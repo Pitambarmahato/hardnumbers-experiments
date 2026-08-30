@@ -1,0 +1,567 @@
+{
+  "captured_at": "2026-08-30T00:47:13.096526+00:00",
+  "machine": {
+    "cpu": "Apple M2",
+    "ram": "25769803776 bytes",
+    "os": "macOS 15.0",
+    "chip": "Apple M2"
+  },
+  "ollama": "http://localhost:11434/api/chat",
+  "models": [
+    "qwen3:14b",
+    "llama3.2:latest"
+  ],
+  "tasks": [
+    {
+      "expected_tool": "get_weather",
+      "prompt": "What's the weather like in Tokyo right now?"
+    },
+    {
+      "expected_tool": "get_weather",
+      "prompt": "Will I need an umbrella in London tomorrow? Use Celsius."
+    },
+    {
+      "expected_tool": "search_articles",
+      "prompt": "Find me articles about RAG evaluation. Limit to 5."
+    },
+    {
+      "expected_tool": "create_task",
+      "prompt": "Add a high-priority task: 'Submit Q3 report' by 2026-10-15."
+    },
+    {
+      "expected_tool": "create_task",
+      "prompt": "Remind me to call the dentist."
+    },
+    {
+      "expected_tool": "send_email",
+      "prompt": "Email priya@hardnumbers.dev about the new article launch. Subject: New article live. Body: Our RAG benchmark article just went up. Worth a read."
+    },
+    {
+      "expected_tool": "lookup_user",
+      "prompt": "Find the user with email alex@example.com."
+    },
+    {
+      "expected_tool": "book_meeting",
+      "prompt": "Book a 30-minute design review tomorrow at 2pm with sam@ and jordan@."
+    },
+    {
+      "expected_tool": "book_meeting",
+      "prompt": "Schedule a 1-hour standup every Monday at 9am. Title: Weekly standup."
+    },
+    {
+      "expected_tool": "search_articles",
+      "prompt": "Show me recent articles on small model inference. Cap at 10."
+    }
+  ],
+  "tools_offered": [
+    "get_weather",
+    "search_articles",
+    "create_task",
+    "send_email",
+    "lookup_user",
+    "book_meeting"
+  ],
+  "model_results": [
+    {
+      "name": "Qwen3 14B (Q4_K_M)",
+      "tag": "qwen3:14b",
+      "params_b": 14.8,
+      "tasks": [
+        {
+          "idx": 1,
+          "expected_tool": "get_weather",
+          "prompt": "What's the weather like in Tokyo right now?",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "get_weather",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 20741.102084051818,
+          "tokens_out": 134,
+          "tokens_in": 545,
+          "tokens_per_sec": 6.46,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "get_weather",
+            "arguments": {
+              "city": "Tokyo",
+              "unit": "celsius"
+            }
+          }
+        },
+        {
+          "idx": 2,
+          "expected_tool": "get_weather",
+          "prompt": "Will I need an umbrella in London tomorrow? Use Celsius.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "get_weather",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 46611.22150009032,
+          "tokens_out": 321,
+          "tokens_in": 547,
+          "tokens_per_sec": 6.89,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "get_weather",
+            "arguments": {
+              "city": "London",
+              "unit": "celsius"
+            }
+          }
+        },
+        {
+          "idx": 3,
+          "expected_tool": "search_articles",
+          "prompt": "Find me articles about RAG evaluation. Limit to 5.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "search_articles",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 23160.794875002466,
+          "tokens_out": 170,
+          "tokens_in": 548,
+          "tokens_per_sec": 7.34,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "search_articles",
+            "arguments": {
+              "limit": 5,
+              "query": "RAG evaluation"
+            }
+          }
+        },
+        {
+          "idx": 4,
+          "expected_tool": "create_task",
+          "prompt": "Add a high-priority task: 'Submit Q3 report' by 2026-10-15.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "create_task",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 28722.62937494088,
+          "tokens_out": 177,
+          "tokens_in": 561,
+          "tokens_per_sec": 6.16,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "create_task",
+            "arguments": {
+              "due_date": "2026-10-15",
+              "priority": "high",
+              "title": "Submit Q3 report"
+            }
+          }
+        },
+        {
+          "idx": 5,
+          "expected_tool": "create_task",
+          "prompt": "Remind me to call the dentist.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "create_task",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 26335.973749984987,
+          "tokens_out": 186,
+          "tokens_in": 543,
+          "tokens_per_sec": 7.06,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "create_task",
+            "arguments": {
+              "title": "Call the dentist"
+            }
+          }
+        },
+        {
+          "idx": 6,
+          "expected_tool": "send_email",
+          "prompt": "Email priya@hardnumbers.dev about the new article launch. Subject: New article live. Body: Our RAG benchmark article just went up. Worth a read.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "send_email",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 26864.365249988623,
+          "tokens_out": 177,
+          "tokens_in": 569,
+          "tokens_per_sec": 6.59,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "send_email",
+            "arguments": {
+              "body": "Our RAG benchmark article just went up. Worth a read.",
+              "subject": "New article live",
+              "to": "priya@hardnumbers.dev"
+            }
+          }
+        },
+        {
+          "idx": 7,
+          "expected_tool": "lookup_user",
+          "prompt": "Find the user with email alex@example.com.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "lookup_user",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 11499.050916056149,
+          "tokens_out": 81,
+          "tokens_in": 544,
+          "tokens_per_sec": 7.04,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "lookup_user",
+            "arguments": {
+              "email": "alex@example.com"
+            }
+          }
+        },
+        {
+          "idx": 8,
+          "expected_tool": "book_meeting",
+          "prompt": "Book a 30-minute design review tomorrow at 2pm with sam@ and jordan@.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "book_meeting",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 70692.48524995055,
+          "tokens_out": 420,
+          "tokens_in": 556,
+          "tokens_per_sec": 5.94,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "book_meeting",
+            "arguments": {
+              "attendees": [
+                "sam@",
+                "jordan@"
+              ],
+              "duration_minutes": 30,
+              "starts_at": "2023-10-06T14:00:00",
+              "title": "design review"
+            }
+          }
+        },
+        {
+          "idx": 9,
+          "expected_tool": "book_meeting",
+          "prompt": "Schedule a 1-hour standup every Monday at 9am. Title: Weekly standup.",
+          "ok": true,
+          "parse_error": "no JSON object found",
+          "is_valid": false,
+          "tool_used": null,
+          "arg_error": "no call parsed",
+          "missing_field": null,
+          "wall_ms": 75434.91154199,
+          "tokens_out": 512,
+          "tokens_in": 555,
+          "tokens_per_sec": 6.79,
+          "raw_content_preview": "",
+          "raw_call": null
+        },
+        {
+          "idx": 10,
+          "expected_tool": "search_articles",
+          "prompt": "Show me recent articles on small model inference. Cap at 10.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "search_articles",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 28743.535834015347,
+          "tokens_out": 154,
+          "tokens_in": 550,
+          "tokens_per_sec": 5.36,
+          "raw_content_preview": " NONE<think>\nOkay, the user wants recent articles on small model inference and wants the results capped at 10. Let me check the available tools. The search_articles function seems appropriate here. It",
+          "raw_call": {
+            "name": "search_articles",
+            "arguments": {
+              "limit": 10,
+              "query": "small model inference"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "http_ok": 10,
+        "json_parse_ok": 9,
+        "schema_valid": 9,
+        "tool_correct": 9,
+        "parse_rate": 90.0,
+        "valid_rate": 90.0,
+        "tool_correct_rate": 90.0,
+        "wall_ms_median": 27793,
+        "wall_ms_p90": 71166,
+        "tok_per_sec_median": 6.69,
+        "tok_per_sec_p10": 5.88,
+        "total_tokens_out": 2332
+      }
+    },
+    {
+      "name": "Llama 3.2 3B (Q4_0)",
+      "tag": "llama3.2:latest",
+      "params_b": 3.2,
+      "tasks": [
+        {
+          "idx": 1,
+          "expected_tool": "get_weather",
+          "prompt": "What's the weather like in Tokyo right now?",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "get_weather",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 6705.880708992481,
+          "tokens_out": 25,
+          "tokens_in": 543,
+          "tokens_per_sec": 3.73,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "get_weather",
+            "arguments": {
+              "city": "Tokyo",
+              "unit": "celsius"
+            }
+          }
+        },
+        {
+          "idx": 2,
+          "expected_tool": "get_weather",
+          "prompt": "Will I need an umbrella in London tomorrow? Use Celsius.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "get_weather",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 916.9523749733344,
+          "tokens_out": 24,
+          "tokens_in": 545,
+          "tokens_per_sec": 26.17,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "get_weather",
+            "arguments": {
+              "city": "London",
+              "unit": "celsius"
+            }
+          }
+        },
+        {
+          "idx": 3,
+          "expected_tool": "search_articles",
+          "prompt": "Find me articles about RAG evaluation. Limit to 5.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": false,
+          "tool_used": "search_articles",
+          "arg_error": "argument 'limit' should be integer",
+          "missing_field": null,
+          "wall_ms": 938.2196250371635,
+          "tokens_out": 25,
+          "tokens_in": 546,
+          "tokens_per_sec": 26.65,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "search_articles",
+            "arguments": {
+              "limit": "5",
+              "query": "RAG evaluation"
+            }
+          }
+        },
+        {
+          "idx": 4,
+          "expected_tool": "create_task",
+          "prompt": "Add a high-priority task: 'Submit Q3 report' by 2026-10-15.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "create_task",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 1309.838499990292,
+          "tokens_out": 38,
+          "tokens_in": 555,
+          "tokens_per_sec": 29.01,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "create_task",
+            "arguments": {
+              "due_date": "2026-10-15",
+              "priority": "high",
+              "title": "Submit Q3 report"
+            }
+          }
+        },
+        {
+          "idx": 5,
+          "expected_tool": "create_task",
+          "prompt": "Remind me to call the dentist.",
+          "ok": true,
+          "parse_error": "no JSON object found",
+          "is_valid": false,
+          "tool_used": null,
+          "arg_error": "no call parsed",
+          "missing_field": null,
+          "wall_ms": 210.57479199953377,
+          "tokens_out": 2,
+          "tokens_in": 541,
+          "tokens_per_sec": 9.5,
+          "raw_content_preview": "NONE",
+          "raw_call": null
+        },
+        {
+          "idx": 6,
+          "expected_tool": "send_email",
+          "prompt": "Email priya@hardnumbers.dev about the new article launch. Subject: New article live. Body: Our RAG benchmark article just went up. Worth a read.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "send_email",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 1701.6906249336898,
+          "tokens_out": 48,
+          "tokens_in": 567,
+          "tokens_per_sec": 28.21,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "send_email",
+            "arguments": {
+              "body": "Our RAG benchmark article just went up. Worth a read.",
+              "subject": "New article live",
+              "to": "priya@hardnumbers.dev"
+            }
+          }
+        },
+        {
+          "idx": 7,
+          "expected_tool": "lookup_user",
+          "prompt": "Find the user with email alex@example.com.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "lookup_user",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 764.6354589378461,
+          "tokens_out": 19,
+          "tokens_in": 542,
+          "tokens_per_sec": 24.85,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "lookup_user",
+            "arguments": {
+              "email": "alex@example.com"
+            }
+          }
+        },
+        {
+          "idx": 8,
+          "expected_tool": "book_meeting",
+          "prompt": "Book a 30-minute design review tomorrow at 2pm with sam@ and jordan@.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": false,
+          "tool_used": "book_meeting",
+          "arg_error": "argument 'attendees' should be array",
+          "missing_field": null,
+          "wall_ms": 2088.029332924634,
+          "tokens_out": 63,
+          "tokens_in": 553,
+          "tokens_per_sec": 30.17,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "book_meeting",
+            "arguments": {
+              "attendees": "[\"sam@\", \"jordan@\"]",
+              "duration_minutes": "30",
+              "starts_at": "2024-03-15T14:00:00+08:00",
+              "title": "Design Review"
+            }
+          }
+        },
+        {
+          "idx": 9,
+          "expected_tool": "book_meeting",
+          "prompt": "Schedule a 1-hour standup every Monday at 9am. Title: Weekly standup.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": true,
+          "tool_used": "create_task",
+          "arg_error": null,
+          "missing_field": null,
+          "wall_ms": 1298.6659590387717,
+          "tokens_out": 37,
+          "tokens_in": 553,
+          "tokens_per_sec": 28.49,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "create_task",
+            "arguments": {
+              "due_date": "2024-01-01",
+              "priority": "high",
+              "title": "Weekly standup"
+            }
+          }
+        },
+        {
+          "idx": 10,
+          "expected_tool": "search_articles",
+          "prompt": "Show me recent articles on small model inference. Cap at 10.",
+          "ok": true,
+          "parse_error": null,
+          "is_valid": false,
+          "tool_used": "search_articles",
+          "arg_error": "argument 'limit' should be integer",
+          "missing_field": null,
+          "wall_ms": 939.4121669465676,
+          "tokens_out": 25,
+          "tokens_in": 547,
+          "tokens_per_sec": 26.61,
+          "raw_content_preview": "",
+          "raw_call": {
+            "name": "search_articles",
+            "arguments": {
+              "limit": "10",
+              "query": "small model inference"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "http_ok": 10,
+        "json_parse_ok": 9,
+        "schema_valid": 6,
+        "tool_correct": 5,
+        "parse_rate": 90.0,
+        "valid_rate": 60.0,
+        "tool_correct_rate": 50.0,
+        "wall_ms_median": 1119,
+        "wall_ms_p90": 2549,
+        "tok_per_sec_median": 26.63,
+        "tok_per_sec_p10": 8.92,
+        "total_tokens_out": 306
+      }
+    }
+  ]
+}
