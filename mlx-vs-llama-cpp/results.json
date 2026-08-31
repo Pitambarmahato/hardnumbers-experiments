@@ -1,0 +1,612 @@
+{
+  "captured_at": "2026-08-31T01:23:08.433393+00:00",
+  "purpose": "MLX vs llama.cpp on Apple Silicon M2 \u2014 Qwen3 14B 4-bit",
+  "model": {
+    "name": "Qwen3 14B Instruct 4-bit",
+    "params_b": 14.8
+  },
+  "system": {
+    "cpu_brand": "arm64",
+    "system": "Darwin",
+    "release": "24.0.0",
+    "macos": "15.0",
+    "python": "3.13.1",
+    "mlx": "installed",
+    "mlx_lm": "installed",
+    "ollama": "ollama version is 0.12.8"
+  },
+  "engines": {
+    "ollama": {
+      "tag": "qwen3:14b",
+      "format": "GGUF Q4_K_M",
+      "backend": "llama.cpp + Metal"
+    },
+    "mlx_lm": {
+      "model_dir": "/Users/pitambarmahato/Desktop/personal/hardnumbers-experiments/mlx-vs-llama-cpp/model",
+      "format": "MLX 4-bit (mlx-community)",
+      "backend": "MLX + Metal"
+    }
+  },
+  "workloads": [
+    "short_chat",
+    "long_context_rag",
+    "long_generation_code"
+  ],
+  "trials_per_condition": 3,
+  "cold_load": {
+    "mlx": {
+      "engine": "mlx",
+      "load_ms": 3733
+    },
+    "ollama": {
+      "engine": "ollama",
+      "wall_ms": 6543,
+      "load_ms": 6475.0
+    }
+  },
+  "engines_results": {
+    "mlx": {
+      "trials": [
+        {
+          "workload": "short_chat",
+          "category": "chat",
+          "input_tokens_target": 256,
+          "max_new_tokens": 256,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 28667,
+              "load_ms": null,
+              "prompt_tokens": 23,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 28667.1,
+              "total_ms": 28667.1,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 9.7,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, so the user is asking for the capital of France and the approximate population. Let me start by recalling that the capital of France is Paris. That's pretty straightforward. Now, for the population, I need to remember the latest estimates. I think as of recent years, the population of Paris is around 2 million people. But wait, sometimes people confuse the population of the city with the metropolitan area. The city of Paris itself is about 2 million, but the greater Paris area, which includes the surrounding suburbs, is much larger, maybe around 12 million or so. However, the que",
+              "trial": 1,
+              "workload": "short_chat"
+            },
+            {
+              "ok": true,
+              "wall_ms": 31052,
+              "load_ms": null,
+              "prompt_tokens": 23,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 31052.6,
+              "total_ms": 31052.6,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 9.0,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, so the user is asking for the capital of France and the approximate population. Let me start by recalling that the capital of France is Paris. That's pretty straightforward. Now, for the population, I need to remember the latest estimates. I think as of recent years, the population of Paris is around 2 million people. But wait, sometimes people confuse the population of the city with the metropolitan area. The city of Paris itself is about 2 million, but the greater Paris area, which includes the surrounding suburbs, is much larger, maybe around 12 million or so. However, the que",
+              "trial": 2,
+              "workload": "short_chat"
+            },
+            {
+              "ok": true,
+              "wall_ms": 40254,
+              "load_ms": null,
+              "prompt_tokens": 23,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 40255.0,
+              "total_ms": 40255.0,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 6.9,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, so the user is asking for the capital of France and the approximate population. Let me start by recalling that the capital of France is Paris. That's pretty straightforward. Now, for the population, I need to remember the latest estimates. I think as of recent years, the population of Paris is around 2 million people. But wait, sometimes people confuse the population of the city with the metropolitan area. The city of Paris itself is about 2 million, but the greater Paris area, which includes the surrounding suburbs, is much larger, maybe around 12 million or so. However, the que",
+              "trial": 3,
+              "workload": "short_chat"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 9.0,
+              "mean": 8.53,
+              "best": 9.7,
+              "p10": 6.9,
+              "p90": 9.7
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 31052,
+              "mean": 33324.33,
+              "best": 40254,
+              "p10": 28667,
+              "p90": 40254
+            },
+            "prompt_tok_s": {
+              "count": 0
+            },
+            "ttft_ms": {
+              "count": 0
+            }
+          }
+        },
+        {
+          "workload": "long_context_rag",
+          "category": "rag",
+          "input_tokens_target": 4096,
+          "max_new_tokens": 256,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 85803,
+              "load_ms": null,
+              "prompt_tokens": 3014,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 85803.8,
+              "total_ms": 85803.8,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 38.1,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, let's tackle this question. The user is asking what Sr. Almeida does at three in the afternoon and why, based on the provided passage.\n\nFirst, I need to find the relevant part of the text. The passage mentions Sr. Almeida several times. Let me scan through the text again.\n\nLooking at the first paragraph, it says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him",
+              "trial": 1,
+              "workload": "long_context_rag"
+            },
+            {
+              "ok": true,
+              "wall_ms": 75012,
+              "load_ms": null,
+              "prompt_tokens": 3014,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 75012.9,
+              "total_ms": 75012.9,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 43.6,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, let's tackle this question. The user is asking what Sr. Almeida does at three in the afternoon and why, based on the provided passage.\n\nFirst, I need to find the relevant part of the text. The passage mentions Sr. Almeida several times. Let me scan through the text again.\n\nLooking at the first paragraph, it says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him",
+              "trial": 2,
+              "workload": "long_context_rag"
+            },
+            {
+              "ok": true,
+              "wall_ms": 73808,
+              "load_ms": null,
+              "prompt_tokens": 3014,
+              "gen_tokens": 256,
+              "prompt_eval_ms": null,
+              "gen_ms": 73808.7,
+              "total_ms": 73808.7,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 44.3,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\nOkay, let's tackle this question. The user is asking what Sr. Almeida does at three in the afternoon and why, based on the provided passage.\n\nFirst, I need to find the relevant part of the text. The passage mentions Sr. Almeida several times. Let me scan through the text again.\n\nLooking at the first paragraph, it says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him",
+              "trial": 3,
+              "workload": "long_context_rag"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 43.6,
+              "mean": 42.0,
+              "best": 44.3,
+              "p10": 38.1,
+              "p90": 44.3
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 75012,
+              "mean": 78207.67,
+              "best": 85803,
+              "p10": 73808,
+              "p90": 85803
+            },
+            "prompt_tok_s": {
+              "count": 0
+            },
+            "ttft_ms": {
+              "count": 0
+            }
+          }
+        },
+        {
+          "workload": "long_generation_code",
+          "category": "code",
+          "input_tokens_target": 256,
+          "max_new_tokens": 1024,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 24542,
+              "load_ms": null,
+              "prompt_tokens": 78,
+              "gen_tokens": 220,
+              "prompt_eval_ms": null,
+              "gen_ms": 24542.5,
+              "total_ms": 24542.5,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 12.1,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\n</think>\n\n```python\nfrom typing import Iterable, List, Dict, Any\nimport csv\nimport io\n\ndef parse_csv_lines(lines: Iterable[str]) -> List[Dict[str, Any]]:\n    \"\"\"\n    Parse an iterable of CSV strings into a list of dictionaries.\n    \n    Each string represents a CSV row with headers. Quoted fields containing commas\n    are handled properly. Blank lines are skipped. Raises ValueError if rows are ragged.\n    \n    Args:\n        lines: Iterable of CSV strings (one row per string).\n        \n    Returns:\n        List of dictionaries, one per row, with headers as keys.\n        \n    Raises:\n   ",
+              "trial": 1,
+              "workload": "long_generation_code"
+            },
+            {
+              "ok": true,
+              "wall_ms": 24842,
+              "load_ms": null,
+              "prompt_tokens": 78,
+              "gen_tokens": 220,
+              "prompt_eval_ms": null,
+              "gen_ms": 24842.8,
+              "total_ms": 24842.8,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 12.0,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\n</think>\n\n```python\nfrom typing import Iterable, List, Dict, Any\nimport csv\nimport io\n\ndef parse_csv_lines(lines: Iterable[str]) -> List[Dict[str, Any]]:\n    \"\"\"\n    Parse an iterable of CSV strings into a list of dictionaries.\n    \n    Each string represents a CSV row with headers. Quoted fields containing commas\n    are handled properly. Blank lines are skipped. Raises ValueError if rows are ragged.\n    \n    Args:\n        lines: Iterable of CSV strings (one row per string).\n        \n    Returns:\n        List of dictionaries, one per row, with headers as keys.\n        \n    Raises:\n   ",
+              "trial": 2,
+              "workload": "long_generation_code"
+            },
+            {
+              "ok": true,
+              "wall_ms": 24705,
+              "load_ms": null,
+              "prompt_tokens": 78,
+              "gen_tokens": 220,
+              "prompt_eval_ms": null,
+              "gen_ms": 24705.2,
+              "total_ms": 24705.2,
+              "ttft_ms": null,
+              "prompt_tok_s": null,
+              "gen_tok_s": 12.1,
+              "peak_rss_mb": 5815.0,
+              "response": "<think>\n</think>\n\n```python\nfrom typing import Iterable, List, Dict, Any\nimport csv\nimport io\n\ndef parse_csv_lines(lines: Iterable[str]) -> List[Dict[str, Any]]:\n    \"\"\"\n    Parse an iterable of CSV strings into a list of dictionaries.\n    \n    Each string represents a CSV row with headers. Quoted fields containing commas\n    are handled properly. Blank lines are skipped. Raises ValueError if rows are ragged.\n    \n    Args:\n        lines: Iterable of CSV strings (one row per string).\n        \n    Returns:\n        List of dictionaries, one per row, with headers as keys.\n        \n    Raises:\n   ",
+              "trial": 3,
+              "workload": "long_generation_code"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 12.1,
+              "mean": 12.07,
+              "best": 12.1,
+              "p10": 12.0,
+              "p90": 12.1
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 24705,
+              "mean": 24696.33,
+              "best": 24842,
+              "p10": 24542,
+              "p90": 24842
+            },
+            "prompt_tok_s": {
+              "count": 0
+            },
+            "ttft_ms": {
+              "count": 0
+            }
+          }
+        }
+      ]
+    },
+    "ollama": {
+      "trials": [
+        {
+          "workload": "short_chat",
+          "category": "chat",
+          "input_tokens_target": 256,
+          "max_new_tokens": 256,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 44078,
+              "load_ms": 6115.3,
+              "prompt_tokens": 25,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 2951.4,
+              "gen_ms": 34834.9,
+              "total_ms": 44034.1,
+              "ttft_ms": 2951.4,
+              "prompt_tok_s": 8.5,
+              "gen_tok_s": 7.3,
+              "response": "",
+              "trial": 1,
+              "workload": "short_chat"
+            },
+            {
+              "ok": true,
+              "wall_ms": 35326,
+              "load_ms": 111.2,
+              "prompt_tokens": 25,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 189.6,
+              "gen_ms": 34817.6,
+              "total_ms": 35253.8,
+              "ttft_ms": 189.6,
+              "prompt_tok_s": 131.8,
+              "gen_tok_s": 7.4,
+              "response": " larger<think>\nOkay, so the user is asking for the capital of France and the population there. Let me start by recalling that the capital of France is Paris. I'm pretty sure about that. Now, for the population, I need to remember the approximate number. I think Paris is one of the largest cities in Europe. Maybe around 2 million? Wait, but I've heard numbers like 2.1 million or 2.2 million. Let me check my memory. Oh right, the population of Paris is often cited as around 2.1 million as of recent years. However, if they're considering the larger metropolitan area, that number would be much hig",
+              "trial": 2,
+              "workload": "short_chat"
+            },
+            {
+              "ok": true,
+              "wall_ms": 44924,
+              "load_ms": 66.4,
+              "prompt_tokens": 25,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 130.1,
+              "gen_ms": 44488.7,
+              "total_ms": 44891.2,
+              "ttft_ms": 130.1,
+              "prompt_tok_s": 192.2,
+              "gen_tok_s": 5.8,
+              "response": " city<think>\nOkay, so the user is asking for the capital of France and the population there. Let me start by recalling that the capital of France is Paris. I'm pretty sure about that. Now, for the population, I need to remember the approximate number. I think Paris is one of the largest cities in Europe. Maybe around 2 million? Wait, but I've heard numbers like 2.1 million or 2.2 million. Let me check my memory. Oh right, the population of Paris is often cited as around 2.1 million as of recent years. However, if they're considering the larger metropolitan area, that number would be much highe",
+              "trial": 3,
+              "workload": "short_chat"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 7.3,
+              "mean": 6.83,
+              "best": 7.4,
+              "p10": 5.8,
+              "p90": 7.4
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 44078,
+              "mean": 41442.67,
+              "best": 44924,
+              "p10": 35326,
+              "p90": 44924
+            },
+            "prompt_tok_s": {
+              "count": 3,
+              "median": 131.8,
+              "mean": 110.83,
+              "best": 192.2,
+              "p10": 8.5,
+              "p90": 192.2
+            },
+            "ttft_ms": {
+              "count": 3,
+              "median": 189.6,
+              "mean": 1090.37,
+              "best": 2951.4,
+              "p10": 130.1,
+              "p90": 2951.4
+            }
+          }
+        },
+        {
+          "workload": "long_context_rag",
+          "category": "rag",
+          "input_tokens_target": 4096,
+          "max_new_tokens": 256,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 132805,
+              "load_ms": 139.7,
+              "prompt_tokens": 3016,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 91010.1,
+              "gen_ms": 41507.8,
+              "total_ms": 132778.4,
+              "ttft_ms": 91010.1,
+              "prompt_tok_s": 33.1,
+              "gen_tok_s": 6.2,
+              "response": " city<think>\nOkay, let's see. The user is asking what Sr. Almeida does at three in the afternoon and why. I need to find the relevant information from the passage.\n\nLooking through the text, there's a part that says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him.\"\n\nSo, the action is climbing the 142 steps of the lighthouse every afternoon at three to polish the lens. The ",
+              "trial": 1,
+              "workload": "long_context_rag"
+            },
+            {
+              "ok": true,
+              "wall_ms": 42858,
+              "load_ms": 77.6,
+              "prompt_tokens": 3016,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 186.1,
+              "gen_ms": 42384.0,
+              "total_ms": 42829.9,
+              "ttft_ms": 186.1,
+              "prompt_tok_s": 16202.1,
+              "gen_tok_s": 6.0,
+              "response": " thing<think>\nOkay, let's see. The user is asking what Sr. Almeida does at three in the afternoon and why. I need to find the relevant information from the passage.\n\nLooking through the text, there's a part that says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him.\"\n\nSo, the action is climbing the 142 steps of the lighthouse every afternoon at three to polish the lens. The",
+              "trial": 2,
+              "workload": "long_context_rag"
+            },
+            {
+              "ok": true,
+              "wall_ms": 42107,
+              "load_ms": 85.2,
+              "prompt_tokens": 3016,
+              "gen_tokens": 256,
+              "prompt_eval_ms": 151.9,
+              "gen_ms": 41690.7,
+              "total_ms": 42070.1,
+              "ttft_ms": 151.9,
+              "prompt_tok_s": 19853.5,
+              "gen_tok_s": 6.1,
+              "response": " should<think>\nOkay, let's see. The user is asking what Sr. Almeida does at three in the afternoon and why. I need to find the relevant information from the passage.\n\nLooking through the text, there's a part that says: \"The lighthouse keeper, a retired naval officer named Sr. Almeida, climbs the 142 steps of the phare every afternoon at three to polish the lens, a ritual he has kept since his wife passed in the winter of 2019. He says the light is the only thing that still talks to him.\"\n\nSo, the action is climbing the 142 steps of the lighthouse every afternoon at three to polish the lens. Th",
+              "trial": 3,
+              "workload": "long_context_rag"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 6.1,
+              "mean": 6.1,
+              "best": 6.2,
+              "p10": 6.0,
+              "p90": 6.2
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 42858,
+              "mean": 72590,
+              "best": 132805,
+              "p10": 42107,
+              "p90": 132805
+            },
+            "prompt_tok_s": {
+              "count": 3,
+              "median": 16202.1,
+              "mean": 12029.57,
+              "best": 19853.5,
+              "p10": 33.1,
+              "p90": 19853.5
+            },
+            "ttft_ms": {
+              "count": 3,
+              "median": 186.1,
+              "mean": 30449.37,
+              "best": 91010.1,
+              "p10": 151.9,
+              "p90": 91010.1
+            }
+          }
+        },
+        {
+          "workload": "long_generation_code",
+          "category": "code",
+          "input_tokens_target": 256,
+          "max_new_tokens": 1024,
+          "trials": [
+            {
+              "ok": true,
+              "wall_ms": 158729,
+              "load_ms": 84.0,
+              "prompt_tokens": 80,
+              "gen_tokens": 1024,
+              "prompt_eval_ms": 3051.5,
+              "gen_ms": 154988.5,
+              "total_ms": 158707.5,
+              "ttft_ms": 3051.5,
+              "prompt_tok_s": 26.2,
+              "gen_tok_s": 6.6,
+              "response": " should<think>\nOkay, I need to write a Python function called parse_csv_lines that takes an iterable of CSV strings and returns a list of dictionaries. Let me think about how to approach this.\n\nFirst, the function needs to handle quoted fields that contain commas. So, if a field is enclosed in quotes, any commas inside those quotes shouldn't be treated as separators. Also, I have to skip blank lines. And if the rows are ragged (i.e., different number of fields than the header), it should raise a ValueError.\n\nHmm, how to parse the CSV lines properly. The standard csv module in Python can handle",
+              "trial": 1,
+              "workload": "long_generation_code"
+            },
+            {
+              "ok": true,
+              "wall_ms": 166410,
+              "load_ms": 66.6,
+              "prompt_tokens": 80,
+              "gen_tokens": 1024,
+              "prompt_eval_ms": 126.1,
+              "gen_ms": 165493.8,
+              "total_ms": 166385.5,
+              "ttft_ms": 126.1,
+              "prompt_tok_s": 634.7,
+              "gen_tok_s": 6.2,
+              "response": " lines<think>\nOkay, I need to write a Python function called parse_csv_lines that takes an iterable of CSV strings and returns a list of dictionaries. Let me think about how to approach this.\n\nFirst, the function needs to handle quoted fields that contain commas. So, splitting on commas directly isn't going to work because quoted fields might have commas inside them. I remember that the csv module in Python handles this automatically. Maybe I should use that.\n\nBut wait, the input is an iterable of CSV strings, each being a row. So each line is a string that represents a CSV row. The csv module",
+              "trial": 2,
+              "workload": "long_generation_code"
+            },
+            {
+              "ok": true,
+              "wall_ms": 167930,
+              "load_ms": 65.4,
+              "prompt_tokens": 80,
+              "gen_tokens": 1024,
+              "prompt_eval_ms": 124.1,
+              "gen_ms": 167142.6,
+              "total_ms": 167886.9,
+              "ttft_ms": 124.1,
+              "prompt_tok_s": 644.4,
+              "gen_tok_s": 6.1,
+              "response": " strings<think>\nOkay, I need to write a Python function called parse_csv_lines that takes an iterable of CSV strings and returns a list of dictionaries. Let me think about how to approach this.\n\nFirst, the function needs to handle quoted fields that contain commas. So, splitting on commas directly isn't going to work because quoted fields might have commas inside them. I remember that the csv module in Python handles this automatically. Maybe I should use that.\n\nBut wait, the input is an iterable of CSV strings, each being a row. So each line is a string that represents a CSV row. The csv modu",
+              "trial": 3,
+              "workload": "long_generation_code"
+            }
+          ],
+          "aggregate": {
+            "gen_tok_s": {
+              "count": 3,
+              "median": 6.2,
+              "mean": 6.3,
+              "best": 6.6,
+              "p10": 6.1,
+              "p90": 6.6
+            },
+            "wall_ms": {
+              "count": 3,
+              "median": 166410,
+              "mean": 164356.33,
+              "best": 167930,
+              "p10": 158729,
+              "p90": 167930
+            },
+            "prompt_tok_s": {
+              "count": 3,
+              "median": 634.7,
+              "mean": 435.1,
+              "best": 644.4,
+              "p10": 26.2,
+              "p90": 644.4
+            },
+            "ttft_ms": {
+              "count": 3,
+              "median": 126.1,
+              "mean": 1100.57,
+              "best": 3051.5,
+              "p10": 124.1,
+              "p90": 3051.5
+            }
+          }
+        }
+      ]
+    }
+  },
+  "headline": {
+    "ollama": {
+      "short_chat": {
+        "gen_tok_s_median": 7.3,
+        "gen_tok_s_best": 7.4,
+        "wall_ms_median": 44078
+      },
+      "long_context_rag": {
+        "gen_tok_s_median": 6.1,
+        "gen_tok_s_best": 6.2,
+        "wall_ms_median": 42858
+      },
+      "long_generation_code": {
+        "gen_tok_s_median": 6.2,
+        "gen_tok_s_best": 6.6,
+        "wall_ms_median": 166410
+      }
+    },
+    "mlx": {
+      "short_chat": {
+        "gen_tok_s_median": 9.0,
+        "gen_tok_s_best": 9.7,
+        "wall_ms_median": 31052
+      },
+      "long_context_rag": {
+        "gen_tok_s_median": 43.6,
+        "gen_tok_s_best": 44.3,
+        "wall_ms_median": 75012
+      },
+      "long_generation_code": {
+        "gen_tok_s_median": 12.1,
+        "gen_tok_s_best": 12.1,
+        "wall_ms_median": 24705
+      }
+    }
+  }
+}

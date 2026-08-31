@@ -14,6 +14,7 @@ underlying numbers without having to trust the writeup.
 | ------- | -------------- | ---------------- |
 | [Qwen3 14B vs Llama 3.2 3B on Apple Silicon M2: An Honest Benchmark](https://hardnumbers.dev/articles/qwen3-14b-vs-llama-3-2-3b-on-apple-silicon-m2-an-honest-benc) | [`m2-benchmark/`](./m2-benchmark/) | Throughput, latency, accuracy on a small reasoning / math / code / instruction suite |
 | [Local LLM Tool Calling for AI Agents: Qwen3 14B vs Llama 3.2 3B on Apple Silicon](https://hardnumbers.dev/articles/local-llm-tool-calling-for-ai-agents-qwen3-14b-vs-llama-3-2-3b-on-apple-silicon) | [`tool-calling-benchmark/`](./tool-calling-benchmark/) | JSON tool-call reliability (parse, schema-valid, tool-correct) on a 10-prompt agent suite |
+| [MLX vs llama.cpp on Apple Silicon: Same Model, Two Engines](https://hardnumbers.dev/articles/) | [`mlx-vs-llama-cpp/`](./mlx-vs-llama-cpp/) | Wall-time and decode throughput for Qwen3 14B 4-bit under Ollama (llama.cpp) vs mlx-lm, on chat / RAG / code workloads |
 
 ## How to read this repo
 

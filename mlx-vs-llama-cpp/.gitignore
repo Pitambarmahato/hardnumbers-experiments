@@ -1,0 +1,5 @@
+# Model weights — too big for git. Download separately via huggingface-cli.
+model/
+__pycache__/
+*.pyc
+.DS_Store
