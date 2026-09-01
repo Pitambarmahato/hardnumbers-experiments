@@ -1,0 +1,92 @@
+{
+  "started_at": "2026-09-01T09:09:14.645241+00:00",
+  "total_elapsed_s": 4089.0018032910302,
+  "results": [
+    {
+      "task": "humaneval",
+      "model": "mistral-small:24b-instruct-2501-q4_K_M",
+      "correct": 1,
+      "total": 5,
+      "total_time_s": 2135.518940750044,
+      "total_tokens": 92,
+      "prompt_tokens": 886,
+      "gen_tokens": 92,
+      "items": [
+        {
+          "task_id": "HumanEval/0",
+          "ok": false,
+          "error": "timed out"
+        },
+        {
+          "task_id": "HumanEval/1",
+          "ok": false,
+          "error": "timed out"
+        },
+        {
+          "task_id": "HumanEval/2",
+          "ok": true,
+          "raw_tail": "```python\n    return number - int(number)\n```"
+        },
+        {
+          "task_id": "HumanEval/3",
+          "ok": false,
+          "raw_tail": "```python\nbalance = 0\nfor operation in operations:\n    balance += operation\n    if balance < 0:\n        return True\nreturn False\n```"
+        },
+        {
+          "task_id": "HumanEval/4",
+          "ok": false,
+          "raw_tail": "```python\nif not numbers:\n        return 0.0\n\nmean = sum(numbers) / len(numbers)\nmad = sum(abs(x - mean) for x in numbers) / len(numbers)\n\nreturn mad"
+        }
+      ],
+      "cold_load_s": null,
+      "extras": {},
+      "accuracy": 0.2,
+      "tok_per_s": 0.04308086350556435
+    },
+    {
+      "task": "ifeval",
+      "model": "mistral-small:24b-instruct-2501-q4_K_M",
+      "correct": 1,
+      "total": 5,
+      "total_time_s": 1953.4552829579916,
+      "total_tokens": 15,
+      "prompt_tokens": 365,
+      "gen_tokens": 15,
+      "items": [
+        {
+          "id": 0,
+          "constraint": "numbered_list_3",
+          "validator": "num_list_items=3",
+          "ok": false,
+          "raw": "1. Python\n2. R\n3. Java"
+        },
+        {
+          "id": 1,
+          "ok": false,
+          "error": "timed out"
+        },
+        {
+          "id": 2,
+          "ok": false,
+          "error": "timed out"
+        },
+        {
+          "id": 3,
+          "ok": false,
+          "error": "timed out"
+        },
+        {
+          "id": 4,
+          "constraint": "only_number",
+          "validator": "only_number",
+          "ok": true,
+          "raw": "96"
+        }
+      ],
+      "cold_load_s": null,
+      "extras": {},
+      "accuracy": 0.2,
+      "tok_per_s": 0.007678701494147573
+    }
+  ]
+}
