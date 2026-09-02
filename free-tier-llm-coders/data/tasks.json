@@ -1,0 +1,93 @@
+[
+  {
+    "id": "csv-header-infer",
+    "bucket": "embarrassingly_parallel",
+    "title": "Infer a CSV header from a headerless file",
+    "repo": "experiments/test-repos/csv-mess",
+    "files": [
+      "data/sales_2024.csv"
+    ],
+    "context_chars": 400,
+    "prompt": "This CSV has no header row. Read the first 5 data rows and infer what the column names should be. The first column is a date (YYYY-MM-DD), the second is a product name, the third is a quantity (integer), the fourth is a price (decimal), and the fifth is a country code (2-letter). Write the inferred header as the first line of the file. Use snake_case for column names.",
+    "verify_command": [
+      "bash",
+      "-c",
+      "head -1 data/sales_2024.csv | grep -q ',' && [ $(head -1 data/sales_2024.csv | awk -F',' '{print NF}') = 5 ]"
+    ],
+    "success_pattern": ".",
+    "quality_rubric": "1-5: header has 5 columns, snake_case, names match the obvious data"
+  },
+  {
+    "id": "function-docstring",
+    "bucket": "loosely_coupled",
+    "title": "Add a Google-style docstring to a function",
+    "repo": "experiments/test-repos/utils",
+    "files": [
+      "src/billing.py"
+    ],
+    "context_chars": 1500,
+    "prompt": "Add a Google-style docstring to the function `calculate_total` in src/billing.py. The docstring must include Args, Returns, and Raises sections. Use the function signature to infer parameter types and return type.",
+    "verify_command": [
+      "bash",
+      "-c",
+      "grep -A 20 'def calculate_total' src/billing.py | grep -q 'Args:' && grep -A 20 'def calculate_total' src/billing.py | grep -q 'Returns:'"
+    ],
+    "success_pattern": ".",
+    "quality_rubric": "1-5: docstring has Args, Returns, Raises sections; types are accurate"
+  },
+  {
+    "id": "function-unit-test",
+    "bucket": "loosely_coupled",
+    "title": "Add unit tests for calculate_total covering happy path and edge cases",
+    "repo": "experiments/test-repos/utils",
+    "files": [
+      "src/billing.py",
+      "tests/test_billing.py"
+    ],
+    "context_chars": 2000,
+    "prompt": "Add unit tests for the function `calculate_total` in src/billing.py to tests/test_billing.py. Add tests that cover the happy path and at least one edge case (empty items list, negative total raising ValueError, tax applied, etc). Output the COMPLETE new test_billing.py file with all tests \u2014 both the existing ones and the new ones you add.",
+    "verify_command": [
+      "bash",
+      "-c",
+      "python -m pytest tests/test_billing.py -q 2>&1 | tail -1 | grep -qE '(passed|passed in)' && python -m pytest tests/test_billing.py --collect-only -q 2>&1 | grep -E 'test_' | wc -l | awk '{exit ($1 >= 4) ? 0 : 1}'"
+    ],
+    "success_pattern": ".",
+    "quality_rubric": "1-5: covers happy path, covers edge case, uses correct assertions"
+  },
+  {
+    "id": "refactor-api-call",
+    "bucket": "tightly_coupled",
+    "title": "Refactor fetch_user to use the new get_user API method",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "files": [
+      "src/users.py"
+    ],
+    "context_chars": 1500,
+    "prompt": "Refactor the function `fetch_user` in src/users.py to use the new `client.get_user(user_id)` method instead of the old `client.fetch(endpoint=f'/users/{user_id}')` pattern. The function signature, docstring, and return type must stay the same. The existing test in tests/test_users.py must still pass.",
+    "verify_command": [
+      "bash",
+      "-c",
+      "python -m pytest tests/test_users.py -q 2>&1 | tail -1 | grep -q 'passed'"
+    ],
+    "success_pattern": ".",
+    "quality_rubric": "1-5: tests pass, signature preserved, diff is minimal"
+  },
+  {
+    "id": "cli-flag",
+    "bucket": "sequential_dependent",
+    "title": "Add a --verbose flag to the analyze CLI command",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "files": [
+      "src/cli.py"
+    ],
+    "context_chars": 1500,
+    "prompt": "Add a `--verbose` flag to the `analyze` command in src/cli.py. When set, the command should print each path it processes before processing it. The existing tests in tests/test_cli.py must still pass. The behavior without --verbose must be unchanged.",
+    "verify_command": [
+      "bash",
+      "-c",
+      "python -m pytest tests/test_cli.py -q 2>&1 | tail -1 | grep -q 'passed' && python -m src.cli analyze --help 2>&1 | grep -q -- '--verbose'"
+    ],
+    "success_pattern": ".",
+    "quality_rubric": "1-5: --verbose present in help, tests pass, minimal diff"
+  }
+]
