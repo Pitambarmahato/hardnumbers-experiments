@@ -1,0 +1,6 @@
+# Document parsing benchmark dependencies
+# Each parser needs its own venv due to dep conflicts; this file lists the
+# base set used to generate the test PDFs and orchestrate runs.
+
+reportlab>=4.0  # PDF generation
+pymupdf>=1.24    # PDF inspection (used by paddleocr pipeline)
