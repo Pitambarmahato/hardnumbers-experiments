@@ -1,0 +1,121 @@
+{
+  "models": [
+    {
+      "name": "gpt-oss-20b (MXFP4)",
+      "size_gb": 13.8,
+      "quant": "MXFP4"
+    },
+    {
+      "name": "Qwen3-14B (Q4_K_M)",
+      "size_gb": 9.3,
+      "quant": "Q4_K_M"
+    }
+  ],
+  "prompt_chars": 263,
+  "max_tokens": 200,
+  "trials": 3,
+  "records": [
+    {
+      "model": "gpt-oss:20b",
+      "label": "gpt-oss-20b (MXFP4)",
+      "quant": "MXFP4",
+      "trial": 0,
+      "success": true,
+      "wall_time_s": 165.749,
+      "total_duration_s": 165.705,
+      "load_duration_s": 1.119,
+      "prompt_eval_s": 64.43,
+      "eval_s": 99.297,
+      "tokens_out": 182,
+      "tokens_in": 127,
+      "tokens_per_s": 1.83,
+      "response_chars": 197,
+      "error": null
+    },
+    {
+      "model": "gpt-oss:20b",
+      "label": "gpt-oss-20b (MXFP4)",
+      "quant": "MXFP4",
+      "trial": 1,
+      "success": true,
+      "wall_time_s": 74.629,
+      "total_duration_s": 74.621,
+      "load_duration_s": 0.317,
+      "prompt_eval_s": 0.66,
+      "eval_s": 73.461,
+      "tokens_out": 182,
+      "tokens_in": 127,
+      "tokens_per_s": 2.48,
+      "response_chars": 197,
+      "error": null
+    },
+    {
+      "model": "gpt-oss:20b",
+      "label": "gpt-oss-20b (MXFP4)",
+      "quant": "MXFP4",
+      "trial": 2,
+      "success": true,
+      "wall_time_s": 66.983,
+      "total_duration_s": 66.977,
+      "load_duration_s": 0.525,
+      "prompt_eval_s": 0.973,
+      "eval_s": 65.349,
+      "tokens_out": 182,
+      "tokens_in": 127,
+      "tokens_per_s": 2.79,
+      "response_chars": 197,
+      "error": null
+    },
+    {
+      "model": "qwen3:14b",
+      "label": "Qwen3-14B (Q4_K_M)",
+      "quant": "Q4_K_M",
+      "trial": 0,
+      "success": true,
+      "wall_time_s": 39.063,
+      "total_duration_s": 39.059,
+      "load_duration_s": 0.091,
+      "prompt_eval_s": 5.143,
+      "eval_s": 33.647,
+      "tokens_out": 200,
+      "tokens_in": 67,
+      "tokens_per_s": 5.94,
+      "response_chars": 971,
+      "error": null
+    },
+    {
+      "model": "qwen3:14b",
+      "label": "Qwen3-14B (Q4_K_M)",
+      "quant": "Q4_K_M",
+      "trial": 1,
+      "success": true,
+      "wall_time_s": 41.914,
+      "total_duration_s": 41.909,
+      "load_duration_s": 0.114,
+      "prompt_eval_s": 0.165,
+      "eval_s": 41.402,
+      "tokens_out": 200,
+      "tokens_in": 67,
+      "tokens_per_s": 4.83,
+      "response_chars": 988,
+      "error": null
+    },
+    {
+      "model": "qwen3:14b",
+      "label": "Qwen3-14B (Q4_K_M)",
+      "quant": "Q4_K_M",
+      "trial": 2,
+      "success": true,
+      "wall_time_s": 46.156,
+      "total_duration_s": 46.152,
+      "load_duration_s": 0.245,
+      "prompt_eval_s": 1.704,
+      "eval_s": 43.964,
+      "tokens_out": 200,
+      "tokens_in": 67,
+      "tokens_per_s": 4.55,
+      "response_chars": 992,
+      "error": null
+    }
+  ]
+}
