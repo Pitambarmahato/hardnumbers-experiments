@@ -135,7 +135,7 @@ This article, the benchmark code, the JSON results, the test PDFs, and the groun
 
 - Code: [github.com/Pitambarmahato/hardnumbers-experiments/tree/main/document-parsing-m2](https://github.com/Pitambarmahato/hardnumbers-experiments/tree/main/document-parsing-m2)
 - Results JSON: same repo, [`document-parsing-m2/results/`](https://github.com/Pitambarmahato/hardnumbers-experiments/tree/main/document-parsing-m2/results)
-- This article: [hardnumbers.dev/articles/3-pdf-parsers-tested-docling-marker-paddleocr](https://hardnumbers.dev/articles/3-pdf-parsers-tested-docling-marker-paddleocr)
+- This article: [hardnumbers.dev/articles/3-pdf-parsers-tested-docling-vs-marker-vs-paddleocr](https://hardnumbers.dev/articles/3-pdf-parsers-tested-docling-vs-marker-vs-paddleocr)
 
 ## What we did not test
 
