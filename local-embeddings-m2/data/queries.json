@@ -1,0 +1,19 @@
+{
+  "queries": [
+    {"id": "q1", "text": "Which quantization format is faster on Apple Silicon, Q4_K_M or MXFP4?", "expected": ["c1", "c2"]},
+    {"id": "q2", "text": "What speedup does speculative decoding give on M2 with a small draft model?", "expected": ["c7", "c8"]},
+    {"id": "q3", "text": "Compare the speed of Docling, Marker, and PaddleOCR for parsing PDFs.", "expected": ["c10", "c12"]},
+    {"id": "q4", "text": "How well does Qwen3 14B do at picking the right tool for an agent?", "expected": ["c13", "c14"]},
+    {"id": "q5", "text": "Which local LLM is fastest on M2 for chat workloads, MLX or Ollama?", "expected": ["c15", "c16"]},
+    {"id": "q6", "text": "How does gpt-oss-20B compare to Qwen3 14B on standard benchmarks?", "expected": ["c17", "c19"]},
+    {"id": "q7", "text": "How much memory does the PaddleOCR PDF parser use on a 24GB Mac?", "expected": ["c10", "c12"]},
+    {"id": "q8", "text": "What is the success rate of free LLM APIs on coding tasks?", "expected": ["c4", "c6"]},
+    {"id": "q9", "text": "Why does speculative decoding not help on Apple Silicon?", "expected": ["c7", "c8", "c9"]},
+    {"id": "q10", "text": "What is the relative speed of MLX and llama.cpp for local inference?", "expected": ["c15", "c16"]},
+    {"id": "q11", "text": "Does MXFP4 require special hardware to run fast?", "expected": ["c2", "c18", "c19"]},
+    {"id": "q12", "text": "What tool did Qwen3 14B pick successfully 9 out of 10 times?", "expected": ["c13", "c14"]},
+    {"id": "q13", "text": "How fast is Marker at parsing a single PDF page?", "expected": ["c10"]},
+    {"id": "q14", "text": "What is the document parsing accuracy of the three PDF parsers tested?", "expected": ["c10", "c11"]},
+    {"id": "q15", "text": "What models were compared in the open-weight LLM benchmark?", "expected": ["c17", "c18"]}
+  ]
+}
