@@ -1,0 +1,574 @@
+{
+  "models": {
+    "piper": {
+      "median_wer": 0.0,
+      "mean_wer": 0.034639252805115026,
+      "median_real_time_factor": 0.05227963757850442,
+      "mean_real_time_factor": 0.06657923368967102,
+      "median_wall_seconds": 0.4254827501717955,
+      "median_peak_rss_mb": 1086.234375,
+      "per_sentence": [
+        {
+          "sentence_id": "long_01",
+          "reference": "On 2026-09-04 at 14:30 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "hypothesis": "On 2026-09-04 at 1430 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "wer": 0.04081632653061224,
+          "errors": 2,
+          "ref_words": 49,
+          "timing": {
+            "wall_seconds": 1.0101519590243697,
+            "audio_duration_seconds": 17.670385487528346,
+            "real_time_factor": 0.05716637929247944,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_02",
+          "reference": "If you visit https://hardnumbers.dev/articles/3-local-vision-models-moondream-vs-gemma-3-vs-qwen2-5-vl, you will find a comparison of three local vision models tested on the same fifteen photos, with the same prompt, and scored against a single reference caption for each image.",
+          "hypothesis": "If you visit https://hardnumbers.dev article slash three local vision models, MoonDreamVS JAMA, 3V-SQ-WAN2-5EL, you will find a comparison of three local vision models tested on the same 15 photos with the same prompt and scored against a single reference caption for each image.",
+          "wer": 0.24489795918367346,
+          "errors": 12,
+          "ref_words": 49,
+          "timing": {
+            "wall_seconds": 1.3471548748202622,
+            "audio_duration_seconds": 18.92426303854875,
+            "real_time_factor": 0.07118664922782492,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_03",
+          "reference": "The 95 percent upper bound on a 0 out of 20 failure rate is approximately 14 percent, which means the phrase all twenty observed runs passed is a more honest summary than perfect pass rate for any benchmark with twenty or fewer items.",
+          "hypothesis": "The 95% upper bound on a zero out of 20 failure rate is approximately 14%, which means the phrase all 20 observed runs past is a more honest summary than perfect pass rate for any benchmark with 20 or fewer items.",
+          "wer": 0.13953488372093023,
+          "errors": 6,
+          "ref_words": 43,
+          "timing": {
+            "wall_seconds": 0.8487320831045508,
+            "audio_duration_seconds": 13.79265306122449,
+            "real_time_factor": 0.0615350853339888,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_04",
+          "reference": "If you read the methodology paragraph at the end of the article, you will see the exact five steps: pull the model, run the warmup, generate the response, score the output, and save the result. Every step is reproducible from the public repository and the experiments repo linked in the footer.",
+          "hypothesis": "If you read the methodology paragraph at the end of the article, you will see the exact five steps, pull the model, run the warmup, generate the response, score the output, and save the result. Every step is reproducible from the public repository, and the experiments repo linked in the footer.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 51,
+          "timing": {
+            "wall_seconds": 0.7769682921934873,
+            "audio_duration_seconds": 16.602267573696146,
+            "real_time_factor": 0.04679892603492787,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_05",
+          "reference": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical: a 14 billion parameter model at Q4_K_M is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+          "hypothesis": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical. A 14 billion parameter model at Q4KM is about 9.3GB, which fits comfortably on a 24GB machine alongside other applications.",
+          "wer": 0.09433962264150944,
+          "errors": 5,
+          "ref_words": 53,
+          "timing": {
+            "wall_seconds": 0.9888595410156995,
+            "audio_duration_seconds": 19.690521541950112,
+            "real_time_factor": 0.05022007867638049,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "med_01",
+          "reference": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+          "hypothesis": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 22,
+          "timing": {
+            "wall_seconds": 0.3448280841112137,
+            "audio_duration_seconds": 6.6525170068027215,
+            "real_time_factor": 0.05183422812126596,
+            "peak_rss_mb": 1002.1875
+          }
+        },
+        {
+          "sentence_id": "med_02",
+          "reference": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "hypothesis": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 22,
+          "timing": {
+            "wall_seconds": 0.3110334579832852,
+            "audio_duration_seconds": 6.849886621315193,
+            "real_time_factor": 0.045407095792713445,
+            "peak_rss_mb": 1028.4375
+          }
+        },
+        {
+          "sentence_id": "med_03",
+          "reference": "Local text to speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "hypothesis": "Local text-to-speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 23,
+          "timing": {
+            "wall_seconds": 0.5827809581533074,
+            "audio_duration_seconds": 7.929614512471655,
+            "real_time_factor": 0.07349423572062837,
+            "peak_rss_mb": 1086.234375
+          }
+        },
+        {
+          "sentence_id": "med_04",
+          "reference": "The benchmark ran on the same machine, with the same prompt, against the same five engines, in randomized order to control for thermal throttling.",
+          "hypothesis": "The benchmark ran on the same machine with the same prompt against the same five engines in randomized order to control for thermal throttling.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 24,
+          "timing": {
+            "wall_seconds": 0.4254827501717955,
+            "audio_duration_seconds": 8.13859410430839,
+            "real_time_factor": 0.05227963757850442,
+            "peak_rss_mb": 1109.484375
+          }
+        },
+        {
+          "sentence_id": "med_05",
+          "reference": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "hypothesis": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 19,
+          "timing": {
+            "wall_seconds": 0.41962912515737116,
+            "audio_duration_seconds": 8.742312925170069,
+            "real_time_factor": 0.04799978320945403,
+            "peak_rss_mb": 1115.0
+          }
+        },
+        {
+          "sentence_id": "short_01",
+          "reference": "The quick brown fox jumps over the lazy dog.",
+          "hypothesis": "The quick brown fox jumps over the lazy dog.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 9,
+          "timing": {
+            "wall_seconds": 0.6042195421177894,
+            "audio_duration_seconds": 2.589024943310658,
+            "real_time_factor": 0.23337725798236503,
+            "peak_rss_mb": 202.0625
+          }
+        },
+        {
+          "sentence_id": "short_02",
+          "reference": "Hello world, this is a basic test.",
+          "hypothesis": "Hello world, this is a basic test.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 7,
+          "timing": {
+            "wall_seconds": 0.12762491614557803,
+            "audio_duration_seconds": 2.182675736961451,
+            "real_time_factor": 0.05847177113135796,
+            "peak_rss_mb": 674.078125
+          }
+        },
+        {
+          "sentence_id": "short_03",
+          "reference": "Buy one get one free this week only.",
+          "hypothesis": "Buy one get one free this week only.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8,
+          "timing": {
+            "wall_seconds": 0.12622154201380908,
+            "audio_duration_seconds": 2.2407256235827666,
+            "real_time_factor": 0.05633065498308958,
+            "peak_rss_mb": 716.40625
+          }
+        },
+        {
+          "sentence_id": "short_04",
+          "reference": "She sells seashells by the seashore.",
+          "hypothesis": "she sells seashells by the seashore.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 6,
+          "timing": {
+            "wall_seconds": 0.09134966600686312,
+            "audio_duration_seconds": 2.0085260770975055,
+            "real_time_factor": 0.04548094597749575,
+            "peak_rss_mb": 825.1875
+          }
+        },
+        {
+          "sentence_id": "short_05",
+          "reference": "Press the red button to stop the machine.",
+          "hypothesis": "press the red button to stop the machine",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8,
+          "timing": {
+            "wall_seconds": 0.10773870791308582,
+            "audio_duration_seconds": 2.2871655328798184,
+            "real_time_factor": 0.04710577628258928,
+            "peak_rss_mb": 904.515625
+          }
+        }
+      ]
+    },
+    "kokoro": {
+      "median_wer": 0.0,
+      "mean_wer": 0.030671797752302617,
+      "median_real_time_factor": 0.4558768917121689,
+      "mean_real_time_factor": 0.4650733429400003,
+      "median_wall_seconds": 4.327791291987523,
+      "median_peak_rss_mb": 1109.484375,
+      "per_sentence": [
+        {
+          "sentence_id": "long_01",
+          "reference": "On 2026-09-04 at 14:30 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "hypothesis": "on 2026-09-04 at 14. 30 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 49,
+          "timing": {
+            "wall_seconds": 8.604297291021794,
+            "audio_duration_seconds": 20.586666666666666,
+            "real_time_factor": 0.41795485545766486,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_02",
+          "reference": "If you visit https://hardnumbers.dev/articles/3-local-vision-models-moondream-vs-gemma-3-vs-qwen2-5-vl, you will find a comparison of three local vision models tested on the same fifteen photos, with the same prompt, and scored against a single reference caption for each image.",
+          "hypothesis": "If you visit https://hardnumbers, dev.slash.articles.slash.3localvisionmodelsmoondreamvsjemma.3vsql2-5vl, you will find a comparison of three local vision models tested on the same 15 photos with the same prompt and scored against a single reference caption for each image.",
+          "wer": 0.2857142857142857,
+          "errors": 14,
+          "ref_words": 49,
+          "timing": {
+            "wall_seconds": 9.455042625078931,
+            "audio_duration_seconds": 22.037333333333333,
+            "real_time_factor": 0.42904658572175697,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_03",
+          "reference": "The 95 percent upper bound on a 0 out of 20 failure rate is approximately 14 percent, which means the phrase all twenty observed runs passed is a more honest summary than perfect pass rate for any benchmark with twenty or fewer items.",
+          "hypothesis": "The 95% upper bound on a zero out of 20 failure rate is approximately 14%, which means the phrase all 20 observed runs passed is a more honest summary than perfect pass rate for any benchmark with 20 or fewer items.",
+          "wer": 0.11627906976744186,
+          "errors": 5,
+          "ref_words": 43,
+          "timing": {
+            "wall_seconds": 6.163868290837854,
+            "audio_duration_seconds": 16.0,
+            "real_time_factor": 0.3852417681773659,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_04",
+          "reference": "If you read the methodology paragraph at the end of the article, you will see the exact five steps: pull the model, run the warmup, generate the response, score the output, and save the result. Every step is reproducible from the public repository and the experiments repo linked in the footer.",
+          "hypothesis": "If you read the methodology paragraph at the end of the article, you will see the exact five steps. Pull the model, run the warm-up, generate the response, score the output, and save the result. Every step is reproducible from the public repository and the experiments repo linked in the footer.",
+          "wer": 0.0392156862745098,
+          "errors": 2,
+          "ref_words": 51,
+          "timing": {
+            "wall_seconds": 7.4448152501136065,
+            "audio_duration_seconds": 18.474666666666668,
+            "real_time_factor": 0.402974266569371,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "long_05",
+          "reference": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical: a 14 billion parameter model at Q4_K_M is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+          "hypothesis": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical. A 14 billion parameter model at Q4Km is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+          "wer": 0.018867924528301886,
+          "errors": 1,
+          "ref_words": 53,
+          "timing": {
+            "wall_seconds": 9.664214916992933,
+            "audio_duration_seconds": 23.189333333333334,
+            "real_time_factor": 0.41675259819139254,
+            "peak_rss_mb": 1195.21875
+          }
+        },
+        {
+          "sentence_id": "med_01",
+          "reference": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+          "hypothesis": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 22,
+          "timing": {
+            "wall_seconds": 3.155666375067085,
+            "audio_duration_seconds": 7.552,
+            "real_time_factor": 0.41785836534256954,
+            "peak_rss_mb": 1028.4375
+          }
+        },
+        {
+          "sentence_id": "med_02",
+          "reference": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "hypothesis": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 22,
+          "timing": {
+            "wall_seconds": 3.146283542038873,
+            "audio_duration_seconds": 7.36,
+            "real_time_factor": 0.42748417690745555,
+            "peak_rss_mb": 1086.234375
+          }
+        },
+        {
+          "sentence_id": "med_03",
+          "reference": "Local text to speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "hypothesis": "Local text-to-speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 23,
+          "timing": {
+            "wall_seconds": 4.348850375041366,
+            "audio_duration_seconds": 9.301333333333334,
+            "real_time_factor": 0.4675512874542752,
+            "peak_rss_mb": 1109.484375
+          }
+        },
+        {
+          "sentence_id": "med_04",
+          "reference": "The benchmark ran on the same machine, with the same prompt, against the same five engines, in randomized order to control for thermal throttling.",
+          "hypothesis": "The benchmark ran on the same machine with the same prompt against the same five engines in randomized order to control for thermal throttling.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 24,
+          "timing": {
+            "wall_seconds": 4.585003874963149,
+            "audio_duration_seconds": 9.386666666666667,
+            "real_time_factor": 0.48845921963385824,
+            "peak_rss_mb": 1115.0
+          }
+        },
+        {
+          "sentence_id": "med_05",
+          "reference": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "hypothesis": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 19,
+          "timing": {
+            "wall_seconds": 4.327791291987523,
+            "audio_duration_seconds": 9.493333333333334,
+            "real_time_factor": 0.4558768917121689,
+            "peak_rss_mb": 1115.0
+          }
+        },
+        {
+          "sentence_id": "short_01",
+          "reference": "The quick brown fox jumps over the lazy dog.",
+          "hypothesis": "The quick brown fox jumps over the lazy dog.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 9,
+          "timing": {
+            "wall_seconds": 1.8477718750946224,
+            "audio_duration_seconds": 2.7733333333333334,
+            "real_time_factor": 0.6662638972696956,
+            "peak_rss_mb": 670.65625
+          }
+        },
+        {
+          "sentence_id": "short_02",
+          "reference": "Hello world, this is a basic test.",
+          "hypothesis": "Hello world, this is a basic test.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 7,
+          "timing": {
+            "wall_seconds": 1.0899972908664495,
+            "audio_duration_seconds": 2.1973333333333334,
+            "real_time_factor": 0.4960545923239303,
+            "peak_rss_mb": 715.0625
+          }
+        },
+        {
+          "sentence_id": "short_03",
+          "reference": "Buy one get one free this week only.",
+          "hypothesis": "Buy one, get one free this week only.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8,
+          "timing": {
+            "wall_seconds": 0.9970774999819696,
+            "audio_duration_seconds": 2.112,
+            "real_time_factor": 0.47210108900661435,
+            "peak_rss_mb": 814.0
+          }
+        },
+        {
+          "sentence_id": "short_04",
+          "reference": "She sells seashells by the seashore.",
+          "hypothesis": "She sells seashells by the seashore.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 6,
+          "timing": {
+            "wall_seconds": 0.9865792088676244,
+            "audio_duration_seconds": 1.8986666666666667,
+            "real_time_factor": 0.5196168586030325,
+            "peak_rss_mb": 900.90625
+          }
+        },
+        {
+          "sentence_id": "short_05",
+          "reference": "Press the red button to stop the machine.",
+          "hypothesis": "Press the red button to stop the machine.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8,
+          "timing": {
+            "wall_seconds": 1.0941092090215534,
+            "audio_duration_seconds": 2.1333333333333333,
+            "real_time_factor": 0.5128636917288532,
+            "peak_rss_mb": 927.203125
+          }
+        }
+      ]
+    },
+    "xtts": {
+      "median_wer": 0.0,
+      "mean_wer": 0.0656660527441793,
+      "median_real_time_factor": 0,
+      "mean_real_time_factor": 0,
+      "median_wall_seconds": 0,
+      "median_peak_rss_mb": 0,
+      "per_sentence": [
+        {
+          "sentence_id": "long_01",
+          "reference": "On 2026-09-04 at 14:30 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "hypothesis": "On 2026-944 at 1430 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+          "wer": 0.08163265306122448,
+          "errors": 4,
+          "ref_words": 49
+        },
+        {
+          "sentence_id": "long_02",
+          "reference": "If you visit https://hardnumbers.dev/articles/3-local-vision-models-moondream-vs-gemma-3-vs-qwen2-5-vl, you will find a comparison of three local vision models tested on the same fifteen photos, with the same prompt, and scored against a single reference caption for each image.",
+          "hypothesis": "If you visit ITTPS, hard numbers, ID Eve articles, three local vision models, MoonDream VZ- schema 3, BZ-cuban2a5, Rool, you will find a comparison of three local vision models, tested on the same 15 photos with the same prompt, and scored against a single reference caption for each image.",
+          "wer": 0.2653061224489796,
+          "errors": 13,
+          "ref_words": 49
+        },
+        {
+          "sentence_id": "long_03",
+          "reference": "The 95 percent upper bound on a 0 out of 20 failure rate is approximately 14 percent, which means the phrase all twenty observed runs passed is a more honest summary than perfect pass rate for any benchmark with twenty or fewer items.",
+          "hypothesis": "The 95% upper bound on a 0 out of 20 failure rate is approximately 14%, which means the phrase all 20 observed runs past is a more honest summary than perfect pass rate for any benchmark with 20 or fewer items.",
+          "wer": 0.11627906976744186,
+          "errors": 5,
+          "ref_words": 43
+        },
+        {
+          "sentence_id": "long_04",
+          "reference": "If you read the methodology paragraph at the end of the article, you will see the exact five steps: pull the model, run the warmup, generate the response, score the output, and save the result. Every step is reproducible from the public repository and the experiments repo linked in the footer.",
+          "hypothesis": "If you read the methodology paragraph at the end of the article, you will see the exact five steps. Every step is reproducible from the public repository and the experiments repo linked in the footer.",
+          "wer": 0.3137254901960784,
+          "errors": 16,
+          "ref_words": 51
+        },
+        {
+          "sentence_id": "long_05",
+          "reference": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical: a 14 billion parameter model at Q4_K_M is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+          "hypothesis": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM. That single fact changes the math on which local models are practical. A 14 billion parameter model at KUKA4-CHI-AN-M is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+          "wer": 0.07547169811320754,
+          "errors": 4,
+          "ref_words": 53
+        },
+        {
+          "sentence_id": "med_01",
+          "reference": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+          "hypothesis": "The package should arrive in 3D to 5 business days, depending on your location and the shipping method you selected at checkout.",
+          "wer": 0.09090909090909091,
+          "errors": 2,
+          "ref_words": 22
+        },
+        {
+          "sentence_id": "med_02",
+          "reference": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "hypothesis": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 22
+        },
+        {
+          "sentence_id": "med_03",
+          "reference": "Local text to speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "hypothesis": "Local text-to-speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 23
+        },
+        {
+          "sentence_id": "med_04",
+          "reference": "The benchmark ran on the same machine, with the same prompt, against the same five engines, in randomized order to control for thermal throttling.",
+          "hypothesis": "The benchmark ran the same machine, with the same prompt, against the same five engines, in randomized order to control for thermal throttling.",
+          "wer": 0.041666666666666664,
+          "errors": 1,
+          "ref_words": 24
+        },
+        {
+          "sentence_id": "med_05",
+          "reference": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "hypothesis": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 19
+        },
+        {
+          "sentence_id": "short_01",
+          "reference": "The quick brown fox jumps over the lazy dog.",
+          "hypothesis": "The quick brown fox jumps over the lazy dog.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 9
+        },
+        {
+          "sentence_id": "short_02",
+          "reference": "Hello world, this is a basic test.",
+          "hypothesis": "Hello world, this is a basic test.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 7
+        },
+        {
+          "sentence_id": "short_03",
+          "reference": "Buy one get one free this week only.",
+          "hypothesis": "Buy one. Get one free. This week only.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8
+        },
+        {
+          "sentence_id": "short_04",
+          "reference": "She sells seashells by the seashore.",
+          "hypothesis": "She sells seashells by the seashore.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 6
+        },
+        {
+          "sentence_id": "short_05",
+          "reference": "Press the red button to stop the machine.",
+          "hypothesis": "Press the red button to stop the machine.",
+          "wer": 0.0,
+          "errors": 0,
+          "ref_words": 8
+        }
+      ]
+    }
+  }
+}

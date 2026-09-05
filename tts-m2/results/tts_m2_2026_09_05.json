@@ -1,0 +1,43 @@
+{
+  "experiment": "tts-m2",
+  "date": "2026-09-05",
+  "hardware": "Apple M2, 24 GB unified memory",
+  "os": "macOS 15",
+  "engines": [
+    "piper",
+    "kokoro",
+    "xtts_v2"
+  ],
+  "sentences": 15,
+  "metric_speed": "real-time factor (RTF) = gen_time / audio_duration",
+  "metric_quality": "Word Error Rate via Whisper small.en transcription vs reference text",
+  "results": [
+    {
+      "model": "piper",
+      "median_wall_seconds": 0.4254827501717955,
+      "median_real_time_factor": 0.05227963757850442,
+      "median_peak_rss_mb": 1086.234375,
+      "median_wer": 0.0,
+      "mean_wer": 0.034639252805115026,
+      "n_sentences": 15
+    },
+    {
+      "model": "kokoro",
+      "median_wall_seconds": 4.327791291987523,
+      "median_real_time_factor": 0.4558768917121689,
+      "median_peak_rss_mb": 1109.484375,
+      "median_wer": 0.0,
+      "mean_wer": 0.030671797752302617,
+      "n_sentences": 15
+    },
+    {
+      "model": "xtts_v2",
+      "median_wall_seconds": 19.85707899997942,
+      "median_real_time_factor": 2.729540382176627,
+      "median_peak_rss_mb": 3734.65625,
+      "median_wer": 0.0,
+      "mean_wer": 0.0656660527441793,
+      "n_sentences": 15
+    }
+  ]
+}
