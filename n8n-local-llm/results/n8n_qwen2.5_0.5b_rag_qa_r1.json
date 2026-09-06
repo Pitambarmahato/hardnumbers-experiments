@@ -1,0 +1,11 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "rag_qa",
+  "run": 0,
+  "input": "The Qwikflow Pro 3000 has a maximum flow rate of 120 L/min and operates at 220V.... Q: What is the IP rating of the Qwikflow Pro 3000?",
+  "expected": "IP67",
+  "response": "IP67",
+  "wall_s": 0.40249675000086427,
+  "score": 1.0,
+  "peak_rss_mb": 30.765625
+}

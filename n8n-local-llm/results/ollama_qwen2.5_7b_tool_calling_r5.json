@@ -1,0 +1,21 @@
+{
+  "model": "qwen2.5:7b",
+  "workflow": "tool_calling",
+  "run": 4,
+  "input": "User ID is usr_42. They want to know what they bought last month. Look up their orders and summarize.",
+  "expected": {
+    "action": "call_tool",
+    "tool": "get_recent_orders",
+    "args_contains": {
+      "user_id": "usr_42"
+    }
+  },
+  "response": "{\"action\": \"call_tool\", \"tool\": \"get_recent_orders\", \"args\": {\"user_id\": \"usr_42\", \"months_back\": 1}}",
+  "wall_s": 4.012597416993231,
+  "prompt_tokens": 107,
+  "response_tokens": 36,
+  "total_duration_s": 4.011471792,
+  "load_duration_s": 0.063591792,
+  "score": 1.0,
+  "peak_rss_mb": 30.65625
+}

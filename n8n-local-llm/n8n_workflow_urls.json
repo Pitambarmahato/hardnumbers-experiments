@@ -1,0 +1,22 @@
+{
+  "classification": {
+    "id": "rnp7zqaxcVEC65q0",
+    "webhook_url": "http://127.0.0.1:5678/webhook/bench-classification"
+  },
+  "extraction": {
+    "id": "HXbDiZEVxujnnfv9",
+    "webhook_url": "http://127.0.0.1:5678/webhook/bench-extraction"
+  },
+  "summarization": {
+    "id": "FxvjSBwq3QirHnZa",
+    "webhook_url": "http://127.0.0.1:5678/webhook/bench-summarization"
+  },
+  "rag_qa": {
+    "id": "3UQjnXTqndGHSM23",
+    "webhook_url": "http://127.0.0.1:5678/webhook/bench-rag_qa"
+  },
+  "tool_calling": {
+    "id": "yBMBBLq1Gsxg3nwi",
+    "webhook_url": "http://127.0.0.1:5678/webhook/bench-tool_calling"
+  }
+}

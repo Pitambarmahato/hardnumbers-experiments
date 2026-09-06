@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:1.5b",
+  "workflow": "classification",
+  "run": 4,
+  "input": "Subject: Login button does nothing on Safari\n\nUsing Safari 17 on macOS 14. Clicked the login button on the homepage, nothing happens.",
+  "expected": "technical",
+  "response": "technical",
+  "wall_s": 0.1662814998999238,
+  "prompt_tokens": 69,
+  "response_tokens": 2,
+  "total_duration_s": 0.164852333,
+  "load_duration_s": 0.061862041,
+  "score": 1.0,
+  "peak_rss_mb": 31.609375
+}

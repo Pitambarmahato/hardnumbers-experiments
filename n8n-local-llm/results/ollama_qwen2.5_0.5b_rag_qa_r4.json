@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "rag_qa",
+  "run": 3,
+  "input": "Section 3.2 of the API docs: To create a customer, POST to /v1/customers with a ... Q: What is the rate limit for the customers endpoint?",
+  "expected": "100 requests per minute per API key",
+  "response": "The rate limit for the customers endpoint is 100 requests per minute per API key.",
+  "wall_s": 0.27112016710452735,
+  "prompt_tokens": 140,
+  "response_tokens": 20,
+  "total_duration_s": 0.269301708,
+  "load_duration_s": 0.05818925,
+  "score": 1.0,
+  "peak_rss_mb": 31.5
+}

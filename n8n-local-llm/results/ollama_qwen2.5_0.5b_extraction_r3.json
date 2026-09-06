@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "extraction",
+  "run": 2,
+  "input": "RECEIPT\nDate: 2025-12-01\nItem: 1 \u00d7 annual subscription\nAmount: \u00a389.00 GBP\nPaid by card ending 4242",
+  "expected": {
+    "total": 89.0,
+    "currency": "GBP",
+    "date": "2025-12-01"
+  },
+  "response": "{\n  \"total\": null,\n  \"currency\": \"GBP\",\n  \"date\": \"2025-12-01\"\n}",
+  "wall_s": 0.39174266695044935,
+  "prompt_tokens": 108,
+  "response_tokens": 32,
+  "total_duration_s": 0.390257709,
+  "load_duration_s": 0.058016792,
+  "score": 0.6666666666666666,
+  "peak_rss_mb": 31.484375
+}

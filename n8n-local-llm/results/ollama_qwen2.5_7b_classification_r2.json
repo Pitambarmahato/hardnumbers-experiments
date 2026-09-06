@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:7b",
+  "workflow": "classification",
+  "run": 1,
+  "input": "Subject: API returns 500 on POST /v1/orders\n\nGetting a 500 from the orders endpoint. Started about 30 min ago. Curl output below. Please advise.",
+  "expected": "technical",
+  "response": "technical",
+  "wall_s": 2.485919041093439,
+  "prompt_tokens": 78,
+  "response_tokens": 2,
+  "total_duration_s": 2.483920875,
+  "load_duration_s": 0.062894125,
+  "score": 1.0,
+  "peak_rss_mb": 30.65625
+}

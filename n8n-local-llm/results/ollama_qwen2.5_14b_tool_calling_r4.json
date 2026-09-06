@@ -1,0 +1,21 @@
+{
+  "model": "qwen2.5:14b",
+  "workflow": "tool_calling",
+  "run": 3,
+  "input": "User email: sam@example.com. They say their last order never arrived. Find their last order ID and draft an apology email.",
+  "expected": {
+    "action": "call_tool",
+    "tool": "lookup_user",
+    "args_contains": {
+      "email": "sam@example.com"
+    }
+  },
+  "response": "{\"action\": \"call_tool\", \"tool\": \"lookup_user\", \"args\": {\"email\": \"sam@example.com\"}}",
+  "wall_s": 9.133613249985501,
+  "prompt_tokens": 108,
+  "response_tokens": 26,
+  "total_duration_s": 9.132177667,
+  "load_duration_s": 0.064262958,
+  "score": 1.0,
+  "peak_rss_mb": 30.828125
+}

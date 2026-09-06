@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:14b",
+  "workflow": "classification",
+  "run": 3,
+  "input": "Subject: Refund for cancelled subscription\n\nI cancelled last month but I see a charge for the new month. I'd like a refund processed.",
+  "expected": "billing",
+  "response": "billing",
+  "wall_s": 5.923754667164758,
+  "prompt_tokens": 66,
+  "response_tokens": 2,
+  "total_duration_s": 5.921319083,
+  "load_duration_s": 0.057590458,
+  "score": 1.0,
+  "peak_rss_mb": 30.828125
+}

@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:1.5b",
+  "workflow": "rag_qa",
+  "run": 2,
+  "input": "Section 3.2 of the API docs: To create a customer, POST to /v1/customers with a ... Q: What HTTP method is used to create a customer?",
+  "expected": "POST",
+  "response": "POST",
+  "wall_s": 0.26594116701744497,
+  "prompt_tokens": 140,
+  "response_tokens": 2,
+  "total_duration_s": 0.263970792,
+  "load_duration_s": 0.071540417,
+  "score": 1.0,
+  "peak_rss_mb": 31.640625
+}

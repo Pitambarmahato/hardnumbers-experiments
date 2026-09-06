@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "summarization",
+  "run": 0,
+  "input": "Meeting: Q2 Roadmap Review (March 4, 2026)\nAttendees: Sarah (PM), Tom (Eng), Priya (Eng), Marcus (Design), Jen (Sales)\n\nSarah opened by recapping the Q1 deliverables. The auth refactor shipped on Feb 18, slightly behind the original Feb 10 target. The new billing system went live Feb 25, one week ahead. NPS for Q1 came in at 42, up from 31 in Q4, which Sarah attributed mostly to the new dashboard.\n\nTom walked through engineering capacity. He flagged that the data team is at 90% allocation through April and cannot take new work until May. Priya added that the platform team has one open req, interviewing now, target start mid-April.\n\nThe big discussion was the proposed Q2 OKRs. Marcus pushed back on OKR 2 (mobile parity) arguing that 6 weeks is too aggressive given the platform team's open req. Jen countered that three of her top 10 accounts have asked for mobile in the last 60 days and waiting until Q3 risks losing two of them. After 20 minutes of back-and-forth, the team agreed to scope OKR 2 down to read-only views in Q2, with full parity slipping to Q3.\n\nThe final decision: ship the analytics dashboard GA in week 1 of April (Tom owns), kick off the mobile read-only sprint in week 2 (Marcus leads), and revisit capacity for OKR 3 (internationalization) at the next staff meeting.\n\nAction items: Tom to draft the analytics GA checklist by Mar 8. Marcus to scope the read-only mobile feature by Mar 11. Sarah to send the revised OKRs to the leadership Slack by EOD Mar 5.",
+  "expected": [
+    "Analytics dashboard ships GA in week 1 of April (Tom owns the GA checklist).",
+    "Mobile parity is scoped to read-only views in Q2; full parity slips to Q3 because of platform team capacity.",
+    "Data team is at 90% allocation through April; no new work until May; platform team has one open req with target mid-April start."
+  ],
+  "response": "- The new billing system went live on February 25, one week ahead of the original plan.\n- NPS for Q1 was at 42, up from 31 in Q4, which Sarah attributed mostly to the new dashboard.\n\n- The team discussed proposing a revised Q2 OKRs to ensure focus and manage capacity effectively.",
+  "wall_s": 1.0055752089247108,
+  "prompt_tokens": 445,
+  "response_tokens": 71,
+  "total_duration_s": 1.00153,
+  "load_duration_s": 0.05983825,
+  "score": 0.08763276752034942,
+  "peak_rss_mb": 31.484375
+}

@@ -1,0 +1,10 @@
+{
+  "model": "qwen2.5:3b",
+  "workflow": "summarization",
+  "n_runs": 3,
+  "wall_s_min": 1.447305457899347,
+  "wall_s_median": 1.501323000062257,
+  "wall_s_max": 2.8162742499262094,
+  "score_mean": 0.17900155400155401,
+  "peak_rss_mb_max": 30.765625
+}

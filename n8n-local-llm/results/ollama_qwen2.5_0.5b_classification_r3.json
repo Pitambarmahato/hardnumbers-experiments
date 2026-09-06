@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "classification",
+  "run": 2,
+  "input": "Subject: Question about your office hours\n\nHello, are you open on Saturday? I'd like to visit the office next week.",
+  "expected": "other",
+  "response": "billing",
+  "wall_s": 0.11100862501189113,
+  "prompt_tokens": 63,
+  "response_tokens": 2,
+  "total_duration_s": 0.109164375,
+  "load_duration_s": 0.073539875,
+  "score": 0.0,
+  "peak_rss_mb": 31.484375
+}

@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "rag_qa",
+  "run": 4,
+  "input": "Refund policy: Refunds are processed within 5-7 business days. We do not offer r... Q: How long do refunds take?",
+  "expected": "5-7 business days",
+  "response": "The refund process is typically completed in 5 to 7 business days, with no exceptions mentioned regarding returns or exchanges within a 14-day timeframe for digital products. Digital products are non-refundable once delivered, so refunds will not be processed after that period. Shipping costs are also non-refundable if the item was delivered within the specified time frame.",
+  "wall_s": 0.8483812918420881,
+  "prompt_tokens": 102,
+  "response_tokens": 74,
+  "total_duration_s": 0.846452459,
+  "load_duration_s": 0.058941,
+  "score": 0.0,
+  "peak_rss_mb": 31.5
+}

@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:3b",
+  "workflow": "extraction",
+  "run": 1,
+  "input": "Acme GmbH \u2014 Rechnung 2024-118\nLeistungsdatum: 11. September 2024\nPositionen: Beratung 8h \u00e0 145,00 EUR\nZwischensumme: 1.160,00 EUR\nUSt 19%: 220,40 EUR\nGesamtbetrag: 1.380,40 EUR\nZahlbar bis: 11.10.2024",
+  "expected": {
+    "total": 1380.4,
+    "currency": "EUR",
+    "date": "2024-09-11"
+  },
+  "response": "{\n  \"total\": 1380.4,\n  \"currency\": \"EUR\",\n  \"date\": \"2024-09-11\"\n}",
+  "wall_s": 1.7399580001365393,
+  "prompt_tokens": 182,
+  "response_tokens": 38,
+  "total_duration_s": 1.738529125,
+  "load_duration_s": 0.061672917,
+  "score": 1.0,
+  "peak_rss_mb": 30.984375
+}

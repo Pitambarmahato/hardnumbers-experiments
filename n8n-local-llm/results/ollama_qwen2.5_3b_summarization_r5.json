@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:3b",
+  "workflow": "summarization",
+  "run": 4,
+  "input": "Meeting: Q2 Roadmap Review (March 4, 2026)\nAttendees: Sarah (PM), Tom (Eng), Priya (Eng), Marcus (Design), Jen (Sales)\n\nSarah opened by recapping the Q1 deliverables. The auth refactor shipped on Feb ",
+  "expected": [
+    "Analytics dashboard ships GA in week 1 of April (Tom owns the GA checklist).",
+    "Mobile parity is scoped to read-only views in Q2; full parity slips to Q3 because of platform team capacity.",
+    "Data team is at 90% allocation through April; no new work until May; platform team has one open req with target mid-April start."
+  ],
+  "response": "- Scope Q2 OKR 2 (mobile parity) down to read-only views, target for Q3.\n- Kick off analytics dashboard GA sprint in week 1 of April.\n- Plan mobile read-only feature sprint in week 2 with Marcus leading.",
+  "wall_s": 2.3683688330929726,
+  "prompt_tokens": 445,
+  "response_tokens": 53,
+  "total_duration_s": 2.360379625,
+  "load_duration_s": 0.068379083,
+  "score": 0.15611506416104118,
+  "peak_rss_mb": 30.984375
+}
