@@ -1,0 +1,17 @@
+# dsh headless-profile patch: route the agent's default model through the
+# host's Ollama server instead of DeepSeek's own API.
+- id: llm-pi-ai
+  config:
+    providers:
+      ollama:
+        baseURL: http://ollama-proxy:11434/v1
+        apiKeyEnv: OLLAMA_API_KEY
+        api: openai-completions
+        models:
+          - id: qwen3-14b-ctx16k
+            contextWindow: 16384
+            maxTokens: 4096
+- id: agent-default-model
+  config:
+    provider: ollama
+    model: qwen3-14b-ctx16k
