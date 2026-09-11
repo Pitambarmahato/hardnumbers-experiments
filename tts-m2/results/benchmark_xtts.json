@@ -1,0 +1,141 @@
+{
+  "models": {
+    "xtts_v2": [
+      {
+        "sentence_id": "short_01",
+        "category": "short",
+        "wall_seconds": 7.75742799998261,
+        "audio_duration_seconds": 2.87,
+        "real_time_factor": 2.7029365853597946,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "short_02",
+        "category": "short",
+        "wall_seconds": 6.553836542181671,
+        "audio_duration_seconds": 2.4966666666666666,
+        "real_time_factor": 2.625034663090122,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "short_03",
+        "category": "short",
+        "wall_seconds": 10.600276042008772,
+        "audio_duration_seconds": 3.894,
+        "real_time_factor": 2.7222075095040505,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "short_04",
+        "category": "short",
+        "wall_seconds": 7.4237997501622885,
+        "audio_duration_seconds": 2.4966666666666666,
+        "real_time_factor": 2.9734845461264174,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "short_05",
+        "category": "short",
+        "wall_seconds": 5.851818040944636,
+        "audio_duration_seconds": 2.358,
+        "real_time_factor": 2.4816870402649007,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "med_01",
+        "category": "medium",
+        "wall_seconds": 19.85707899997942,
+        "audio_duration_seconds": 7.094,
+        "real_time_factor": 2.799137158158926,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "med_02",
+        "category": "medium",
+        "wall_seconds": 19.74205404194072,
+        "audio_duration_seconds": 6.774,
+        "real_time_factor": 2.9143864839003126,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "med_03",
+        "category": "medium",
+        "wall_seconds": 19.790110459085554,
+        "audio_duration_seconds": 7.606,
+        "real_time_factor": 2.6019077648022026,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "med_04",
+        "category": "medium",
+        "wall_seconds": 21.74411049997434,
+        "audio_duration_seconds": 8.214,
+        "real_time_factor": 2.6472011809075164,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "med_05",
+        "category": "medium",
+        "wall_seconds": 26.22886695805937,
+        "audio_duration_seconds": 9.238,
+        "real_time_factor": 2.839236518516927,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "long_01",
+        "category": "long",
+        "wall_seconds": 49.40140412491746,
+        "audio_duration_seconds": 16.288666666666668,
+        "real_time_factor": 3.0328697330404037,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "long_02",
+        "category": "long",
+        "wall_seconds": 56.135727499844506,
+        "audio_duration_seconds": 20.566,
+        "real_time_factor": 2.729540382176627,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "long_03",
+        "category": "long",
+        "wall_seconds": 48.075008291052654,
+        "audio_duration_seconds": 15.318,
+        "real_time_factor": 3.1384650927701174,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "long_04",
+        "category": "long",
+        "wall_seconds": 29.601524957921356,
+        "audio_duration_seconds": 11.094666666666667,
+        "real_time_factor": 2.668086013512921,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      },
+      {
+        "sentence_id": "long_05",
+        "category": "long",
+        "wall_seconds": 63.06243045814335,
+        "audio_duration_seconds": 21.345333333333333,
+        "real_time_factor": 2.9543895835847036,
+        "peak_rss_mb": 3734.65625,
+        "rss_delta_mb": 0.0
+      }
+    ]
+  }
+}

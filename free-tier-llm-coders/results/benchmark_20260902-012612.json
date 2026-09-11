@@ -1,0 +1,19 @@
+[
+  {
+    "provider": "nvidia_nim",
+    "provider_label": "NVIDIA NIM (Nemotron 120B, free)",
+    "task_id": "csv-header-infer",
+    "bucket": "embarrassingly_parallel",
+    "trial": 0,
+    "wall_time_s": 18.82,
+    "time_to_first_token_s": 13.0,
+    "tokens_in": 404,
+    "tokens_out": 497,
+    "tokens_per_s": 85.38,
+    "success": false,
+    "rate_limited": false,
+    "error": null,
+    "diff_lines": 1,
+    "response_excerpt": "```file:data/sales_2024.csv\ndate,product_name,quantity,price,country_code\n2024-01-15,Widget A,42,99.99,US\n2024-01-16,Widget B,15,149.50,UK\n2024-01-17,Widget C,8,29.99,DE\n2024-01-18,Widget A,3,99.99,US\n2024-01-19,Widget B,21,149.50,CA\n2024-01-20,Widget C,5,29.99,US\n```"
+  }
+]

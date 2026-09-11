@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:14b",
+  "workflow": "extraction",
+  "run": 0,
+  "input": "INVOICE #A-1043\nDate Issued: 2026-03-14\nCustomer: Acme Corp\nItems:\n  - 10 widgets @ $50 = $500\n  - 2 gadgets  @ $75 = $150\nSubtotal: $650\nTax (8%): $52\nTOTAL DUE: $702.00 USD\nPayment due within 30 day",
+  "expected": {
+    "total": 702.0,
+    "currency": "USD",
+    "date": "2026-03-14"
+  },
+  "response": "{\n  \"total\": 702.00,\n  \"currency\": \"USD\",\n  \"date\": \"2026-03-14\"\n}",
+  "wall_s": 22.3863632499706,
+  "prompt_tokens": 166,
+  "response_tokens": 38,
+  "total_duration_s": 22.382077208,
+  "load_duration_s": 0.057051708,
+  "score": 1.0,
+  "peak_rss_mb": 30.828125
+}

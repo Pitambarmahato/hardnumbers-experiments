@@ -1,0 +1,15 @@
+{
+  "model": "qwen2.5:1.5b",
+  "workflow": "rag_qa",
+  "run": 4,
+  "input": "Refund policy: Refunds are processed within 5-7 business days. We do not offer r... Q: How long do refunds take?",
+  "expected": "5-7 business days",
+  "response": "Refunds are processed within 5-7 business days.",
+  "wall_s": 0.3886555000208318,
+  "prompt_tokens": 102,
+  "response_tokens": 13,
+  "total_duration_s": 0.386857875,
+  "load_duration_s": 0.064819459,
+  "score": 1.0,
+  "peak_rss_mb": 31.640625
+}

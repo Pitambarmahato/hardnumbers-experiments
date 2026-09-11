@@ -1,0 +1,278 @@
+{
+  "models": {
+    "piper": [
+      {
+        "wall_seconds": 0.6042195421177894,
+        "audio_duration_seconds": 2.589024943310658,
+        "real_time_factor": 0.23337725798236503,
+        "peak_rss_mb": 202.0625,
+        "rss_delta_mb": 50.140625,
+        "sentence_id": "short_01",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.12762491614557803,
+        "audio_duration_seconds": 2.182675736961451,
+        "real_time_factor": 0.05847177113135796,
+        "peak_rss_mb": 674.078125,
+        "rss_delta_mb": 0.265625,
+        "sentence_id": "short_02",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.12622154201380908,
+        "audio_duration_seconds": 2.2407256235827666,
+        "real_time_factor": 0.05633065498308958,
+        "peak_rss_mb": 716.40625,
+        "rss_delta_mb": 0.1875,
+        "sentence_id": "short_03",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.09134966600686312,
+        "audio_duration_seconds": 2.0085260770975055,
+        "real_time_factor": 0.04548094597749575,
+        "peak_rss_mb": 825.1875,
+        "rss_delta_mb": 0.09375,
+        "sentence_id": "short_04",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.10773870791308582,
+        "audio_duration_seconds": 2.2871655328798184,
+        "real_time_factor": 0.04710577628258928,
+        "peak_rss_mb": 904.515625,
+        "rss_delta_mb": 2.90625,
+        "sentence_id": "short_05",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.3448280841112137,
+        "audio_duration_seconds": 6.6525170068027215,
+        "real_time_factor": 0.05183422812126596,
+        "peak_rss_mb": 1002.1875,
+        "rss_delta_mb": 64.453125,
+        "sentence_id": "med_01",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 0.3110334579832852,
+        "audio_duration_seconds": 6.849886621315193,
+        "real_time_factor": 0.045407095792713445,
+        "peak_rss_mb": 1028.4375,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "med_02",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 0.5827809581533074,
+        "audio_duration_seconds": 7.929614512471655,
+        "real_time_factor": 0.07349423572062837,
+        "peak_rss_mb": 1086.234375,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "med_03",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 0.4254827501717955,
+        "audio_duration_seconds": 8.13859410430839,
+        "real_time_factor": 0.05227963757850442,
+        "peak_rss_mb": 1109.484375,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "med_04",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 0.41962912515737116,
+        "audio_duration_seconds": 8.742312925170069,
+        "real_time_factor": 0.04799978320945403,
+        "peak_rss_mb": 1115.0,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "med_05",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 1.0101519590243697,
+        "audio_duration_seconds": 17.670385487528346,
+        "real_time_factor": 0.05716637929247944,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 80.21875,
+        "sentence_id": "long_01",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 1.3471548748202622,
+        "audio_duration_seconds": 18.92426303854875,
+        "real_time_factor": 0.07118664922782492,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_02",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 0.8487320831045508,
+        "audio_duration_seconds": 13.79265306122449,
+        "real_time_factor": 0.0615350853339888,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_03",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 0.7769682921934873,
+        "audio_duration_seconds": 16.602267573696146,
+        "real_time_factor": 0.04679892603492787,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_04",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 0.9888595410156995,
+        "audio_duration_seconds": 19.690521541950112,
+        "real_time_factor": 0.05022007867638049,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_05",
+        "category": "long"
+      }
+    ],
+    "kokoro": [
+      {
+        "wall_seconds": 1.8477718750946224,
+        "audio_duration_seconds": 2.7733333333333334,
+        "real_time_factor": 0.6662638972696956,
+        "peak_rss_mb": 670.65625,
+        "rss_delta_mb": 68.03125,
+        "sentence_id": "short_01",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 1.0899972908664495,
+        "audio_duration_seconds": 2.1973333333333334,
+        "real_time_factor": 0.4960545923239303,
+        "peak_rss_mb": 715.0625,
+        "rss_delta_mb": 8.109375,
+        "sentence_id": "short_02",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.9970774999819696,
+        "audio_duration_seconds": 2.112,
+        "real_time_factor": 0.47210108900661435,
+        "peak_rss_mb": 814.0,
+        "rss_delta_mb": 5.515625,
+        "sentence_id": "short_03",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 0.9865792088676244,
+        "audio_duration_seconds": 1.8986666666666667,
+        "real_time_factor": 0.5196168586030325,
+        "peak_rss_mb": 900.90625,
+        "rss_delta_mb": 1.90625,
+        "sentence_id": "short_04",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 1.0941092090215534,
+        "audio_duration_seconds": 2.1333333333333333,
+        "real_time_factor": 0.5128636917288532,
+        "peak_rss_mb": 927.203125,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "short_05",
+        "category": "short"
+      },
+      {
+        "wall_seconds": 3.155666375067085,
+        "audio_duration_seconds": 7.552,
+        "real_time_factor": 0.41785836534256954,
+        "peak_rss_mb": 1028.4375,
+        "rss_delta_mb": 26.25,
+        "sentence_id": "med_01",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 3.146283542038873,
+        "audio_duration_seconds": 7.36,
+        "real_time_factor": 0.42748417690745555,
+        "peak_rss_mb": 1086.234375,
+        "rss_delta_mb": 53.234375,
+        "sentence_id": "med_02",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 4.348850375041366,
+        "audio_duration_seconds": 9.301333333333334,
+        "real_time_factor": 0.4675512874542752,
+        "peak_rss_mb": 1109.484375,
+        "rss_delta_mb": 23.25,
+        "sentence_id": "med_03",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 4.585003874963149,
+        "audio_duration_seconds": 9.386666666666667,
+        "real_time_factor": 0.48845921963385824,
+        "peak_rss_mb": 1115.0,
+        "rss_delta_mb": 5.515625,
+        "sentence_id": "med_04",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 4.327791291987523,
+        "audio_duration_seconds": 9.493333333333334,
+        "real_time_factor": 0.4558768917121689,
+        "peak_rss_mb": 1115.0,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "med_05",
+        "category": "medium"
+      },
+      {
+        "wall_seconds": 8.604297291021794,
+        "audio_duration_seconds": 20.586666666666666,
+        "real_time_factor": 0.41795485545766486,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_01",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 9.455042625078931,
+        "audio_duration_seconds": 22.037333333333333,
+        "real_time_factor": 0.42904658572175697,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_02",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 6.163868290837854,
+        "audio_duration_seconds": 16.0,
+        "real_time_factor": 0.3852417681773659,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_03",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 7.4448152501136065,
+        "audio_duration_seconds": 18.474666666666668,
+        "real_time_factor": 0.402974266569371,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_04",
+        "category": "long"
+      },
+      {
+        "wall_seconds": 9.664214916992933,
+        "audio_duration_seconds": 23.189333333333334,
+        "real_time_factor": 0.41675259819139254,
+        "peak_rss_mb": 1195.21875,
+        "rss_delta_mb": 0.0,
+        "sentence_id": "long_05",
+        "category": "long"
+      }
+    ]
+  }
+}

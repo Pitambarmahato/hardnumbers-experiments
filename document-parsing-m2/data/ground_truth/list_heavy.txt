@@ -1,0 +1,15 @@
+Installation Guide
+Prerequisites
+Before you begin, ensure you have the following:
+* Python 3.10 or newer installed.
+* At least 16 gigabytes of free disk space.
+* A working internet connection for model downloads.
+* macOS 14 or Ubuntu 22.04 as the operating system.
+Steps
+1. Clone the repository to your local machine.
+2. Create a virtual environment in the project directory.
+3. Install the required Python packages from requirements.txt.
+4. Download the model weights using the provided script.
+5. Run the smoke test to verify the installation.
+Troubleshooting
+If the model fails to load, check that your machine has enough free memory. If you see a CUDA error, verify that you are not running the Apple Silicon build on an Intel machine.

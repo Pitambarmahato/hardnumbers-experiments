@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:0.5b",
+  "workflow": "extraction",
+  "run": 3,
+  "input": "Bill of Sale \u2014 Mar 3, 2026\nConsulting services rendered in February 2026\n40 hours @ JPY 12,000/hr = JPY 480,000\nConsumption tax 10% included",
+  "expected": {
+    "total": 480000,
+    "currency": "JPY",
+    "date": "2026-03-03"
+  },
+  "response": "{\n  \"total\": null,\n  \"currency\": \"JPY\",\n  \"date\": \"2026-03-03\"\n}",
+  "wall_s": 0.43124133301898837,
+  "prompt_tokens": 122,
+  "response_tokens": 33,
+  "total_duration_s": 0.430173958,
+  "load_duration_s": 0.058971916,
+  "score": 0.6666666666666666,
+  "peak_rss_mb": 31.484375
+}

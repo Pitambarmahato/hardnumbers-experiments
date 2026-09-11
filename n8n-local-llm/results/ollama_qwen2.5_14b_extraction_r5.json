@@ -1,0 +1,19 @@
+{
+  "model": "qwen2.5:14b",
+  "workflow": "extraction",
+  "run": 4,
+  "input": "X-Pay invoice INV-9981\nNo date on the document\nCustomer: Globex\nTotal: 250.00 CHF\nNote: vendor has not yet billed us for this",
+  "expected": {
+    "total": 250.0,
+    "currency": "CHF",
+    "date": null
+  },
+  "response": "{\n  \"total\": 250.00,\n  \"currency\": \"CHF\",\n  \"date\": null\n}",
+  "wall_s": 16.19381737499498,
+  "prompt_tokens": 106,
+  "response_tokens": 29,
+  "total_duration_s": 16.189616083,
+  "load_duration_s": 0.091137875,
+  "score": 1.0,
+  "peak_rss_mb": 30.828125
+}

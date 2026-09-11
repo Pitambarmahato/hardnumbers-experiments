@@ -1,0 +1,11 @@
+{
+  "model": "qwen2.5:3b",
+  "workflow": "rag_qa",
+  "run": 1,
+  "input": "The Qwikflow Pro 3000 has a maximum flow rate of 120 L/min and operates at 220V.... Q: What is the warranty period for the Qwikflow Pro 5000?",
+  "expected": "I don't know",
+  "response": "I don't know.",
+  "wall_s": 0.46468562516383827,
+  "score": 1.0,
+  "peak_rss_mb": 30.765625
+}

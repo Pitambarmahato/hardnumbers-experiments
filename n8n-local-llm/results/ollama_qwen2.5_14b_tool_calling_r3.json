@@ -1,0 +1,21 @@
+{
+  "model": "qwen2.5:14b",
+  "workflow": "tool_calling",
+  "run": 2,
+  "input": "I need to email ops@company.com about the outage. Subject 'Database down'. Body: 'We are investigating.'",
+  "expected": {
+    "action": "call_tool",
+    "tool": "send_email",
+    "args_contains": {
+      "to": "ops@company.com"
+    }
+  },
+  "response": "{\"action\": \"send_email\", \"args\": {\"to\": \"ops@company.com\", \"subject\": \"Database down\", \"body\": \"We are investigating.\"}}",
+  "wall_s": 10.402267499826849,
+  "prompt_tokens": 106,
+  "response_tokens": 36,
+  "total_duration_s": 10.400104458,
+  "load_duration_s": 0.08251525,
+  "score": 0.0,
+  "peak_rss_mb": 30.828125
+}

@@ -1,0 +1,422 @@
+{
+  "started_at": "2026-09-01T06:11:40.550341+00:00",
+  "total_elapsed_s": 920.1687342079822,
+  "results": [
+    {
+      "task": "mmlu",
+      "model": "mistral-small:24b-instruct-2501-q4_K_M",
+      "correct": 37,
+      "total": 50,
+      "total_time_s": 920.1564501249231,
+      "total_tokens": 100,
+      "prompt_tokens": 13572,
+      "gen_tokens": 100,
+      "items": [
+        {
+          "id": 0,
+          "subject": "abstract_algebra",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 1,
+          "subject": "abstract_algebra",
+          "expected": "B",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 2,
+          "subject": "abstract_algebra",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 3,
+          "subject": "abstract_algebra",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 4,
+          "subject": "abstract_algebra",
+          "expected": "A",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 5,
+          "subject": "anatomy",
+          "expected": "D",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 6,
+          "subject": "anatomy",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 7,
+          "subject": "anatomy",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 8,
+          "subject": "anatomy",
+          "expected": "C",
+          "got": "D",
+          "raw": "D",
+          "ok": false
+        },
+        {
+          "id": 9,
+          "subject": "anatomy",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 10,
+          "subject": "astronomy",
+          "expected": "D",
+          "got": "B",
+          "raw": "B",
+          "ok": false
+        },
+        {
+          "id": 11,
+          "subject": "astronomy",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 12,
+          "subject": "astronomy",
+          "expected": "A",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 13,
+          "subject": "astronomy",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 14,
+          "subject": "astronomy",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 15,
+          "subject": "business_ethics",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 16,
+          "subject": "business_ethics",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 17,
+          "subject": "business_ethics",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 18,
+          "subject": "business_ethics",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 19,
+          "subject": "business_ethics",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 20,
+          "subject": "clinical_knowledge",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 21,
+          "subject": "clinical_knowledge",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 22,
+          "subject": "clinical_knowledge",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 23,
+          "subject": "clinical_knowledge",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 24,
+          "subject": "clinical_knowledge",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 25,
+          "subject": "college_biology",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 26,
+          "subject": "college_biology",
+          "expected": "D",
+          "got": "B",
+          "raw": "B",
+          "ok": false
+        },
+        {
+          "id": 27,
+          "subject": "college_biology",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 28,
+          "subject": "college_biology",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 29,
+          "subject": "college_biology",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 30,
+          "subject": "college_chemistry",
+          "expected": "D",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 31,
+          "subject": "college_chemistry",
+          "expected": "C",
+          "got": "B",
+          "raw": "B",
+          "ok": false
+        },
+        {
+          "id": 32,
+          "subject": "college_chemistry",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 33,
+          "subject": "college_chemistry",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 34,
+          "subject": "college_chemistry",
+          "expected": "A",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 35,
+          "subject": "college_computer_science",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 36,
+          "subject": "college_computer_science",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 37,
+          "subject": "college_computer_science",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 38,
+          "subject": "college_computer_science",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 39,
+          "subject": "college_computer_science",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 40,
+          "subject": "college_mathematics",
+          "expected": "D",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 41,
+          "subject": "college_mathematics",
+          "expected": "D",
+          "got": "B",
+          "raw": "B",
+          "ok": false
+        },
+        {
+          "id": 42,
+          "subject": "college_mathematics",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        },
+        {
+          "id": 43,
+          "subject": "college_mathematics",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 44,
+          "subject": "college_mathematics",
+          "expected": "B",
+          "got": "C",
+          "raw": "C",
+          "ok": false
+        },
+        {
+          "id": 45,
+          "subject": "college_medicine",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 46,
+          "subject": "college_medicine",
+          "expected": "D",
+          "got": "D",
+          "raw": "D",
+          "ok": true
+        },
+        {
+          "id": 47,
+          "subject": "college_medicine",
+          "expected": "C",
+          "got": "C",
+          "raw": "C",
+          "ok": true
+        },
+        {
+          "id": 48,
+          "subject": "college_medicine",
+          "expected": "A",
+          "got": "A",
+          "raw": "A",
+          "ok": true
+        },
+        {
+          "id": 49,
+          "subject": "college_medicine",
+          "expected": "B",
+          "got": "B",
+          "raw": "B",
+          "ok": true
+        }
+      ],
+      "cold_load_s": null,
+      "extras": {},
+      "accuracy": 0.74,
+      "tok_per_s": 0.10867717113369547
+    }
+  ]
+}

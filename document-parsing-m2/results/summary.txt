@@ -1,0 +1,31 @@
+
+=== MEAN PER PARSER (averaged across the 4 PDFs with ground truth) ===
+
+Parser       Mean wall (s)  Mean per page (s)    Mean RSS (MB)  Mean acc% 
+---------------------------------------------------------------------------
+docling      5.51           5.51                 1134           83.9      
+marker       0.99           0.99                 496            95.6      
+paddleocr    28.75          28.75                4427           93.3      
+
+=== PER-PDF DETAIL (with GT) ===
+
+PDF                Parser     Pages   Wall (s)   Per page (s)   RSS (MB)   Acc%    
+--------------------------------------------------------------------------------
+list_heavy.pdf     docling    1       4.5        4.54           985        93.9    
+list_heavy.pdf     marker     1       1.0        1.03           486        96.8    
+list_heavy.pdf     paddleocr  1       23.2       23.20          4508       99.9    
+multi_column.pdf   docling    1       4.2        4.16           983        99.3    
+multi_column.pdf   marker     1       0.8        0.85           487        99.3    
+multi_column.pdf   paddleocr  1       26.4       26.40          4503       88.9    
+table_heavy.pdf    docling    1       9.0        8.95           1579       43.0    
+table_heavy.pdf    marker     1       0.9        0.93           527        86.8    
+table_heavy.pdf    paddleocr  1       41.0       40.98          4191       85.0    
+text_only.pdf      docling    1       4.4        4.38           990        99.5    
+text_only.pdf      marker     1       1.2        1.16           482        99.5    
+text_only.pdf      paddleocr  1       24.4       24.43          4507       99.4    
+
+=== PER-PAGE SPEED (all 5 PDFs, warm cache) ===
+
+  docling      mean 4.80s/page  min 1.94  max 8.95
+  marker       mean 0.86s/page  min 0.32  max 1.16
+  paddleocr    mean 26.99s/page  min 19.94  max 40.98

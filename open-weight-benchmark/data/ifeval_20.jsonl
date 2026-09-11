@@ -1,0 +1,20 @@
+{"id": 0, "prompt": "List exactly 3 popular programming languages used for AI development. Format your answer as a numbered list with no extra prose.", "constraint": "numbered_list_3", "validator": "num_list_items=3"}
+{"id": 1, "prompt": "Write a short paragraph about the benefits of regular exercise. End your response with the exact phrase: That is all.", "constraint": "end_phrase", "validator": "ends_with='That is all.'"}
+{"id": 2, "prompt": "Explain what a hash table is. Your response must contain no commas at all.", "constraint": "no_commas", "validator": "no_commas"}
+{"id": 3, "prompt": "Describe a sunset. Use the word 'orange' at least 3 times in your response.", "constraint": "word_min", "validator": "min_word('orange',3)"}
+{"id": 4, "prompt": "What is 12 multiplied by 8? Reply with only the number and nothing else.", "constraint": "only_number", "validator": "only_number"}
+{"id": 5, "prompt": "Write a haiku about machine learning. A haiku has exactly 3 lines with a 5-7-5 syllable pattern. Separate the lines with the newline character.", "constraint": "haiku_575", "validator": "haiku_575"}
+{"id": 6, "prompt": "Provide a JSON object with two keys: 'name' and 'age', where the value for name is 'Alice' and the value for age is 30. Output only the JSON object, nothing before or after.", "constraint": "json_only", "validator": "json_with(name='Alice',age=30)"}
+{"id": 7, "prompt": "List 4 fruits. Each fruit must be on its own line. Do not number them.", "constraint": "newline_list_4", "validator": "newline_items=4"}
+{"id": 8, "prompt": "Explain why the sky is blue. Your response must be between 30 and 60 words long.", "constraint": "word_count_range", "validator": "words_in(30,60)"}
+{"id": 9, "prompt": "Write a short biography of Albert Einstein in exactly 2 paragraphs. Separate the paragraphs with a single blank line.", "constraint": "two_paragraphs", "validator": "paragraphs=2"}
+{"id": 10, "prompt": "Translate 'Hello, how are you?' to French. Your response must contain only the translation and no additional commentary.", "constraint": "translation_only", "validator": "no_preamble(contains='Comment')"}
+{"id": 11, "prompt": "Name 5 capital cities in Europe. Format your answer as a comma-separated list with no extra words or explanation.", "constraint": "csv_5", "validator": "csv_items=5"}
+{"id": 12, "prompt": "Explain the concept of recursion. Your response must not contain the letter 'e'.", "constraint": "no_letter", "validator": "no_letter('e')"}
+{"id": 13, "prompt": "Write a one-sentence definition of 'algorithm'. The sentence must end with a period.", "constraint": "one_sentence_ending_period", "validator": "single_sentence=1"}
+{"id": 14, "prompt": "List the first 5 prime numbers. Each number must be on its own line, in increasing order.", "constraint": "primes_5_newline", "validator": "lines_are_primes=[2,3,5,7,11]"}
+{"id": 15, "prompt": "Describe a cup of coffee in exactly 15 words.", "constraint": "exactly_15_words", "validator": "words=15"}
+{"id": 16, "prompt": "Write a 4-line poem about autumn. Each line should start with a capital letter.", "constraint": "four_lines_capital", "validator": "lines=4,all_capitalized"}
+{"id": 17, "prompt": "What is the capital of Japan? Answer in exactly one word.", "constraint": "one_word", "validator": "words=1"}
+{"id": 18, "prompt": "Provide instructions for making a peanut butter sandwich. Your response must be at most 50 words long.", "constraint": "word_count_max", "validator": "words<=50"}
+{"id": 19, "prompt": "Write a short paragraph about dogs. Your response must contain the word 'loyal' at least twice.", "constraint": "word_min_2", "validator": "min_word('loyal',2)"}

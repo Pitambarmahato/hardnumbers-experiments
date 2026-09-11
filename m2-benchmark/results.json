@@ -1,0 +1,284 @@
+{
+  "captured_at": "2026-08-29T08:35:42.224416+00:00",
+  "machine": {
+    "cpu": "Apple M2 (8 cores)",
+    "ram": "24 GB unified",
+    "gpu": "Apple integrated (Metal 3)"
+  },
+  "ollama": "localhost:11434",
+  "models": [
+    "Qwen3 14B (Q4_K_M)",
+    "Llama 3.2 3B (Q4_0)"
+  ],
+  "tasks": [],
+  "model_results": [
+    {
+      "name": "Qwen3 14B (Q4_K_M)",
+      "tag": "qwen3:14b",
+      "params_b": 14.8,
+      "tasks": [
+        {
+          "category": "reasoning",
+          "prompt": "If all roses are flowers and some flowers fade quickly, can we conclude that some roses fade quickly?",
+          "expected": [
+            "yes"
+          ],
+          "response": "",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 31053,
+          "gen_ms": 2914.715575000002,
+          "tokens_per_sec": 8.25,
+          "response_tokens": 256
+        },
+        {
+          "category": "math",
+          "prompt": "What is 17% of 240?",
+          "expected": [
+            "40.8"
+          ],
+          "response": " different<think>\nOkay, so I need to find 17% of 240. Hmm, percentages can sometimes be tricky, but let me think step by step. First, I remember that percentages are basically fractions out of 100. So 17% means 17 per 100, or 17/100. Therefore, to find 17% of 240, I should multiply 240 by 17/100. Let me write that down: 240 \u00d7 (17/100). \n\nAlternatively, I can think of it as 240 \u00d7 0.17 because 17 divided by 100 is 0.17. Maybe that's easier for calculation. Let me try both methods to see if they give the same result.\n\nStarting with the fraction method: 240 \u00d7 17/100. Let me compute 240 \u00d7 17 first. Hmm, 240 \u00d7 10 is 2400, 240 \u00d7 7 is 1680. So adding those together, 2400 +",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 28902,
+          "gen_ms": 574.4262049999998,
+          "tokens_per_sec": 8.86,
+          "response_tokens": 256
+        },
+        {
+          "category": "code",
+          "prompt": "Write a Python function `factorial(n)` that returns n! using recursion. Output only the code.",
+          "expected": [
+            "def factorial",
+            "return"
+          ],
+          "response": "",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 29076,
+          "gen_ms": 561.7231300000021,
+          "tokens_per_sec": 8.81,
+          "response_tokens": 256
+        },
+        {
+          "category": "code",
+          "prompt": "Fix this bug: `def add(a, b): return a + b + 1`. What's wrong?",
+          "expected": [
+            "off-by-one",
+            "adds an extra",
+            "+ 1"
+          ],
+          "response": "'s<think>\nOkay, let me try to figure out what's wrong with this code. The user provided a function called add that takes two arguments, a and b, and returns a + b + 1. Hmm, the question is asking what's wrong with it. \n\nWait, the function is supposed to add two numbers, but it's adding 1 as well. So maybe the intention was to just return a + b, but there's an extra +1. That would be a bug if the function is meant to add two numbers without any additional value. For example, if someone uses add(2,3), it would return 6 instead of 5. So the error is that the function is adding an extra 1. \n\nBut maybe there's another perspective. Could there be a case where adding 1 is intended? Like maybe the function is supposed to add 1 to the sum? But the name \"add\" suggests that it's a standard addition. So the bug is likely the extra +1. The fix would be to remove that +1. \n\nAlternatively, maybe the function is correct, and the user is mistaken. But the question says \"fix this bug,\" so there must be an issue. Another possibility: maybe the function",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 30508,
+          "gen_ms": 670.9858299999978,
+          "tokens_per_sec": 8.39,
+          "response_tokens": 256
+        },
+        {
+          "category": "instruction",
+          "prompt": "List exactly 3 fruits, one per line, no other text.",
+          "expected": [
+            "apple",
+            "banana",
+            "orange"
+          ],
+          "response": " is<think>\nOkay, the user wants me to list exactly three fruits, each on a separate line, and no other text. Let me make sure I understand the requirements correctly. They specified \"exactly 3 fruits,\" so I need to pick three. Also, each should be on its own line, and there should be no additional text or explanations.\n\nFirst, I should think of common fruits that are easy to recognize. Maybe start with the most obvious ones. Apple is a good choice. Then banana, since it's another common fruit. For the third one, perhaps orange? Those are all widely known and should meet the criteria. Let me check if there are any other requirements. The user didn't mention any specific regions or types, so common fruits should be fine. I need to ensure that each is on a separate line and there's no extra text. Let me write them out:\n\nApple\nBanana\nOrange\n\nThat should do it. No markdown, just plain text with each fruit on its own line. I think that's all.\n</think>\n\nApple  \nBanana  \nOrange",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 24948,
+          "gen_ms": 551.6243360000008,
+          "tokens_per_sec": 8.86,
+          "response_tokens": 221
+        },
+        {
+          "category": "instruction",
+          "prompt": "Translate to French: 'The meeting starts at 3pm.'",
+          "expected": [
+            "La r\u00e9union",
+            "15"
+          ],
+          "response": "",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 28784,
+          "gen_ms": 563.5567059999994,
+          "tokens_per_sec": 8.9,
+          "response_tokens": 256
+        },
+        {
+          "category": "reasoning",
+          "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+          "expected": [
+            "0.05",
+            "5 cents"
+          ],
+          "response": " \"<think>\nOkay, let's see. There's this problem about a bat and a ball costing $1.10 together. The bat is $1.00 more expensive than the ball. I need to figure out how much the ball costs. Hmm, sounds simple, but I remember these kinds of problems can be tricky. Let me think step by step.\n\nFirst, let me try to assign variables. Let's say the cost of the ball is some amount, maybe x dollars. Then, since the bat is $1.00 more than the ball, the bat would cost x + $1.00. Together, they add up to $1.10. So, if I write that as an equation, it would be:\n\nBall cost + Bat cost = Total cost\nx + (x + 1.00) = 1.10\n\nLet me check that. If the ball is x, then the bat is x + 1.00. Adding them together gives 2x + 1.00 = 1.10. Then, solving for x:\n\n2x + 1.00 = 1.10\nSubtract 1.00 from both sides:\n",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 29974,
+          "gen_ms": 909.7100390000014,
+          "tokens_per_sec": 8.55,
+          "response_tokens": 256
+        },
+        {
+          "category": "math",
+          "prompt": "Solve: 3x + 7 = 22. What is x?",
+          "expected": [
+            "5"
+          ],
+          "response": "2<think>\nOkay, so I need to solve the equation 3x + 7 = 22 for x. Let me think about how to approach this. Hmm, I remember from algebra that the goal is to isolate x on one side of the equation. That means I need to get rid of the 7 that's being added to 3x and then deal with the 3 that's multiplied by x. \n\nFirst step, maybe I should subtract 7 from both sides of the equation to undo the addition. Let me try that. If I subtract 7 from both sides, it would look like:\n\n3x + 7 - 7 = 22 - 7\n\nSimplifying both sides, the +7 and -7 on the left side cancel each other out, leaving just 3x. On the right side, 22 minus 7 is... let me calculate that. 22 minus 7 is 15. So now the equation is:\n\n3x = 15\n\nAlright, now I need to get x by itself, so I have to deal with the 3 that's multiplied by x. To undo multiplication, I should divide both sides by 3. Let me write that down:\n\n",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 29062,
+          "gen_ms": 567.0295349999978,
+          "tokens_per_sec": 8.81,
+          "response_tokens": 256
+        }
+      ],
+      "aggregate": {
+        "tps_median": 8.81,
+        "tps_mean": 8.68,
+        "tps_p10": 8.25,
+        "accuracy": 0.25,
+        "correct": 2,
+        "total": 8
+      }
+    },
+    {
+      "name": "Llama 3.2 3B (Q4_0)",
+      "tag": "llama3.2:latest",
+      "params_b": 3.2,
+      "tasks": [
+        {
+          "category": "reasoning",
+          "prompt": "If all roses are flowers and some flowers fade quickly, can we conclude that some roses fade quickly?",
+          "expected": [
+            "yes"
+          ],
+          "response": "Yes, we can conclude that some roses fade quickly.\n\nThis is an example of a syllogism:\n\nAll A (roses) are B (flowers)\nSome B (flowers) fade quickly\n\u2234 Some A (roses) must also be B (flowers) that fade quickly\n\nIn this case, the conclusion logically follows from the premises. If all roses are flowers and some flowers fade quickly, then it's reasonable to infer that some roses, being a subset of flowers, would also be prone to fading quickly.\n\nThis type of reasoning is called \"affirming the consequent,\" where we assume that if A implies B, and B occurs, then A must also occur. In this case, the conclusion is logically sound because it follows from the premises using a valid logical connection.",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 5195,
+          "gen_ms": 641.4941699999999,
+          "tokens_per_sec": 31.27,
+          "response_tokens": 162
+        },
+        {
+          "category": "math",
+          "prompt": "What is 17% of 240?",
+          "expected": [
+            "40.8"
+          ],
+          "response": "To find 17% of 240, multiply 240 by 0.17.\n\n240 x 0.17 = 40.8",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 999,
+          "gen_ms": 192.22070900000006,
+          "tokens_per_sec": 30.7,
+          "response_tokens": 30
+        },
+        {
+          "category": "code",
+          "prompt": "Write a Python function `factorial(n)` that returns n! using recursion. Output only the code.",
+          "expected": [
+            "def factorial",
+            "return"
+          ],
+          "response": "```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n```",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 1181,
+          "gen_ms": 174.1457069999999,
+          "tokens_per_sec": 32.65,
+          "response_tokens": 38
+        },
+        {
+          "category": "code",
+          "prompt": "Fix this bug: `def add(a, b): return a + b + 1`. What's wrong?",
+          "expected": [
+            "off-by-one",
+            "adds an extra",
+            "+ 1"
+          ],
+          "response": "The issue with the given code is that it will always return `a + b + 1` instead of just `a + b`. This is because the `+ 1` part is being added to the result of `a + b`, not just appended.\n\nHere's how you can fix this:\n\n```python\ndef add(a, b):\n    \"\"\"Returns the sum of a and b.\"\"\"\n    return a + b\n```\n\nAlternatively, if you want to include an offset in your addition, you could do it like so:\n\n```python\ndef add(a, b, offset=1):\n    \"\"\"Returns the sum of a and b with an optional offset.\"\"\"\n    return a + b + offset\n```\n\nIn this version, `offset` is an optional parameter that defaults to 1 if not provided.",
+          "ok": true,
+          "correct": false,
+          "wall_ms": 5982,
+          "gen_ms": 506.2664189999996,
+          "tokens_per_sec": 28.02,
+          "response_tokens": 167
+        },
+        {
+          "category": "instruction",
+          "prompt": "List exactly 3 fruits, one per line, no other text.",
+          "expected": [
+            "apple",
+            "banana",
+            "orange"
+          ],
+          "response": "Apple\nBanana\nOrange",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 384,
+          "gen_ms": 203.873667,
+          "tokens_per_sec": 19.09,
+          "response_tokens": 7
+        },
+        {
+          "category": "instruction",
+          "prompt": "Translate to French: 'The meeting starts at 3pm.'",
+          "expected": [
+            "La r\u00e9union",
+            "15"
+          ],
+          "response": "La r\u00e9union commence \u00e0 15h.",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 454,
+          "gen_ms": 182.038876,
+          "tokens_per_sec": 22.91,
+          "response_tokens": 10
+        },
+        {
+          "category": "reasoning",
+          "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+          "expected": [
+            "0.05",
+            "5 cents"
+          ],
+          "response": "Let's say the ball costs x dollars.\n\nSince the bat costs $1.00 more than the ball, the bat costs x + $1.00.\n\nThe total cost of the bat and the ball is $1.10, so we can set up an equation:\n\nx + (x + $1.00) = $1.10\n\nCombine like terms:\n\n2x + $1.00 = $1.10\n\nSubtract $1.00 from both sides:\n\n2x = $0.10\n\nDivide by 2:\n\nx = $0.05\n\nSo, the ball costs $0.05 or 5 cents.",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 3955,
+          "gen_ms": 290.3900010000002,
+          "tokens_per_sec": 34.02,
+          "response_tokens": 134
+        },
+        {
+          "category": "math",
+          "prompt": "Solve: 3x + 7 = 22. What is x?",
+          "expected": [
+            "5"
+          ],
+          "response": "To solve for x, we need to isolate the variable x on one side of the equation.\n\nFirst, subtract 7 from both sides:\n\n3x + 7 - 7 = 22 - 7\n3x = 15\n\nNext, divide both sides by 3:\n\n3x / 3 = 15 / 3\nx = 5\n\nTherefore, x is equal to 5.",
+          "ok": true,
+          "correct": true,
+          "wall_ms": 2501,
+          "gen_ms": 206.7352050000004,
+          "tokens_per_sec": 34.28,
+          "response_tokens": 85
+        }
+      ],
+      "aggregate": {
+        "tps_median": 30.98,
+        "tps_mean": 29.12,
+        "tps_p10": 19.09,
+        "accuracy": 0.875,
+        "correct": 7,
+        "total": 8
+      }
+    }
+  ]
+}

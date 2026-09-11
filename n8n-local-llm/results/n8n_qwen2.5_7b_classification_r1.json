@@ -1,0 +1,11 @@
+{
+  "model": "qwen2.5:7b",
+  "workflow": "classification",
+  "run": 0,
+  "input": "Subject: Invoice #4092 wrong total\n\nHi, the total on my latest invoice shows $349 but my PO was approved for $279. Can you check?",
+  "expected": "billing",
+  "response": "billing",
+  "wall_s": 2.5946784999687225,
+  "score": 1.0,
+  "peak_rss_mb": 30.765625
+}

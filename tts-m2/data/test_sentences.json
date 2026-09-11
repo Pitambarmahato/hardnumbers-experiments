@@ -1,0 +1,87 @@
+"""15-sentence TTS test set for the local TTS benchmark.
+
+5 short (5-10 words), 5 medium (15-25 words), 5 long (40-60 words with
+numbers/URLs/edge cases). All English. Hand-written to avoid licensing
+contamination — these are original test sentences, not copied from any
+benchmark.
+"""
+
+SENTENCES = [
+    # Short (5-10 words)
+    "id": "short_01",
+    "text": "The quick brown fox jumps over the lazy dog.",
+    "category": "short",
+    },
+    {
+        "id": "short_02",
+        "text": "Hello world, this is a basic test.",
+        "category": "short",
+    },
+    {
+        "id": "short_03",
+        "text": "Buy one get one free this week only.",
+        "category": "short",
+    },
+    {
+        "id": "short_04",
+        "text": "She sells seashells by the seashore.",
+        "category": "short",
+    },
+    {
+        "id": "short_05",
+        "text": "Press the red button to stop the machine.",
+        "category": "short",
+    },
+    # Medium (15-25 words)
+    {
+        "id": "med_01",
+        "text": "The package should arrive in three to five business days, depending on your location and the shipping method you selected at checkout.",
+        "category": "medium",
+    },
+    {
+        "id": "med_02",
+        "text": "If you have any questions about your order, please contact our customer support team at the email address listed on the receipt.",
+        "category": "medium",
+    },
+    {
+        "id": "med_03",
+        "text": "Local text to speech systems have improved dramatically in the last two years, with several small open-weight models now matching cloud quality.",
+        "category": "medium",
+    },
+    {
+        "id": "med_04",
+        "text": "The benchmark ran on the same machine, with the same prompt, against the same five engines, in randomized order to control for thermal throttling.",
+        "category": "medium",
+    },
+    {
+        "id": "med_05",
+        "text": "Hard Numbers is a publication that benchmarks AI models, programming languages, and frameworks with reproducible experiments and public methodology.",
+        "category": "medium",
+    },
+    # Long (40-60 words, edge cases)
+    {
+        "id": "long_01",
+        "text": "On 2026-09-04 at 14:30 UTC, the server restarted for the third time in 24 hours, which is the reliability issue this article is going to address with a specific monitoring recipe and a fallback configuration that has held up in production for the last six months.",
+        "category": "long",
+    },
+    {
+        "id": "long_02",
+        "text": "If you visit https://hardnumbers.dev/articles/3-local-vision-models-moondream-vs-gemma-3-vs-qwen2-5-vl, you will find a comparison of three local vision models tested on the same fifteen photos, with the same prompt, and scored against a single reference caption for each image.",
+        "category": "long",
+    },
+    {
+        "id": "long_03",
+        "text": "The 95% upper bound on a 0 out of 20 failure rate is approximately 14 percent, which means the phrase 'all twenty observed runs passed' is a more honest summary than 'perfect pass rate' for any benchmark with twenty or fewer items.",
+        "category": "long",
+    },
+    {
+        "id": "long_04",
+        "text": "If you read the methodology paragraph at the end of the article, you will see the exact five steps: pull the model, run the warmup, generate the response, score the output, and save the result; every step is reproducible from the public repository and the experiments repo linked in the footer.",
+        "category": "long",
+    },
+    {
+        "id": "long_05",
+        "text": "Apple's M2 silicon has unified memory, which means the CPU and the GPU share the same physical RAM, and that single fact changes the math on which local models are practical: a 14 billion parameter model at Q4_K_M is about 9.3 gigabytes, which fits comfortably on a 24 gigabyte machine alongside other applications.",
+        "category": "long",
+    },
+]

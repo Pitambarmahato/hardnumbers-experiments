@@ -1,0 +1,4 @@
+Speculative Decoding for Local Language Models
+Speculative decoding accelerates inference by drafting tokens with a small fast model and verifying them with a larger target model. This study measures the speedup on a 24-gigabyte Apple Silicon Mac using a Qwen three 14 billion parameter target model.
+We find that a 0.5 billion parameter draft model achieves a 1.8x speedup at batch size one, with no quality loss. At batch size four the speedup shrinks to 1.3x as verification cost dominates.
+These results suggest speculative decoding is a free lunch for interactive local inference, where batch sizes are small and latency matters more than throughput.

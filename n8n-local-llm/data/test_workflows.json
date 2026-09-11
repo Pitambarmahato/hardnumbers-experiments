@@ -1,0 +1,68 @@
+{
+  "models": [
+    {"name": "qwen2.5:0.5b", "size_b": 500000000,  "tier": "tiny"},
+    {"name": "qwen2.5:1.5b", "size_b": 1500000000,  "tier": "small"},
+    {"name": "qwen2.5:3b",   "size_b": 3000000000,  "tier": "medium"},
+    {"name": "qwen2.5:7b",   "size_b": 7000000000,  "tier": "large"},
+    {"name": "qwen2.5:14b",  "size_b": 14000000000, "tier": "xlarge"}
+  ],
+  "runs_per_cell": 5,
+  "ollama_url": "http://127.0.0.1:11434",
+  "n8n_url": "http://127.0.0.1:5678",
+  "workflows": {
+    "classification": {
+      "description": "Categorize a support email as billing, technical, or other.",
+      "system_prompt": "You are a support email classifier. Respond with exactly one word: billing, technical, or other. No other text.",
+      "test_inputs": [
+        {"input": "Subject: Invoice #4092 wrong total\n\nHi, the total on my latest invoice shows $349 but my PO was approved for $279. Can you check?", "expected": "billing"},
+        {"input": "Subject: API returns 500 on POST /v1/orders\n\nGetting a 500 from the orders endpoint. Started about 30 min ago. Curl output below. Please advise.", "expected": "technical"},
+        {"input": "Subject: Question about your office hours\n\nHello, are you open on Saturday? I'd like to visit the office next week.", "expected": "other"},
+        {"input": "Subject: Refund for cancelled subscription\n\nI cancelled last month but I see a charge for the new month. I'd like a refund processed.", "expected": "billing"},
+        {"input": "Subject: Login button does nothing on Safari\n\nUsing Safari 17 on macOS 14. Clicked the login button on the homepage, nothing happens.", "expected": "technical"},
+        {"input": "Subject: Where are you headquartered?\n\nQuick question for a vendor due-diligence form — what city is your HQ in?", "expected": "other"},
+        {"input": "Subject: Tax invoice needed for Q3\n\nCould you send an invoice with our VAT number on it for Q3 expenses?", "expected": "billing"},
+        {"input": "Subject: Webhook signature validation fails\n\nOur integration engineer reports HMAC validation fails for some events. Sample payload attached.", "expected": "technical"},
+        {"input": "Subject: Do you have an office in Singapore?\n\nAsking on behalf of our APAC team.", "expected": "other"},
+        {"input": "Subject: Charge for the seats I deleted last week\n\nRemoved 3 of 5 seats on the 12th. Saw a charge for 5 seats on the 14th. Why?", "expected": "billing"}
+      ]
+    },
+    "extraction": {
+      "description": "Extract total amount, currency, and invoice date from arbitrary invoice text as JSON.",
+      "system_prompt": "You are a precise invoice data extractor. Output ONLY a JSON object with keys: total (number), currency (ISO 4217 code), date (YYYY-MM-DD). No other text. If a value is missing, use null.",
+      "test_inputs": [
+        {"input": "INVOICE #A-1043\nDate Issued: 2026-03-14\nCustomer: Acme Corp\nItems:\n  - 10 widgets @ $50 = $500\n  - 2 gadgets  @ $75 = $150\nSubtotal: $650\nTax (8%): $52\nTOTAL DUE: $702.00 USD\nPayment due within 30 days.", "expected": {"total": 702.00, "currency": "USD", "date": "2026-03-14"}},
+        {"input": "Acme GmbH — Rechnung 2024-118\nLeistungsdatum: 11. September 2024\nPositionen: Beratung 8h à 145,00 EUR\nZwischensumme: 1.160,00 EUR\nUSt 19%: 220,40 EUR\nGesamtbetrag: 1.380,40 EUR\nZahlbar bis: 11.10.2024", "expected": {"total": 1380.40, "currency": "EUR", "date": "2024-09-11"}},
+        {"input": "RECEIPT\nDate: 2025-12-01\nItem: 1 × annual subscription\nAmount: £89.00 GBP\nPaid by card ending 4242", "expected": {"total": 89.00, "currency": "GBP", "date": "2025-12-01"}},
+        {"input": "Bill of Sale — Mar 3, 2026\nConsulting services rendered in February 2026\n40 hours @ JPY 12,000/hr = JPY 480,000\nConsumption tax 10% included", "expected": {"total": 480000, "currency": "JPY", "date": "2026-03-03"}},
+        {"input": "X-Pay invoice INV-9981\nNo date on the document\nCustomer: Globex\nTotal: 250.00 CHF\nNote: vendor has not yet billed us for this", "expected": {"total": 250.00, "currency": "CHF", "date": null}}
+      ]
+    },
+    "summarization": {
+      "description": "Summarize a 400-500 word meeting transcript into 3 bullet points.",
+      "system_prompt": "You are a meeting summarizer. Read the meeting transcript and produce exactly 3 bullet points capturing the most important decisions, blockers, and next steps. Each bullet must be one sentence, 15-30 words. Output ONLY the 3 bullets, no intro text.",
+      "test_inputs": [
+        {"input": "Meeting: Q2 Roadmap Review (March 4, 2026)\nAttendees: Sarah (PM), Tom (Eng), Priya (Eng), Marcus (Design), Jen (Sales)\n\nSarah opened by recapping the Q1 deliverables. The auth refactor shipped on Feb 18, slightly behind the original Feb 10 target. The new billing system went live Feb 25, one week ahead. NPS for Q1 came in at 42, up from 31 in Q4, which Sarah attributed mostly to the new dashboard.\n\nTom walked through engineering capacity. He flagged that the data team is at 90% allocation through April and cannot take new work until May. Priya added that the platform team has one open req, interviewing now, target start mid-April.\n\nThe big discussion was the proposed Q2 OKRs. Marcus pushed back on OKR 2 (mobile parity) arguing that 6 weeks is too aggressive given the platform team's open req. Jen countered that three of her top 10 accounts have asked for mobile in the last 60 days and waiting until Q3 risks losing two of them. After 20 minutes of back-and-forth, the team agreed to scope OKR 2 down to read-only views in Q2, with full parity slipping to Q3.\n\nThe final decision: ship the analytics dashboard GA in week 1 of April (Tom owns), kick off the mobile read-only sprint in week 2 (Marcus leads), and revisit capacity for OKR 3 (internationalization) at the next staff meeting.\n\nAction items: Tom to draft the analytics GA checklist by Mar 8. Marcus to scope the read-only mobile feature by Mar 11. Sarah to send the revised OKRs to the leadership Slack by EOD Mar 5.", "expected": ["Analytics dashboard ships GA in week 1 of April (Tom owns the GA checklist).", "Mobile parity is scoped to read-only views in Q2; full parity slips to Q3 because of platform team capacity.", "Data team is at 90% allocation through April; no new work until May; platform team has one open req with target mid-April start."]}
+      ]
+    },
+    "rag_qa": {
+      "description": "Answer a question using ONLY the provided document excerpts. If the answer isn't in the context, reply with 'I don't know'.",
+      "system_prompt": "Answer the question using ONLY the provided context. If the answer is not in the context, reply exactly: I don't know. Be concise.",
+      "test_inputs": [
+        {"context": "The Qwikflow Pro 3000 has a maximum flow rate of 120 L/min and operates at 220V. It is IP67 rated and weighs 4.2 kg. The Qwikflow Pro 2000 has a max flow rate of 80 L/min, operates at 110V, is IP54 rated, and weighs 2.8 kg. Both models ship with a 2-year warranty.", "question": "What is the IP rating of the Qwikflow Pro 3000?", "expected": "IP67"},
+        {"context": "The Qwikflow Pro 3000 has a maximum flow rate of 120 L/min and operates at 220V. It is IP67 rated and weighs 4.2 kg. The Qwikflow Pro 2000 has a max flow rate of 80 L/min, operates at 110V, is IP54 rated, and weighs 2.8 kg.", "question": "What is the warranty period for the Qwikflow Pro 5000?", "expected": "I don't know"},
+        {"context": "Section 3.2 of the API docs: To create a customer, POST to /v1/customers with a JSON body containing 'name' (string, required) and 'email' (string, optional). The endpoint requires authentication via the X-API-Key header. Rate limit is 100 requests per minute per API key. Returns 201 Created on success with the new customer's ID.", "question": "What HTTP method is used to create a customer?", "expected": "POST"},
+        {"context": "Section 3.2 of the API docs: To create a customer, POST to /v1/customers with a JSON body containing 'name' (string, required) and 'email' (string, optional). The endpoint requires authentication via the X-API-Key header. Rate limit is 100 requests per minute per API key. Returns 201 Created on success with the new customer's ID.", "question": "What is the rate limit for the customers endpoint?", "expected": "100 requests per minute per API key"},
+        {"context": "Refund policy: Refunds are processed within 5-7 business days. We do not offer refunds for subscriptions cancelled after the 14-day window. Digital products are non-refundable once delivered. Shipping costs are non-refundable.", "question": "How long do refunds take?", "expected": "5-7 business days"}
+      ]
+    },
+    "tool_calling": {
+      "description": "Multi-step tool-using agent: given a user request, decide which tool to call and with what args.",
+      "system_prompt": "You are an agent. Output a JSON object describing the next action: either {\"action\": \"call_tool\", \"tool\": <name>, \"args\": {...}} or {\"action\": \"final_answer\", \"answer\": <text>}. Available tools: lookup_user(email), get_recent_orders(user_id), send_email(to, subject, body).",
+      "test_inputs": [
+        {"input": "User email: sam@example.com. They say their last order never arrived. Find their last order ID and draft an apology email.", "expected_first_action": {"action": "call_tool", "tool": "lookup_user", "args_contains": {"email": "sam@example.com"}}},
+        {"input": "User ID is usr_42. They want to know what they bought last month. Look up their orders and summarize.", "expected_first_action": {"action": "call_tool", "tool": "get_recent_orders", "args_contains": {"user_id": "usr_42"}}},
+        {"input": "I need to email ops@company.com about the outage. Subject 'Database down'. Body: 'We are investigating.'", "expected_first_action": {"action": "call_tool", "tool": "send_email", "args_contains": {"to": "ops@company.com"}}}
+      ]
+    }
+  }
+}

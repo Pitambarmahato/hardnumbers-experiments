@@ -1,0 +1,4 @@
+ollama>=0.4
+sacrebleu>=2.4
+requests>=2.32
+Pillow>=10.0

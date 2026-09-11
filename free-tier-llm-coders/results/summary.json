@@ -1,0 +1,241 @@
+{
+  "timestamp": "20260902-014824",
+  "headline_table": [
+    {
+      "provider": "nvidia_nim",
+      "label": "NVIDIA NIM (Nemotron 120B)",
+      "free": "Free",
+      "pass": 5,
+      "n": 5,
+      "avg_wall_s": 26.97,
+      "p50_wall_s": 16.9,
+      "avg_tok_per_s": 408.9,
+      "avg_ttft_s": 23.03
+    },
+    {
+      "provider": "groq",
+      "label": "Groq (Qwen 3.6 27B)",
+      "free": "Free",
+      "pass": 5,
+      "n": 5,
+      "avg_wall_s": 8.79,
+      "p50_wall_s": 3.98,
+      "avg_tok_per_s": 510.9,
+      "avg_ttft_s": 5.78
+    },
+    {
+      "provider": "openrouter_minimax_m3",
+      "label": "OpenRouter (MiniMax M3)",
+      "free": "Free",
+      "pass": 5,
+      "n": 5,
+      "avg_wall_s": 2.89,
+      "p50_wall_s": 2.51,
+      "avg_tok_per_s": 177.7,
+      "avg_ttft_s": 1.44
+    },
+    {
+      "provider": "cline_claude",
+      "label": "Cline API (Claude fable 5.1)",
+      "free": "Paid",
+      "pass": 5,
+      "n": 5,
+      "avg_wall_s": 7.43,
+      "p50_wall_s": 7.15,
+      "avg_tok_per_s": 278.8,
+      "avg_ttft_s": 4.13
+    }
+  ],
+  "per_task": {
+    "csv-header-infer": {
+      "nvidia_nim": {
+        "wall_time_s": 27.13,
+        "tokens_in": 404,
+        "tokens_out": 784,
+        "tokens_per_s": 146.82,
+        "time_to_first_token_s": 21.79,
+        "success": true,
+        "diff_lines": 1
+      },
+      "groq": {
+        "wall_time_s": 1.57,
+        "tokens_in": 392,
+        "tokens_out": 727,
+        "tokens_per_s": 509.72,
+        "time_to_first_token_s": 0.15,
+        "success": true,
+        "diff_lines": 1
+      },
+      "openrouter_minimax_m3": {
+        "wall_time_s": 2.32,
+        "tokens_in": 497,
+        "tokens_out": 134,
+        "tokens_per_s": 196.49,
+        "time_to_first_token_s": 1.64,
+        "success": true,
+        "diff_lines": 1
+      },
+      "cline_claude": {
+        "wall_time_s": 5.18,
+        "tokens_in": 477,
+        "tokens_out": 156,
+        "tokens_per_s": 71.9,
+        "time_to_first_token_s": 3.01,
+        "success": true,
+        "diff_lines": 1
+      }
+    },
+    "function-docstring": {
+      "nvidia_nim": {
+        "wall_time_s": 14.54,
+        "tokens_in": 281,
+        "tokens_out": 413,
+        "tokens_per_s": 122.77,
+        "time_to_first_token_s": 11.18,
+        "success": true,
+        "diff_lines": 12
+      },
+      "groq": {
+        "wall_time_s": 14.59,
+        "tokens_in": 274,
+        "tokens_out": 1764,
+        "tokens_per_s": 522.4,
+        "time_to_first_token_s": 11.21,
+        "success": true,
+        "diff_lines": 12
+      },
+      "openrouter_minimax_m3": {
+        "wall_time_s": 2.12,
+        "tokens_in": 417,
+        "tokens_out": 209,
+        "tokens_per_s": 280.55,
+        "time_to_first_token_s": 1.38,
+        "success": true,
+        "diff_lines": 14
+      },
+      "cline_claude": {
+        "wall_time_s": 7.15,
+        "tokens_in": 407,
+        "tokens_out": 302,
+        "tokens_per_s": 74.63,
+        "time_to_first_token_s": 3.1,
+        "success": true,
+        "diff_lines": 14
+      }
+    },
+    "function-unit-test": {
+      "nvidia_nim": {
+        "wall_time_s": 16.9,
+        "tokens_in": 416,
+        "tokens_out": 1189,
+        "tokens_per_s": 192.77,
+        "time_to_first_token_s": 10.74,
+        "success": true,
+        "diff_lines": 24
+      },
+      "groq": {
+        "wall_time_s": 3.98,
+        "tokens_in": 407,
+        "tokens_out": 2005,
+        "tokens_per_s": 523.83,
+        "time_to_first_token_s": 0.15,
+        "success": true,
+        "diff_lines": 28
+      },
+      "openrouter_minimax_m3": {
+        "wall_time_s": 4.81,
+        "tokens_in": 548,
+        "tokens_out": 556,
+        "tokens_per_s": 147.3,
+        "time_to_first_token_s": 1.04,
+        "success": true,
+        "diff_lines": 47
+      },
+      "cline_claude": {
+        "wall_time_s": 10.45,
+        "tokens_in": 617,
+        "tokens_out": 755,
+        "tokens_per_s": 101.53,
+        "time_to_first_token_s": 3.01,
+        "success": true,
+        "diff_lines": 48
+      }
+    },
+    "refactor-api-call": {
+      "nvidia_nim": {
+        "wall_time_s": 14.6,
+        "tokens_in": 356,
+        "tokens_out": 576,
+        "tokens_per_s": 208.22,
+        "time_to_first_token_s": 11.84,
+        "success": true,
+        "diff_lines": 1
+      },
+      "groq": {
+        "wall_time_s": 2.68,
+        "tokens_in": 349,
+        "tokens_out": 1240,
+        "tokens_per_s": 491.12,
+        "time_to_first_token_s": 0.15,
+        "success": true,
+        "diff_lines": 1
+      },
+      "openrouter_minimax_m3": {
+        "wall_time_s": 2.51,
+        "tokens_in": 493,
+        "tokens_out": 128,
+        "tokens_per_s": 154.96,
+        "time_to_first_token_s": 1.69,
+        "success": true,
+        "diff_lines": 1
+      },
+      "cline_claude": {
+        "wall_time_s": 6.45,
+        "tokens_in": 534,
+        "tokens_out": 194,
+        "tokens_per_s": 75.78,
+        "time_to_first_token_s": 3.89,
+        "success": true,
+        "diff_lines": 1
+      }
+    },
+    "cli-flag": {
+      "nvidia_nim": {
+        "wall_time_s": 61.68,
+        "tokens_in": 306,
+        "tokens_out": 2861,
+        "tokens_per_s": 1373.78,
+        "time_to_first_token_s": 59.6,
+        "success": true,
+        "diff_lines": 3
+      },
+      "groq": {
+        "wall_time_s": 21.12,
+        "tokens_in": 299,
+        "tokens_out": 1974,
+        "tokens_per_s": 507.52,
+        "time_to_first_token_s": 17.23,
+        "success": true,
+        "diff_lines": 3
+      },
+      "openrouter_minimax_m3": {
+        "wall_time_s": 2.67,
+        "tokens_in": 438,
+        "tokens_out": 135,
+        "tokens_per_s": 109.3,
+        "time_to_first_token_s": 1.44,
+        "success": true,
+        "diff_lines": 3
+      },
+      "cline_claude": {
+        "wall_time_s": 7.94,
+        "tokens_in": 467,
+        "tokens_out": 330,
+        "tokens_per_s": 1070.34,
+        "time_to_first_token_s": 7.63,
+        "success": true,
+        "diff_lines": 7
+      }
+    }
+  }
+}

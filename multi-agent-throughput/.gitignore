@@ -1,0 +1,7 @@
+# Per-agent worktrees are created and destroyed at runtime
+wt-*/
+__pycache__/
+*.pyc
+.env
+.venv/
+results/temp/

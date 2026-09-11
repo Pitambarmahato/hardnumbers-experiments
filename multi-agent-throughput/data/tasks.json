@@ -1,0 +1,425 @@
+[
+  {
+    "id": "log-scrub-nginx",
+    "bucket": "embarrassingly_parallel",
+    "title": "Scrub 10 nginx access.log files for unique 5xx error patterns",
+    "repo": "experiments/test-repos/log-scrub",
+    "prompt": "Find every 5xx error in logs/access-*.log, group by error signature, output to logs/5xx-summary.txt as a JSON map {pattern: count}.",
+    "verify_command": ["bash", "-c", "test -f logs/5xx-summary.txt && python -c \"import json; d=json.load(open('logs/5xx-summary.txt')); assert sum(d.values()) > 0\""],
+    "success_pattern": "AssertionError|assert"
+  },
+  {
+    "id": "docstring-pass-1",
+    "bucket": "embarrassingly_parallel",
+    "title": "Add docstrings to all .py files missing them",
+    "repo": "experiments/test-repos/undocumented-pkg",
+    "prompt": "For each .py file in src/ that lacks a module-level docstring, add a one-line docstring describing the module's purpose. Use the filename as the docstring text. Do not modify any file that already has a docstring.",
+    "verify_command": ["bash", "-c", "python -c \"import os; from pathlib import Path; missing=[p for p in Path('src').rglob('*.py') if not p.read_text().lstrip().startswith('\\\"\\\"\\\"')]; assert not missing, missing\""],
+    "success_pattern": "AssertionError"
+  },
+  {
+    "id": "schema-migration-multi",
+    "bucket": "embarrassingly_parallel",
+    "title": "Apply schema migration to 12 independent tables",
+    "repo": "experiments/test-repos/multi-table",
+    "prompt": "Add a 'created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP' column to every table in migrations/. Each table file is independent.",
+    "verify_command": ["bash", "-c", "test $(grep -l 'created_at' migrations/*.sql | wc -l) -eq 12"],
+    "success_pattern": "OK|created_at"
+  },
+  {
+    "id": "test-scaffold-utility",
+    "bucket": "embarrassingly_parallel",
+    "title": "Scaffold pytest tests for 8 utility modules",
+    "repo": "experiments/test-repos/utils",
+    "prompt": "Create tests/test_<module>.py for each module in src/utils/. Each test file should have 3 trivial assertions (assertTrue, assertEqual, assertIsInstance).",
+    "verify_command": ["bash", "-c", "test $(ls tests/test_*.py 2>/dev/null | wc -l) -ge 8 && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed|OK"
+  },
+  {
+    "id": "readme-per-module",
+    "bucket": "embarrassingly_parallel",
+    "title": "Generate README.md for 10 modules",
+    "repo": "experiments/test-repos/multi-module",
+    "prompt": "For each subdirectory in src/, create a README.md with the heading '# <dirname>' and a one-paragraph description of what the module does (use the dirname as the description basis).",
+    "verify_command": ["bash", "-c", "test $(find src -name 'README.md' | wc -l) -eq 10"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "csv-headers-fixer",
+    "bucket": "embarrassingly_parallel",
+    "title": "Add missing header rows to 15 CSV files",
+    "repo": "experiments/test-repos/csv-mess",
+    "prompt": "Each .csv file in data/ that lacks a header row should get one matching its data. Inspect each file, infer the columns, write the header as the first line. Skip files that already have a header.",
+    "verify_command": ["bash", "-c", "test $(grep -l '^[a-zA-Z_]' data/*.csv | wc -l) -ge 15"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "json-lint-batch",
+    "bucket": "embarrassingly_parallel",
+    "title": "Format 20 .json files (idempotent prettier-style reformat)",
+    "repo": "experiments/test-repos/json-dump",
+    "prompt": "Run a 2-space indent reformat on every .json file in config/. Do not change content, only formatting.",
+    "verify_command": ["bash", "-c", "for f in config/*.json; do python -c \"import json; json.load(open('$f'))\" || exit 1; done"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "replace-import-paths",
+    "bucket": "embarrassingly_parallel",
+    "title": "Bulk-replace 'old_pkg' with 'new_pkg' across 30 files",
+    "repo": "experiments/test-repos/imports",
+    "prompt": "In every .py file under src/, replace the import 'from old_pkg' with 'from new_pkg'. Do not change any other text.",
+    "verify_command": ["bash", "-c", "! grep -rn 'from old_pkg' src/"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "strip-trailing-whitespace",
+    "bucket": "embarrassingly_parallel",
+    "title": "Strip trailing whitespace from all text files in repo",
+    "repo": "experiments/test-repos/whitespace",
+    "prompt": "For every .py, .md, .json, .yml, .yaml, .toml file in the repo, strip trailing whitespace from each line. Do not change any other content.",
+    "verify_command": ["bash", "-c", "! grep -rn ' $' --include='*.py' --include='*.md' --include='*.json' --include='*.yml' --include='*.yaml' --include='*.toml' ."],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "add-typing-imports",
+    "bucket": "embarrassingly_parallel",
+    "title": "Add 'from __future__ import annotations' to 25 files",
+    "repo": "experiments/test-repos/old-python",
+    "prompt": "Add 'from __future__ import annotations' as the first non-docstring line of every .py file in src/ that does not already have it. Skip files that already import it.",
+    "verify_command": ["bash", "-c", "test $(grep -l 'from __future__ import annotations' src/**/*.py 2>/dev/null | wc -l) -ge 25"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "todos-to-issues-export",
+    "bucket": "embarrassingly_parallel",
+    "title": "Convert 50 TODO comments into issues/todos.json",
+    "repo": "experiments/test-repos/todo-heavy",
+    "prompt": "Scan all .py files in src/ for lines containing 'TODO' or 'FIXME'. For each one, create an entry in issues/todos.json with fields: file, line, text. The list should be sorted by file then line number.",
+    "verify_command": ["bash", "-c", "python -c \"import json; d=json.load(open('issues/todos.json')); assert len(d) >= 50\""],
+    "success_pattern": "AssertionError"
+  },
+  {
+    "id": "rename-bulk-files",
+    "bucket": "embarrassingly_parallel",
+    "title": "Rename 100 .jpeg files to .jpg in uploads/",
+    "repo": "experiments/test-repos/images",
+    "prompt": "Find every .jpeg file in uploads/ and rename it to .jpg (same basename). Do not change file contents, only the name.",
+    "verify_command": ["bash", "-c", "test ! -f $(find uploads -name '*.jpeg' | head -1) && test $(find uploads -name '*.jpg' | wc -l) -ge 100"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "test-coverage-5-modules",
+    "bucket": "loosely_coupled",
+    "title": "Add unit tests to 5 modules (one file each)",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "For each of these 5 modules (auth.py, billing.py, search.py, mailer.py, reports.py) in src/, add at least 3 unit tests in tests/test_<module>.py. The tests should be plausible, not stub assertions.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -3 | grep -E 'passed|failed'"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "per-module-readme-12",
+    "bucket": "loosely_coupled",
+    "title": "Write real per-module README for 12 modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "For each module in src/, create README.md with: # heading, '## Usage' section with a 5-line code example, '## API' section listing public functions. Skip modules that already have a README.",
+    "verify_command": ["bash", "-c", "test $(find src -name 'README.md' | wc -l) -ge 12 && for f in $(find src -name 'README.md'); do test $(wc -l < $f) -ge 10; done"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "lint-cleanup-bulk",
+    "bucket": "loosely_coupled",
+    "title": "Apply ruff --fix across the codebase",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Run ruff check --fix on every .py file. Manually fix any 'F' (pyflakes) errors that --fix couldn't auto-correct. Do not silence warnings.",
+    "verify_command": ["bash", "-c", "ruff check . 2>&1 | tail -3 | grep -E 'All checks passed|Found'"],
+    "success_pattern": "All checks passed"
+  },
+  {
+    "id": "mypy-pass-batch",
+    "bucket": "loosely_coupled",
+    "title": "Resolve mypy errors across 8 modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Run mypy src/ and resolve every 'error:' line by adding type annotations or refactoring. Do not use # type: ignore comments.",
+    "verify_command": ["bash", "-c", "mypy src/ 2>&1 | tail -3 | grep -E 'Success|Found'"],
+    "success_pattern": "Success"
+  },
+  {
+    "id": "import-order-fix",
+    "bucket": "loosely_coupled",
+    "title": "Apply isort to 30 .py files",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Run isort on every .py file in src/ and tests/. Use the profile 'black'.",
+    "verify_command": ["bash", "-c", "isort --check-only --profile black src/ tests/"],
+    "success_pattern": ""
+  },
+  {
+    "id": "type-hints-public-functions",
+    "bucket": "loosely_coupled",
+    "title": "Add type hints to all public functions in 10 modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "For each function in src/<module>.py that does not start with _, add complete type hints to parameters and return type. Use Any sparingly.",
+    "verify_command": ["bash", "-c", "mypy --strict src/ 2>&1 | tail -3 | grep -E 'Success|Found'"],
+    "success_pattern": "Success"
+  },
+  {
+    "id": "config-externalize",
+    "bucket": "loosely_coupled",
+    "title": "Move hardcoded config to config.yaml in 8 modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Find any hardcoded URL, port, timeout, or threshold in src/<module>.py files. Extract each to config.yaml and load with yaml.safe_load. Do not change runtime behavior.",
+    "verify_command": ["bash", "-c", "test -f config.yaml && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "log-standards",
+    "bucket": "loosely_coupled",
+    "title": "Standardize logging in 6 service modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "In each of these 6 modules, replace print() calls with logger.info()/logger.error() and add a module-level logger. Set up logging.basicConfig in __main__ if not present.",
+    "verify_command": ["bash", "-c", "! grep -n 'print(' src/<module>.py 2>/dev/null | grep -v '# ' | head -1"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "error-handling-audit",
+    "bucket": "loosely_coupled",
+    "title": "Add explicit error handling to 5 external-call sites",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Find 5 places in src/ that make external calls (HTTP, DB, file I/O on user paths) without try/except. Add try/except with logging and a clean re-raise or fallback.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "requirements-cleanup",
+    "bucket": "loosely_coupled",
+    "title": "Pin and clean requirements.txt + add requirements-dev.txt",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Pin every package in requirements.txt to its current major.minor. Create requirements-dev.txt with the test/lint/typecheck packages. Use pip freeze output as ground truth.",
+    "verify_command": ["bash", "-c", "test -f requirements.txt && test -f requirements-dev.txt && ! grep -E '^[^=<>~]+$' requirements.txt"],
+    "success_pattern": "OK"
+  },
+  {
+    "id": "gitignore-strict",
+    "bucket": "loosely_coupled",
+    "title": "Tighten .gitignore across 3 repos in a monorepo",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add __pycache__/, *.pyc, .pytest_cache/, .mypy_cache/, .ruff_cache/, dist/, build/, *.egg-info to .gitignore at every level (root and per-package). Do not remove existing entries.",
+    "verify_command": ["bash", "-c", "grep -E '__pycache__|\\.pyc|\\.pytest_cache|\\.mypy_cache|\\.ruff_cache' .gitignore"],
+    "success_pattern": "__pycache__"
+  },
+  {
+    "id": "deprecation-warnings",
+    "bucket": "loosely_coupled",
+    "title": "Replace deprecated stdlib calls in 4 modules",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Find any use of deprecated stdlib calls (e.g., distutils, imp, collections.MutableMapping) in 4 modules. Replace each with the current recommended API.",
+    "verify_command": ["bash", "-c", "python -W error::DeprecationWarning -c 'import pkg' 2>&1 | tail -3"],
+    "success_pattern": "Error|Traceback"
+  },
+  {
+    "id": "pre-commit-config",
+    "bucket": "loosely_coupled",
+    "title": "Add .pre-commit-config.yaml with ruff + mypy + pytest",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Create .pre-commit-config.yaml that runs: ruff (lint+format), mypy (type check), pytest (test on changed files). Pin each hook to a specific revision.",
+    "verify_command": ["bash", "-c", "test -f .pre-commit-config.yaml && pre-commit validate-config"],
+    "success_pattern": ""
+  },
+  {
+    "id": "feature-flag-refactor",
+    "bucket": "tightly_coupled",
+    "title": "Refactor feature flag system across 6 files",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Replace the homegrown is_enabled() pattern with a centralised FeatureFlags class. Update all 6 call sites to use the new API. Add type hints. Update tests.",
+    "verify_command": ["bash", "-c", "! grep -rn 'is_enabled' src/ | grep -v 'class FeatureFlags' && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "auth-middleware-update",
+    "bucket": "tightly_coupled",
+    "title": "Migrate auth middleware from session cookies to JWT",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Replace the session-based auth middleware with a JWT-based one. Update all 4 routes that use the old middleware. Update tests to match the new request format. Do not break the existing logout flow.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/test_auth* tests/test_routes* -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "orm-migration",
+    "bucket": "tightly_coupled",
+    "title": "Migrate from raw SQL to SQLAlchemy ORM in 5 modules",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Replace raw SQL queries in 5 modules with SQLAlchemy ORM calls. Define models for any tables you use. Update tests to use the new query API. The behaviour must be identical.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && ! grep -rn 'cursor.execute' src/"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "config-loading-refactor",
+    "bucket": "tightly_coupled",
+    "title": "Centralise config loading (3 entry points, 8 consumers)",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Find 3 places that load config.json or environment variables. Replace them with a single config.py that exports a typed Config object. Update 8 consumer sites to import from config.py.",
+    "verify_command": ["bash", "-c", "grep -rn 'from src.config' src/ | wc -l | grep -q 8 && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "error-payload-standardization",
+    "bucket": "tightly_coupled",
+    "title": "Standardise error response shape across 7 endpoints",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Make every error response in these 7 endpoints return the same shape: {error: {code, message, request_id}}. Add a global error handler. Update tests.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "database-schema-add-column",
+    "bucket": "tightly_coupled",
+    "title": "Add a column to 4 tables with cascading updates",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Add a 'tenant_id UUID NOT NULL' column to 4 tables. Add a foreign key from each to tenants(id). Add a backfill migration. Update all queries that touch these tables to filter by tenant_id. Update the ORM models and tests.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "event-bus-integration",
+    "bucket": "tightly_coupled",
+    "title": "Add an event bus to decouple 3 tightly coupled services",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Identify the 3 services that call each other directly. Add a simple in-memory event bus. Refactor the direct calls into publish/subscribe. Add tests for the new event flow.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "api-versioning",
+    "bucket": "tightly_coupled",
+    "title": "Add /v2/ namespace with new response shape, keep /v1/ working",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Create /v2/ versions of 4 endpoints with a new response shape (camelCase fields, ISO 8601 dates). Keep /v1/ working unchanged. Update the OpenAPI spec. Add tests for both versions.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f openapi.yaml"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "transaction-handling",
+    "bucket": "tightly_coupled",
+    "title": "Add proper transaction boundaries to 6 service methods",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Find 6 service methods that do multiple DB writes without a transaction. Wrap each in a single transaction. Add tests for rollback on error.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "auth-rbac-roles",
+    "bucket": "tightly_coupled",
+    "title": "Add 3 new RBAC roles with permission checks in 8 places",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Define 3 new roles: 'auditor', 'support', 'admin'. Add a permission check decorator. Apply it to 8 endpoints with the right role mapping. Update tests.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "config-merge-strategy",
+    "bucket": "tightly_coupled",
+    "title": "Make config loading merge file + env + CLI args in priority order",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Build a config loader that reads defaults from config.yaml, then overrides from environment variables, then from CLI args (highest priority). Use it in 5 entry points. Add tests for the merge order.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/test_config* -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "rate-limiter",
+    "bucket": "tightly_coupled",
+    "title": "Add a token-bucket rate limiter to 5 endpoints",
+    "repo": "experiments/test-repos/coupled-pkg",
+    "prompt": "Implement a token-bucket rate limiter. Apply it to 5 endpoints with different rate configs per role. Add Redis-backed storage for distributed deployments. Add tests.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "endpoint-cache",
+    "bucket": "sequential_dependent",
+    "title": "Add Redis cache to expensive endpoint + invalidate on write",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add a Redis cache to GET /reports/{id} (currently slow). Cache invalidation must trigger on any write to that report. Add a cache hit/miss metric. Add tests for cache hit, miss, and invalidation.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "endpoint-pagination",
+    "bucket": "sequential_dependent",
+    "title": "Add cursor-based pagination to /items",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add cursor-based pagination to GET /items. Update the OpenAPI spec. Update the SDK client. Update the frontend. Update tests. Ensure backwards compatibility with offset-based clients for 2 release cycles.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "search-feature-full",
+    "bucket": "sequential_dependent",
+    "title": "Add full-text search: schema, endpoint, frontend, docs",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add a full-text search feature: create a search_index table, add POST /search endpoint, build a simple frontend page, update the OpenAPI spec, add an SDK method, add tests for the endpoint, add a README section.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/search.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "webhook-system",
+    "bucket": "sequential_dependent",
+    "title": "Add webhook system: table, endpoint, signing, retries, dashboard",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add a webhook delivery system: webhooks table, POST /webhooks endpoint, HMAC signing, exponential backoff retries, a small dashboard page. Add tests. Update docs.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/webhooks.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "audit-log-feature",
+    "bucket": "sequential_dependent",
+    "title": "Add audit log: schema, capture, query, export, retention",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add an audit log: audit_log table, capture wrapper for mutating endpoints, GET /audit endpoint with filters, CSV export, 90-day retention job. Add tests. Update docs.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/audit.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "user-export-feature",
+    "bucket": "sequential_dependent",
+    "title": "Add user data export: schema, job, download URL, retention",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add a user data export: exports table, POST /export endpoint, async job runner, signed download URL with 24h expiry, 7-day file retention. Add tests. Update docs.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/export.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "2fa-feature",
+    "bucket": "sequential_dependent",
+    "title": "Add 2FA: TOTP setup, verification, recovery codes, admin reset",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add 2FA: TOTP setup endpoint, verification on login, 10 recovery codes per user, admin reset endpoint, all backed by a new totp_secrets table. Add tests. Update docs.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/2fa.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "soft-delete-feature",
+    "bucket": "sequential_dependent",
+    "title": "Add soft delete: deleted_at column, query filters, restore, purge",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Add soft delete to the User and Item models: deleted_at column, automatic filter on all queries, restore endpoint, 30-day purge job. Add tests. Update docs.",
+    "verify_command": ["bash", "-c", "python -m pytest tests/ -q 2>&1 | tail -1 && test -f docs/soft-delete.md"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "function-deprecation-shim",
+    "bucket": "loosely_coupled",
+    "title": "Add deprecation shims to 6 legacy functions",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Find 6 functions marked 'legacy' in their docstring. For each, add a DeprecationWarning at call time, route to the new function, and update callers. Keep the old name working for one release.",
+    "verify_command": ["bash", "-c", "python -W error::DeprecationWarning -c 'import pkg' 2>&1 | grep -c 'DeprecationWarning' | grep -q 6 && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  },
+  {
+    "id": "env-var-to-config",
+    "bucket": "loosely_coupled",
+    "title": "Migrate 10 environment variable reads to typed config",
+    "repo": "experiments/test-repos/medium-pkg",
+    "prompt": "Find 10 places that read os.environ directly. Replace each with a typed config field in config.py. Add validation. Update tests.",
+    "verify_command": ["bash", "-c", "! grep -rn 'os.environ.get' src/ | grep -v 'config.py' | head -1 && python -m pytest tests/ -q 2>&1 | tail -1"],
+    "success_pattern": "passed"
+  }
+]

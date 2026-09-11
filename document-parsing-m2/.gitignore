@@ -1,0 +1,9 @@
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.DS_Store
+results/raw.json
+results/all.json
+results/all_rescored.json
+data/pdfs/test_simple.pdf

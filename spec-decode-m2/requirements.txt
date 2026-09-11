@@ -1,0 +1,7 @@
+# No Python dependencies — uses the standard library only.
+# Requires Ollama running locally (https://ollama.com) with the target
+# and draft models pulled:
+#
+#   ollama pull qwen3:14b
+#   ollama pull qwen2.5:0.5b
+#   ollama pull qwen2.5:1.5b

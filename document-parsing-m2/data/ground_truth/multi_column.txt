@@ -1,0 +1,9 @@
+On the Evaluation of Local Document Parsing Pipelines: A Comparative Study
+Abstract. We compare four open-source document parsing tools across a diverse corpus. We find that table accuracy varies by an order of magnitude between the best and worst parsers, while text accuracy remains within five percentage points for all but the most degraded inputs.
+1. Introduction
+Document parsing is the first step in most retrieval-augmented generation pipelines. The output of this step feeds every downstream decision, so accuracy and structure preservation matter as much as raw text fidelity.
+In this study, we focus on the four most popular open-source parsers as of mid-2026: Docling from IBM Research, Marker from Datalab, PaddleOCR-VL from Baidu, and MinerU from OpenDataLab.
+2. Methodology
+We ran each parser on the same eight-document corpus, measuring wall time, peak resident memory, and text fidelity against a hand-curated ground truth. Tables were scored separately using tree edit distance.
+3. Results
+On simple digital PDFs all four parsers achieved edit distance under five percent. On scanned documents with complex tables, the gap widened to over forty percentage points between the best and worst parsers.
