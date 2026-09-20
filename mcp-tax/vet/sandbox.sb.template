@@ -1,0 +1,6 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write* (subpath "<WORKDIR>/work") (subpath "/dev") (subpath "/private/var/folders"))
+(deny file-read* (subpath "<HOME>/.ssh") (subpath "<HOME>/.aws") (subpath "<HOME>/.gnupg") (subpath "<HOME>/.claude") (subpath "<HOME>/.config") (subpath "<HOME>/Library/Keychains") (subpath "<HOME>/Desktop") (subpath "<HOME>/.npmrc"))

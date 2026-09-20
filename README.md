@@ -16,6 +16,7 @@ underlying numbers without having to trust the writeup.
 | [Local LLM Tool Calling for AI Agents: Qwen3 14B vs Llama 3.2 3B on Apple Silicon](https://hardnumbers.dev/articles/local-llm-tool-calling-for-ai-agents-qwen3-14b-vs-llama-3-2-3b-on-apple-silicon) | [`tool-calling-benchmark/`](./tool-calling-benchmark/) | JSON tool-call reliability (parse, schema-valid, tool-correct) on a 10-prompt agent suite |
 | [MLX vs llama.cpp on Apple Silicon: Same Model, Two Engines](https://hardnumbers.dev/articles/mlx-vs-llama-cpp-on-apple-silicon-same-model-two-engines) | [`mlx-vs-llama-cpp/`](./mlx-vs-llama-cpp/) | Wall-time and decode throughput for Qwen3 14B 4-bit under Ollama (llama.cpp) vs mlx-lm, on chat / RAG / code workloads |
 | [gpt-oss-20B vs Qwen3-14B vs Mistral-Small-24B: A Real Benchmark](https://hardnumbers.dev/articles/gpt-oss-20b-vs-qwen3-14b-vs-mistral-small-24b-a-real-benchmark) | [`open-weight-benchmark/`](./open-weight-benchmark/) | MMLU / GSM8K / HumanEval+ / IFEval accuracy + tokens/sec on 3 Apache 2.0 open-weight 14-24B models |
+| MCP Server Token Cost in Claude Code: 10 Servers Measured (article not yet published) | [`mcp-tax/`](./mcp-tax/) | Context tokens added by 10 open-source MCP servers in Claude Code 2.1.278, with tool search on and off, single and stacked |
 
 ## How to read this repo
 

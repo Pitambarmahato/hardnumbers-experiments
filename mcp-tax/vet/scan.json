@@ -1,0 +1,254 @@
+{
+ "memory": {
+  "pkg": "@modelcontextprotocol/server-memory@2026.8.31",
+  "install_hooks": {
+   "prepare": "npm run build"
+  },
+  "deps": [
+   "@modelcontextprotocol/sdk"
+  ],
+  "bin": {
+   "mcp-server-memory": "dist/index.js"
+  },
+  "size_kb": 8,
+  "scan": [
+   1,
+   506,
+   {
+    "proc": 0,
+    "net": 0,
+    "env": 4,
+    "dyn": 0
+   },
+   []
+  ]
+ },
+ "sequential-thinking": {
+  "pkg": "@modelcontextprotocol/server-sequential-thinking@2026.8.31",
+  "install_hooks": {
+   "prepare": "npm run build"
+  },
+  "deps": [
+   "@modelcontextprotocol/sdk",
+   "chalk",
+   "yargs"
+  ],
+  "bin": {
+   "mcp-server-sequential-thinking": "dist/index.js"
+  },
+  "size_kb": 6,
+  "scan": [
+   3,
+   232,
+   {
+    "proc": 0,
+    "net": 0,
+    "env": 1,
+    "dyn": 0
+   },
+   []
+  ]
+ },
+ "everything": {
+  "pkg": "@modelcontextprotocol/server-everything@2026.8.31",
+  "install_hooks": {
+   "prepare": "npm run build"
+  },
+  "deps": [
+   "@modelcontextprotocol/sdk",
+   "cors",
+   "express",
+   "jszip",
+   "zod"
+  ],
+  "bin": {
+   "mcp-server-everything": "dist/index.js"
+  },
+  "size_kb": 56,
+  "scan": [
+   43,
+   4683,
+   {
+    "proc": 0,
+    "net": 3,
+    "env": 8,
+    "dyn": 0
+   },
+   [
+    "https://example.com/verify",
+    "https://example.com/connect",
+    "https://modelcontextprotocol.io",
+    "https://raw.githubusercontent.com/modelcontextprotocol/servers/refs/heads/main/README.md",
+    "https://modelcontextprotocol.io/specification/2025-11-25/server/resources",
+    "https://modelcontextprotocol.io/specification/2025-11-25/schema"
+   ]
+  ]
+ },
+ "playwright": {
+  "pkg": "@playwright/mcp@0.0.82",
+  "install_hooks": {},
+  "deps": [
+   "playwright",
+   "playwright-core"
+  ],
+  "bin": {
+   "playwright-mcp": "cli.js"
+  },
+  "size_kb": 24,
+  "scan": [
+   2,
+   51,
+   {
+    "proc": 0,
+    "net": 0,
+    "env": 0,
+    "dyn": 0
+   },
+   [
+    "http://www.apache.org/licenses/LICENSE-2.0"
+   ]
+  ]
+ },
+ "chrome-devtools": {
+  "pkg": "chrome-devtools-mcp@1.9.0",
+  "install_hooks": {
+   "prepare": "node scripts/prepare.ts"
+  },
+  "deps": [],
+  "bin": {
+   "chrome-devtools-mcp": "./build/src/bin/chrome-devtools-mcp.js",
+   "chrome-devtools": "./build/src/bin/chrome-devtools.js"
+  },
+  "size_kb": 2401,
+  "scan": [
+   78,
+   280040,
+   {
+    "proc": 123,
+    "net": 470,
+    "env": 42,
+    "dyn": 134
+   },
+   [
+    "http://www.w3.org/2000/svg",
+    "https://github.com/WICG/email-verification-protocol",
+    "https://fedidcg.github.io/FedCM",
+    "https://example.com",
+    "https://pcsclite.apdu.fr/api/group__API.html",
+    "https://pubdash.ezoic.com/leap"
+   ]
+  ]
+ },
+ "context7": {
+  "pkg": "@upstash/context7-mcp@4.1.1",
+  "install_hooks": {},
+  "deps": [
+   "@modelcontextprotocol/node",
+   "@modelcontextprotocol/server",
+   "@opentelemetry/api",
+   "@opentelemetry/exporter-prometheus",
+   "@opentelemetry/instrumentation-runtime-node",
+   "@opentelemetry/resources",
+   "@opentelemetry/sdk-metrics",
+   "@types/express",
+   "commander",
+   "express",
+   "jose",
+   "undici",
+   "zod"
+  ],
+  "bin": {
+   "context7-mcp": "dist/index.js"
+  },
+  "size_kb": 47,
+  "scan": [
+   21,
+   2718,
+   {
+    "proc": 0,
+    "net": 10,
+    "env": 21,
+    "dyn": 0
+   },
+   [
+    "https://context7.com",
+    "https://login.microsoftonline.com",
+    "https://context7.com/dashboard",
+    "https://context7.com/context7-icon-green.png",
+    "http://localhost",
+    "https://mcp.context7.com"
+   ]
+  ]
+ },
+ "fetch": {
+  "pkg": "mcp-server-fetch==2026.8.18",
+  "install_hooks": "wheel (no setup.py run)",
+  "deps": [
+   "httpx>=0.27",
+   "markdownify>=0.13.1",
+   "mcp<2,>=1.29.0",
+   "protego>=0.3.1",
+   "pydantic>=2.0.0",
+   "readabilipy>=0.2.0",
+   "requests>=2.32.3"
+  ],
+  "size_kb": 9,
+  "scan": [
+   3,
+   318,
+   {
+    "proc": 0,
+    "net": 2,
+    "env": 0,
+    "dyn": 0
+   },
+   [
+    "https://github.com/modelcontextprotocol/servers"
+   ]
+  ]
+ },
+ "time": {
+  "pkg": "mcp-server-time==2026.8.18",
+  "install_hooks": "wheel (no setup.py run)",
+  "deps": [
+   "mcp<2,>=1.29.0",
+   "pydantic>=2.0.0",
+   "tzdata>=2024.2",
+   "tzlocal>=5.3.1"
+  ],
+  "size_kb": 7,
+  "scan": [
+   3,
+   242,
+   {
+    "proc": 0,
+    "net": 0,
+    "env": 0,
+    "dyn": 0
+   },
+   []
+  ]
+ },
+ "git": {
+  "pkg": "mcp-server-git==2026.8.18",
+  "install_hooks": "wheel (no setup.py run)",
+  "deps": [
+   "click>=8.1.7",
+   "gitpython>=3.1.50",
+   "mcp<2,>=1.29.0",
+   "pydantic>=2.0.0"
+  ],
+  "size_kb": 11,
+  "scan": [
+   3,
+   631,
+   {
+    "proc": 0,
+    "net": 0,
+    "env": 0,
+    "dyn": 0
+   },
+   []
+  ]
+ }
+}

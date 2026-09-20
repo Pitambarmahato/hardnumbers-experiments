@@ -1,0 +1,1 @@
+{"mcpServers":{"filesystem":{"command":"npx","args":["-y","@modelcontextprotocol/server-filesystem@2026.8.31","<WORKDIR>/fsroot"]}}}

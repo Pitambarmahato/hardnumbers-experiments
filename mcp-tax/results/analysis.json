@@ -1,0 +1,234 @@
+{
+ "baseline_default": 22243,
+ "baseline_off": 37211,
+ "zero_mcp_gap": 14968,
+ "runs_identical": true,
+ "config_modes": 30,
+ "total_runs": 82,
+ "H1": {
+  "max_default_delta_servers_lt10_tools": 322,
+  "server": "context7",
+  "all_lt_1000": true,
+  "tokens_per_tool_no_instructions": {
+   "sequential-thinking": 20.0,
+   "fetch": 12.0,
+   "time": 11.5,
+   "memory": 16.8,
+   "git": 11.6,
+   "filesystem": 14.9,
+   "playwright": 15.4,
+   "chrome-devtools": 17.7
+  },
+  "per_tool_range": [
+   11.5,
+   20.0
+  ],
+  "per_tool_median": 15.15
+ },
+ "H2": {
+  "gap": 14968,
+  "meets_ge_10000": true,
+  "off_baseline_runs": [
+   37211,
+   37211,
+   37211
+  ],
+  "default_baseline_runs": [
+   22243,
+   22243,
+   22243
+  ]
+ },
+ "H3": {
+  "ratio": {
+   "sequential-thinking": 63.1,
+   "fetch": 35.0,
+   "time": 19.0,
+   "context7": 8.2,
+   "memory": 16.1,
+   "git": 15.6,
+   "everything": 4.2,
+   "filesystem": 14.1,
+   "playwright": 17.3,
+   "chrome-devtools": 18.2
+  },
+  "n_ge_10x": 8,
+  "falsified_as_written": true,
+  "below_10x": [
+   "context7",
+   "everything"
+  ]
+ },
+ "H4": {
+  "per_stack": {
+   "stack2/default": {
+    "measured": 360,
+    "sum_of_singles": 360,
+    "diff": 0,
+    "pct": 0.0
+   },
+   "stack2/false": {
+    "measured": 5381,
+    "sum_of_singles": 5381,
+    "diff": 0,
+    "pct": 0.0
+   },
+   "stack5/default": {
+    "measured": 534,
+    "sum_of_singles": 534,
+    "diff": 0,
+    "pct": 0.0
+   },
+   "stack5/false": {
+    "measured": 8407,
+    "sum_of_singles": 8403,
+    "diff": 4,
+    "pct": 0.05
+   },
+   "stack2_big/default": {
+    "measured": 899,
+    "sum_of_singles": 899,
+    "diff": 0,
+    "pct": 0.0
+   },
+   "stack2_big/false": {
+    "measured": 15991,
+    "sum_of_singles": 15991,
+    "diff": 0,
+    "pct": 0.0
+   },
+   "stack10/default": {
+    "measured": 2523,
+    "sum_of_singles": 2651,
+    "diff": -128,
+    "pct": -4.83
+   },
+   "stack10/false": {
+    "measured": 30357,
+    "sum_of_singles": 31943,
+    "diff": -1586,
+    "pct": -4.97
+   }
+  },
+  "all_within_5pct": true,
+  "worst_pct": -4.97
+ },
+ "model_default": {
+  "tokens_per_tool": 16.11,
+  "tokens_per_instruction_char": 0.428,
+  "r2": 0.9906,
+  "residuals": {
+   "sequential-thinking": 3.9,
+   "fetch": -4.1,
+   "time": -9.2,
+   "context7": 19.1,
+   "memory": 6.0,
+   "git": -54.3,
+   "everything": -7.7,
+   "filesystem": -16.6,
+   "playwright": -17.8,
+   "chrome-devtools": 46.7
+  },
+  "r2_tools_only": 0.2627
+ },
+ "model_off": {
+  "tokens_per_json_char": 0.333,
+  "chars_per_token": 3.0,
+  "r2_chars": 0.9153,
+  "tokens_per_tool": 281.5,
+  "r2_tools": 0.8693,
+  "chars_per_token_by_server": {
+   "sequential-thinking": 3.67,
+   "fetch": 2.63,
+   "time": 2.8,
+   "context7": 1.85,
+   "memory": 4.43,
+   "git": 2.73,
+   "everything": 2.1,
+   "filesystem": 4.39,
+   "playwright": 3.02,
+   "chrome-devtools": 2.79
+  }
+ },
+ "built_in_share_stack10": {
+  "default_total": 24766,
+  "off_total": 67568,
+  "tool_search_saves": 42802,
+  "built_in_part": 14968,
+  "mcp_part": 27834,
+  "built_in_pct": 35.0
+ },
+ "stack10_total_tools": 108,
+ "per_server": {
+  "sequential-thinking": {
+   "tools": 1,
+   "json_chars": 4640,
+   "instr_chars": 0,
+   "default_delta": 20,
+   "off_delta": 1263
+  },
+  "fetch": {
+   "tools": 1,
+   "json_chars": 1104,
+   "instr_chars": 0,
+   "default_delta": 12,
+   "off_delta": 420
+  },
+  "time": {
+   "tools": 2,
+   "json_chars": 1220,
+   "instr_chars": 0,
+   "default_delta": 23,
+   "off_delta": 436
+  },
+  "context7": {
+   "tools": 2,
+   "json_chars": 4870,
+   "instr_chars": 632,
+   "default_delta": 322,
+   "off_delta": 2637
+  },
+  "memory": {
+   "tools": 9,
+   "json_chars": 10750,
+   "instr_chars": 0,
+   "default_delta": 151,
+   "off_delta": 2426
+  },
+  "git": {
+   "tools": 12,
+   "json_chars": 5909,
+   "instr_chars": 0,
+   "default_delta": 139,
+   "off_delta": 2166
+  },
+  "everything": {
+   "tools": 13,
+   "json_chars": 7653,
+   "instr_chars": 1574,
+   "default_delta": 876,
+   "off_delta": 3649
+  },
+  "filesystem": {
+   "tools": 14,
+   "json_chars": 12973,
+   "instr_chars": 0,
+   "default_delta": 209,
+   "off_delta": 2955
+  },
+  "playwright": {
+   "tools": 25,
+   "json_chars": 20102,
+   "instr_chars": 0,
+   "default_delta": 385,
+   "off_delta": 6655
+  },
+  "chrome-devtools": {
+   "tools": 29,
+   "json_chars": 26018,
+   "instr_chars": 0,
+   "default_delta": 514,
+   "off_delta": 9336
+  }
+ }
+}

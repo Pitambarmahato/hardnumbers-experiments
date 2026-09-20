@@ -1,0 +1,86 @@
+{
+ "baseline_default": 22243,
+ "baseline_off": 37211,
+ "per_server": [
+  {
+   "server": "sequential-thinking",
+   "tools": 1,
+   "tools_json_chars": 4640,
+   "instructions_chars": 0,
+   "default_delta": 20,
+   "off_delta": 1263
+  },
+  {
+   "server": "fetch",
+   "tools": 1,
+   "tools_json_chars": 1104,
+   "instructions_chars": 0,
+   "default_delta": 12,
+   "off_delta": 420
+  },
+  {
+   "server": "time",
+   "tools": 2,
+   "tools_json_chars": 1220,
+   "instructions_chars": 0,
+   "default_delta": 23,
+   "off_delta": 436
+  },
+  {
+   "server": "context7",
+   "tools": 2,
+   "tools_json_chars": 4870,
+   "instructions_chars": 632,
+   "default_delta": 322,
+   "off_delta": 2637
+  },
+  {
+   "server": "memory",
+   "tools": 9,
+   "tools_json_chars": 10750,
+   "instructions_chars": 0,
+   "default_delta": 151,
+   "off_delta": 2426
+  },
+  {
+   "server": "git",
+   "tools": 12,
+   "tools_json_chars": 5909,
+   "instructions_chars": 0,
+   "default_delta": 139,
+   "off_delta": 2166
+  },
+  {
+   "server": "everything",
+   "tools": 13,
+   "tools_json_chars": 7653,
+   "instructions_chars": 1574,
+   "default_delta": 876,
+   "off_delta": 3649
+  },
+  {
+   "server": "filesystem",
+   "tools": 14,
+   "tools_json_chars": 12973,
+   "instructions_chars": 0,
+   "default_delta": 209,
+   "off_delta": 2955
+  },
+  {
+   "server": "playwright",
+   "tools": 25,
+   "tools_json_chars": 20102,
+   "instructions_chars": 0,
+   "default_delta": 385,
+   "off_delta": 6655
+  },
+  {
+   "server": "chrome-devtools",
+   "tools": 29,
+   "tools_json_chars": 26018,
+   "instructions_chars": 0,
+   "default_delta": 514,
+   "off_delta": 9336
+  }
+ ]
+}
