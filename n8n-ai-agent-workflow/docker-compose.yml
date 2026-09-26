@@ -9,6 +9,10 @@ services:
       - N8N_RUNNERS_ENABLED=true
     volumes:
       - n8n_data:/home/node/.n8n
+    extra_hosts:
+      # Docker Desktop (Mac/Windows) defines this automatically; plain
+      # Linux Docker doesn't, so it's added explicitly for both.
+      - "host.docker.internal:host-gateway"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5678/"]
       interval: 3s
