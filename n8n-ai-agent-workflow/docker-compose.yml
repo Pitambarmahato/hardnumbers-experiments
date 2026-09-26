@@ -1,0 +1,30 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n-agent-test
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - N8N_RUNNERS_ENABLED=true
+    volumes:
+      - n8n_data:/home/node/.n8n
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5678/"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  builder:
+    build: .
+    depends_on:
+      n8n:
+        condition: service_healthy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - MODEL=${MODEL:-qwen2.5:14b}
+    command: ["--container", "n8n-agent-test", "--model", "${MODEL:-qwen2.5:14b}", "--run"]
+
+volumes:
+  n8n_data:

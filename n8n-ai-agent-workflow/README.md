@@ -11,36 +11,69 @@ model and n8n's built-in Calculator tool, against a running n8n container.
 It replaces the manual `docker cp` / `n8n import:*` / `n8n execute` sequence
 in the tutorial with one command.
 
-## Quick start
+## Quick start (docker compose)
+
+```bash
+docker compose up --build
+```
+
+That's it — no manual `docker run`, no owner setup, no separate script
+invocation. `docker compose up` starts n8n, waits for its healthcheck, then
+runs the builder against it and prints the result:
+
+```
+builder-1  | Successfully imported 1 credential.
+builder-1  | Importing 1 workflows...
+builder-1  | Successfully imported 1 workflow.
+builder-1  |
+builder-1  | == executing (model=qwen2.5:14b) ==
+builder-1  |
+builder-1  | LLM calls: 2  Calculator calls: 1
+builder-1  | Output: {"output": "47.51"}
+```
+
+n8n itself keeps running afterward at `http://127.0.0.1:5678` (open it and
+complete the one-time owner setup if you want to click around the canvas —
+that step is only needed for the browser UI, not for this CLI-driven
+build). Reproduce the tutorial's failing case with a different model:
+
+```bash
+MODEL=qwen2.5:7b docker compose up --build
+```
+
+```
+builder-1  | == executing (model=qwen2.5:7b) ==
+builder-1  |
+builder-1  | LLM calls: 10  Calculator calls: 10
+builder-1  | Output: {"output": "Agent stopped due to max iterations."}
+```
+
+`docker compose down -v` tears everything down, including n8n's data volume.
+
+### How the builder talks to n8n
+
+`builder`'s Dockerfile has no daemon of its own — it mounts the host's
+Docker socket (`/var/run/docker.sock`) and shells out `docker cp` /
+`docker exec` against the `n8n` service's container, the same commands the
+manual walkthrough below uses. The CLI binary comes from Docker's official
+`docker:cli` image via a multi-stage build; Debian's own `docker.io` apt
+package stopped shipping the client binary as of Debian trixie, only the
+daemon (`dockerd`) — a real gotcha hit while building this image, not a
+hypothetical one.
+
+## Manual / standalone use
+
+Prefer running the script yourself against an n8n you already have
+(no compose, no Docker socket mount):
 
 ```bash
 # n8n already running, e.g.:
 docker run -d --name n8n-agent-test -p 5678:5678 \
   -e N8N_SECURE_COOKIE=false -e N8N_RUNNERS_ENABLED=true \
   -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n:latest
-# ... complete the one-time owner setup at http://127.0.0.1:5678, then:
 
 python3 build_agent_workflow.py --run
-```
-
-```
-== executing (model=qwen2.5:14b) ==
-
-LLM calls: 2  Calculator calls: 1
-Output: {"output": "47.51"}
-```
-
-Reproduce the tutorial's failing case:
-
-```bash
-python3 build_agent_workflow.py --model qwen2.5:7b --run
-```
-
-```
-== executing (model=qwen2.5:7b) ==
-
-LLM calls: 10  Calculator calls: 10
-Output: {"output": "Agent stopped due to max iterations."}
+python3 build_agent_workflow.py --model qwen2.5:7b --run   # the failing case
 ```
 
 ## What it does
