@@ -1,0 +1,23 @@
+# openai_gpt-oss-20b-bf16.gguf  total 12.83 GiB
+ffn_down_exps.weight         MXFP4    n= 24  3.152 GiB  24.6%
+ffn_gate_exps.weight         MXFP4    n= 24  3.152 GiB  24.6%
+ffn_up_exps.weight           MXFP4    n= 24  3.152 GiB  24.6%
+output.weight                BF16     n=  1  1.079 GiB   8.4%
+token_embd.weight            BF16     n=  1  1.079 GiB   8.4%
+attn_output.weight           BF16     n= 24  0.527 GiB   4.1%
+attn_q.weight                BF16     n= 24  0.527 GiB   4.1%
+attn_k.weight                BF16     n= 24  0.066 GiB   0.5%
+attn_v.weight                BF16     n= 24  0.066 GiB   0.5%
+ffn_down_exps.bias           F32      n= 24  0.008 GiB   0.1%
+ffn_gate_exps.bias           F32      n= 24  0.008 GiB   0.1%
+ffn_up_exps.bias             F32      n= 24  0.008 GiB   0.1%
+ffn_gate_inp.weight          F32      n= 24  0.008 GiB   0.1%
+attn_q.bias                  F32      n= 24  0.000 GiB   0.0%
+attn_norm.weight             F32      n= 24  0.000 GiB   0.0%
+post_attention_norm.weight   F32      n= 24  0.000 GiB   0.0%
+attn_output.bias             F32      n= 24  0.000 GiB   0.0%
+attn_k.bias                  F32      n= 24  0.000 GiB   0.0%
+attn_v.bias                  F32      n= 24  0.000 GiB   0.0%
+output_norm.weight           F32      n=  1  0.000 GiB   0.0%
+attn_sinks.weight            F32      n= 24  0.000 GiB   0.0%
+ffn_gate_inp.bias            F32      n= 24  0.000 GiB   0.0%

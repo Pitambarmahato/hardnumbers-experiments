@@ -1,0 +1,61 @@
+arith-01 OK
+arith-02 OK
+arith-03 OK
+arith-04 OK
+arith-05 OK
+arith-06 OK
+arith-07 OK
+arith-08 OK
+arith-09 OK
+arith-10 OK
+arith-11 OK
+arith-12 OK
+arith-13 OK
+arith-14 OK
+arith-15 OK
+string-01 OK
+string-02 X got=ecnefe want=ecnere
+string-03 OK
+string-04 OK
+string-05 X got=yxytxe want=ytixel
+string-06 OK
+string-07 OK
+string-08 X got=rezin want=rezine
+string-09 X got=E want=N
+string-10 OK
+string-11 X got=kcnoke want=kramhc
+string-12 OK
+string-13 OK
+string-14 X got=hdiwtn want=htdiwd
+string-15 OK
+code-01 X got=None want=52
+code-02 X got=None want=170
+code-03 OK
+code-04 X got=None want=125
+code-05 OK
+code-06 OK
+code-07 X got=None want=160
+code-08 OK
+code-09 OK
+code-10 OK
+code-11 OK
+code-12 OK
+code-13 OK
+code-14 X got=None want=63
+code-15 OK
+logic-01 OK
+logic-02 OK
+logic-03 X got=None want=78
+logic-04 OK
+logic-05 OK
+logic-06 X got=None want=74
+logic-07 OK
+logic-08 OK
+logic-09 X got=None want=78
+logic-10 OK
+logic-11 OK
+logic-12 OK
+logic-13 OK
+logic-14 OK
+logic-15 OK
+ACCURACY strict 46/60 lenient 54/60

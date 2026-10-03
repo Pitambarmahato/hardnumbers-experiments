@@ -1,0 +1,362 @@
+[
+ {
+  "id": "arith-01",
+  "cat": "arith",
+  "prompt": "Compute (53 * 31) - (62 * 95) + 148.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-4099"
+ },
+ {
+  "id": "arith-02",
+  "cat": "arith",
+  "prompt": "Compute (18 * 21) - (80 * 24) + 42.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-1500"
+ },
+ {
+  "id": "arith-03",
+  "cat": "arith",
+  "prompt": "Compute (58 * 86) - (19 * 76) + 134.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "3678"
+ },
+ {
+  "id": "arith-04",
+  "cat": "arith",
+  "prompt": "Compute (39 * 16) - (23 * 67) + 106.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-811"
+ },
+ {
+  "id": "arith-05",
+  "cat": "arith",
+  "prompt": "Compute (65 * 20) - (42 * 23) + 88.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "422"
+ },
+ {
+  "id": "arith-06",
+  "cat": "arith",
+  "prompt": "Compute (82 * 66) - (19 * 84) + 166.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "3982"
+ },
+ {
+  "id": "arith-07",
+  "cat": "arith",
+  "prompt": "Compute (27 * 40) - (92 * 92) + 119.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-7265"
+ },
+ {
+  "id": "arith-08",
+  "cat": "arith",
+  "prompt": "Compute (86 * 19) - (85 * 86) + 172.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-5504"
+ },
+ {
+  "id": "arith-09",
+  "cat": "arith",
+  "prompt": "Compute (62 * 18) - (40 * 17) + 79.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "515"
+ },
+ {
+  "id": "arith-10",
+  "cat": "arith",
+  "prompt": "Compute (83 * 29) - (49 * 65) + 148.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-630"
+ },
+ {
+  "id": "arith-11",
+  "cat": "arith",
+  "prompt": "Compute (30 * 81) - (27 * 85) + 115.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "250"
+ },
+ {
+  "id": "arith-12",
+  "cat": "arith",
+  "prompt": "Compute (51 * 83) - (99 * 35) + 86.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "854"
+ },
+ {
+  "id": "arith-13",
+  "cat": "arith",
+  "prompt": "Compute (25 * 86) - (85 * 93) + 118.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "-5637"
+ },
+ {
+  "id": "arith-14",
+  "cat": "arith",
+  "prompt": "Compute (36 * 59) - (24 * 82) + 118.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "274"
+ },
+ {
+  "id": "arith-15",
+  "cat": "arith",
+  "prompt": "Compute (20 * 84) - (19 * 91) + 111.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "62"
+ },
+ {
+  "id": "string-01",
+  "cat": "string",
+  "prompt": "How many times does the letter 'u' appear in the string \"throughputtokenizer\"?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "2"
+ },
+ {
+  "id": "string-02",
+  "cat": "string",
+  "prompt": "Reverse the string \"bandwidthinference\" and give the first 6 characters of the result.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "ecnere"
+ },
+ {
+  "id": "string-03",
+  "cat": "string",
+  "prompt": "What is the 7th character (1-indexed) of the string \"tokenizerembedding\" converted to uppercase?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "Z"
+ },
+ {
+  "id": "string-04",
+  "cat": "string",
+  "prompt": "How many times does the letter 'i' appear in the string \"tokenizerinference\"?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "2"
+ },
+ {
+  "id": "string-05",
+  "cat": "string",
+  "prompt": "Reverse the string \"throughputperplexity\" and give the first 6 characters of the result.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "ytixel"
+ },
+ {
+  "id": "string-06",
+  "cat": "string",
+  "prompt": "What is the 7th character (1-indexed) of the string \"calibrationthroughput\" converted to uppercase?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "A"
+ },
+ {
+  "id": "string-07",
+  "cat": "string",
+  "prompt": "How many times does the letter 'i' appear in the string \"benchmarkembedding\"?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "1"
+ },
+ {
+  "id": "string-08",
+  "cat": "string",
+  "prompt": "Reverse the string \"attentiontokenizer\" and give the first 6 characters of the result.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "rezine"
+ },
+ {
+  "id": "string-09",
+  "cat": "string",
+  "prompt": "What is the 7th character (1-indexed) of the string \"inferencecalibration\" converted to uppercase?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "N"
+ },
+ {
+  "id": "string-10",
+  "cat": "string",
+  "prompt": "How many times does the letter 'u' appear in the string \"tokenizermicroscaling\"?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "0"
+ },
+ {
+  "id": "string-11",
+  "cat": "string",
+  "prompt": "Reverse the string \"benchmarkbenchmark\" and give the first 6 characters of the result.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "kramhc"
+ },
+ {
+  "id": "string-12",
+  "cat": "string",
+  "prompt": "What is the 7th character (1-indexed) of the string \"attentionbandwidth\" converted to uppercase?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "I"
+ },
+ {
+  "id": "string-13",
+  "cat": "string",
+  "prompt": "How many times does the letter 'e' appear in the string \"perplexityinference\"?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "5"
+ },
+ {
+  "id": "string-14",
+  "cat": "string",
+  "prompt": "Reverse the string \"tokenizerbandwidth\" and give the first 6 characters of the result.\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "htdiwd"
+ },
+ {
+  "id": "string-15",
+  "cat": "string",
+  "prompt": "What is the 7th character (1-indexed) of the string \"quantizationlatency\" converted to uppercase?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "Z"
+ },
+ {
+  "id": "code-01",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(6):\n    if i % 4 != 2:\n        s += i * 4\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "52"
+ },
+ {
+  "id": "code-02",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(10):\n    if i % 5 != 3:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "170"
+ },
+ {
+  "id": "code-03",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(12):\n    if i % 2 != 1:\n        s += i * 2\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "60"
+ },
+ {
+  "id": "code-04",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(9):\n    if i % 5 != 3:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "125"
+ },
+ {
+  "id": "code-05",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(6):\n    if i % 2 != 1:\n        s += i * 2\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "12"
+ },
+ {
+  "id": "code-06",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(9):\n    if i % 5 != 2:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "135"
+ },
+ {
+  "id": "code-07",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(11):\n    if i % 4 != 1:\n        s += i * 4\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "160"
+ },
+ {
+  "id": "code-08",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(12):\n    if i % 4 != 1:\n        s += i * 4\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "204"
+ },
+ {
+  "id": "code-09",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(6):\n    if i % 5 != 1:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "70"
+ },
+ {
+  "id": "code-10",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(8):\n    if i % 4 != 1:\n        s += i * 4\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "88"
+ },
+ {
+  "id": "code-11",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(8):\n    if i % 5 != 2:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "95"
+ },
+ {
+  "id": "code-12",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(12):\n    if i % 2 != 1:\n        s += i * 2\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "60"
+ },
+ {
+  "id": "code-13",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(12):\n    if i % 5 != 3:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "275"
+ },
+ {
+  "id": "code-14",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(9):\n    if i % 3 != 2:\n        s += i * 3\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "63"
+ },
+ {
+  "id": "code-15",
+  "cat": "code",
+  "prompt": "What does this Python program print?\n```python\ns = 0\nfor i in range(9):\n    if i % 5 != 2:\n        s += i * 5\nprint(s)\n```\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "135"
+ },
+ {
+  "id": "logic-01",
+  "cat": "logic",
+  "prompt": "Sort these numbers ascending and give the 4th one: [97, 58, 39, 29, 20, 32, 94]\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "39"
+ },
+ {
+  "id": "logic-02",
+  "cat": "logic",
+  "prompt": "What is the sum of the even numbers in this list: [39, 11, 72, 85, 33, 43, 46]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "118"
+ },
+ {
+  "id": "logic-03",
+  "cat": "logic",
+  "prompt": "What is the difference between the largest and smallest of: [10, 28, 63, 78, 57, 88, 82]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "78"
+ },
+ {
+  "id": "logic-04",
+  "cat": "logic",
+  "prompt": "Sort these numbers ascending and give the 4th one: [50, 26, 98, 75, 89, 93, 96]\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "89"
+ },
+ {
+  "id": "logic-05",
+  "cat": "logic",
+  "prompt": "What is the sum of the even numbers in this list: [16, 68, 97, 81, 60, 61, 23]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "144"
+ },
+ {
+  "id": "logic-06",
+  "cat": "logic",
+  "prompt": "What is the difference between the largest and smallest of: [71, 91, 61, 17, 34, 18, 36]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "74"
+ },
+ {
+  "id": "logic-07",
+  "cat": "logic",
+  "prompt": "Sort these numbers ascending and give the 4th one: [66, 30, 24, 53, 86, 16, 23]\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "30"
+ },
+ {
+  "id": "logic-08",
+  "cat": "logic",
+  "prompt": "What is the sum of the even numbers in this list: [10, 82, 29, 78, 22, 56, 88]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "336"
+ },
+ {
+  "id": "logic-09",
+  "cat": "logic",
+  "prompt": "What is the difference between the largest and smallest of: [13, 19, 36, 88, 58, 29, 91]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "78"
+ },
+ {
+  "id": "logic-10",
+  "cat": "logic",
+  "prompt": "Sort these numbers ascending and give the 4th one: [42, 54, 87, 56, 70, 25, 24]\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "54"
+ },
+ {
+  "id": "logic-11",
+  "cat": "logic",
+  "prompt": "What is the sum of the even numbers in this list: [72, 69, 71, 49, 20, 28, 23]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "120"
+ },
+ {
+  "id": "logic-12",
+  "cat": "logic",
+  "prompt": "What is the difference between the largest and smallest of: [53, 43, 71, 98, 30, 76, 12]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "86"
+ },
+ {
+  "id": "logic-13",
+  "cat": "logic",
+  "prompt": "Sort these numbers ascending and give the 4th one: [36, 77, 56, 28, 98, 79, 13]\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "56"
+ },
+ {
+  "id": "logic-14",
+  "cat": "logic",
+  "prompt": "What is the sum of the even numbers in this list: [77, 48, 92, 21, 43, 76, 56]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "272"
+ },
+ {
+  "id": "logic-15",
+  "cat": "logic",
+  "prompt": "What is the difference between the largest and smallest of: [31, 55, 38, 78, 79, 74, 52]?\nEnd your reply with a last line of the form `FINAL: <answer>` (answer only, no units, no extra text).",
+  "answer": "48"
+ }
+]

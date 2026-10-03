@@ -1,0 +1,15 @@
+=== Q4_K_M ===
+| model                          |       size |     params | backend    | threads |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | --------------: | -------------------: |
+| gpt-oss 20B Q4_K - Medium      |  10.86 GiB |    20.91 B | BLAS,MTL   |       4 |           pp512 |        353.90 ± 1.40 |
+| gpt-oss 20B Q4_K - Medium      |  10.86 GiB |    20.91 B | BLAS,MTL   |       4 |           tg128 |         31.31 ± 0.21 |
+
+build: 7fe450e19 (11146)
+=== MXFP4 ===
+| model                          |       size |     params | backend    | threads |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | --------------: | -------------------: |
+| gpt-oss 20B MXFP4 MoE          |  11.27 GiB |    20.91 B | BLAS,MTL   |       4 |           pp512 |        369.66 ± 4.68 |
+| gpt-oss 20B MXFP4 MoE          |  11.27 GiB |    20.91 B | BLAS,MTL   |       4 |           tg128 |         30.48 ± 0.13 |
+
+build: 7fe450e19 (11146)
+ALLDONE

@@ -1,0 +1,24 @@
+# openai_gpt-oss-20b-Q4_K_M.gguf  total 10.86 GiB
+ffn_down_exps.weight         MXFP4    n= 24  3.152 GiB  29.0%
+ffn_gate_exps.weight         MXFP4    n= 24  3.152 GiB  29.0%
+ffn_up_exps.weight           MXFP4    n= 24  3.152 GiB  29.0%
+output.weight                Q8_0     n=  1  0.573 GiB   5.3%
+token_embd.weight            Q5_0     n=  1  0.371 GiB   3.4%
+attn_output.weight           Q5_K     n= 24  0.181 GiB   1.7%
+attn_q.weight                Q5_0     n= 24  0.181 GiB   1.7%
+attn_k.weight                Q8_0     n= 24  0.035 GiB   0.3%
+attn_v.weight                Q8_0     n= 12  0.018 GiB   0.2%
+attn_v.weight                Q5_0     n= 12  0.011 GiB   0.1%
+ffn_down_exps.bias           F32      n= 24  0.008 GiB   0.1%
+ffn_gate_exps.bias           F32      n= 24  0.008 GiB   0.1%
+ffn_gate_inp.weight          F32      n= 24  0.008 GiB   0.1%
+ffn_up_exps.bias             F32      n= 24  0.008 GiB   0.1%
+attn_q.bias                  F32      n= 24  0.000 GiB   0.0%
+attn_norm.weight             F32      n= 24  0.000 GiB   0.0%
+attn_output.bias             F32      n= 24  0.000 GiB   0.0%
+post_attention_norm.weight   F32      n= 24  0.000 GiB   0.0%
+attn_k.bias                  F32      n= 24  0.000 GiB   0.0%
+attn_v.bias                  F32      n= 24  0.000 GiB   0.0%
+output_norm.weight           F32      n=  1  0.000 GiB   0.0%
+attn_sinks.weight            F32      n= 24  0.000 GiB   0.0%
+ffn_gate_inp.bias            F32      n= 24  0.000 GiB   0.0%

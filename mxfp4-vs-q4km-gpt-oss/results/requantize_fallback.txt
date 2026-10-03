@@ -1,0 +1,13 @@
+# What happened when we ran: llama-quantize --allow-requantize openai_gpt-oss-20b-bf16.gguf ctl-Q4_K_M.gguf Q4_K_M 4
+# llama.cpp 0.5.0 (build 7fe450e19), 2026-10-03. Output size: 15,805,135,680 bytes (15.8 GB), larger than the 13,792,637,760-byte bf16 source.
+# The file was deleted afterwards to free disk. The listing below was produced by tensor_anatomy.py before deletion and copied
+# from the terminal output (top 6 rows only), not regenerated.
+ffn_gate_exps.weight         Q5_0    n= 24  4.08 GiB
+ffn_up_exps.weight           Q5_0    n= 24  4.08 GiB
+ffn_down_exps.weight         Q8_0    n= 12  3.15 GiB
+ffn_down_exps.weight         Q5_0    n= 12  2.04 GiB
+output.weight                Q8_0    n=  1  0.57 GiB
+token_embd.weight            Q5_0    n=  1  0.37 GiB
+# expert row length 2880: 2880 % 256 = 64 (not a K-quant block multiple), 2880 % 32 = 0 (MXFP4 block multiple)
+# Earlier attempt WITHOUT --allow-requantize failed with:
+#   llama_model_quantize: failed to quantize: requantizing from type mxfp4 is disabled
