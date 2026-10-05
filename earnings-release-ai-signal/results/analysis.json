@@ -1,0 +1,276 @@
+{
+ "abn": {
+  "outcome": "abn",
+  "events": 476,
+  "dropped_no_or_short_text": 24,
+  "arms": {
+   "jev": {
+    "n": 476,
+    "non_neutral": 392,
+    "neutral": 84,
+    "hits": 220,
+    "hit_rate": 0.5612244897959183,
+    "wilson95": [
+     0.5117406627712289,
+     0.6095199626910772
+    ],
+    "binom_p": 0.017491561093844397,
+    "spearman": 0.22405088975084955,
+    "spearman_p": 1.04443627174964e-06,
+    "labels": {
+     "bullish": 333,
+     "neutral": 84,
+     "bearish": 59
+    },
+    "latency_ms": {
+     "p50": 366.0,
+     "p95": 446.3,
+     "max": 19600.3
+    },
+    "tokens_in": 966512
+   },
+   "qwen2.5-7b": {
+    "n": 476,
+    "non_neutral": 379,
+    "neutral": 97,
+    "hits": 191,
+    "hit_rate": 0.503957783641161,
+    "wilson95": [
+     0.4538336038341078,
+     0.5540025351852673
+    ],
+    "binom_p": 0.9181926096129444,
+    "spearman": 0.13162510305467431,
+    "spearman_p": 0.0041215912145784765,
+    "labels": {
+     "bullish": 374,
+     "neutral": 97,
+     "bearish": 5
+    },
+    "latency_ms": {
+     "p50": 8840.4,
+     "p95": 11594.4,
+     "max": 15510.8
+    },
+    "tokens_in": 798767
+   },
+   "rules": {
+    "n": 476,
+    "non_neutral": 398,
+    "neutral": 78,
+    "hits": 194,
+    "hit_rate": 0.48743718592964824,
+    "wilson95": [
+     0.43868498241686815,
+     0.5364295900913042
+    ],
+    "binom_p": 0.6519508773557384,
+    "spearman": 0.048888734704767345,
+    "spearman_p": 0.28664734191477653,
+    "labels": {
+     "bullish": 382,
+     "neutral": 78,
+     "bearish": 16
+    },
+    "latency_ms": {
+     "p50": 0.4,
+     "p95": 0.5,
+     "max": 0.9
+    },
+    "tokens_in": 0
+   },
+   "always_up": {
+    "n": 476,
+    "non_neutral": 476,
+    "neutral": 0,
+    "hits": 223,
+    "hit_rate": 0.4684873949579832,
+    "wilson95": [
+     0.4240898555613647,
+     0.5133895126301387
+    ],
+    "binom_p": 0.1837190359393453,
+    "spearman": NaN,
+    "spearman_p": NaN,
+    "labels": {
+     "bullish": 476,
+     "neutral": 0,
+     "bearish": 0
+    },
+    "latency_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 0.0
+    },
+    "tokens_in": 0
+   }
+  },
+  "jev_tercile": {
+   "bottom": 0.5307692307692308,
+   "top": 0.5692307692307692,
+   "gap": 0.038461538461538436,
+   "n_each": 130
+  },
+  "jev_ece": 0.3367602040816326,
+  "hypotheses": {
+   "H1_no_arm_beats_chance": {
+    "holds": true,
+    "arms_that_beat": [],
+    "rule": "Wilson 95% lower bound > 0.5 and binomial p < 0.0167"
+   },
+   "H2_cheap_equals_paid": {
+    "gap_points": 5.726670615475737,
+    "holds": false,
+    "falsified": true
+   },
+   "H3_confidence_matters": {
+    "gap_points": 3.8461538461538436,
+    "holds": false,
+    "falsified": false
+   },
+   "H4_weak_correlation": {
+    "best_spearman": 0.22405088975084955,
+    "p": 1.04443627174964e-06,
+    "holds": false,
+    "falsified": true
+   }
+  }
+ },
+ "abn_oc": {
+  "outcome": "abn_oc",
+  "events": 476,
+  "dropped_no_or_short_text": 24,
+  "arms": {
+   "jev": {
+    "n": 476,
+    "non_neutral": 392,
+    "neutral": 84,
+    "hits": 194,
+    "hit_rate": 0.49489795918367346,
+    "wilson95": [
+     0.4456933082282775,
+     0.5442016396498637
+    ],
+    "binom_p": 0.879588179261681,
+    "spearman": -0.05362852480118522,
+    "spearman_p": 0.24248156045305708,
+    "labels": {
+     "bullish": 333,
+     "neutral": 84,
+     "bearish": 59
+    },
+    "latency_ms": {
+     "p50": 366.0,
+     "p95": 446.3,
+     "max": 19600.3
+    },
+    "tokens_in": 966512
+   },
+   "qwen2.5-7b": {
+    "n": 476,
+    "non_neutral": 379,
+    "neutral": 97,
+    "hits": 191,
+    "hit_rate": 0.503957783641161,
+    "wilson95": [
+     0.4538336038341078,
+     0.5540025351852673
+    ],
+    "binom_p": 0.9181926096129444,
+    "spearman": -0.01343236851010096,
+    "spearman_p": 0.7697119611036354,
+    "labels": {
+     "bullish": 374,
+     "neutral": 97,
+     "bearish": 5
+    },
+    "latency_ms": {
+     "p50": 8840.4,
+     "p95": 11594.4,
+     "max": 15510.8
+    },
+    "tokens_in": 798767
+   },
+   "rules": {
+    "n": 476,
+    "non_neutral": 398,
+    "neutral": 78,
+    "hits": 194,
+    "hit_rate": 0.48743718592964824,
+    "wilson95": [
+     0.43868498241686815,
+     0.5364295900913042
+    ],
+    "binom_p": 0.6519508773557384,
+    "spearman": -0.08447843019279587,
+    "spearman_p": 0.06559742653344838,
+    "labels": {
+     "bullish": 382,
+     "neutral": 78,
+     "bearish": 16
+    },
+    "latency_ms": {
+     "p50": 0.4,
+     "p95": 0.5,
+     "max": 0.9
+    },
+    "tokens_in": 0
+   },
+   "always_up": {
+    "n": 476,
+    "non_neutral": 476,
+    "neutral": 0,
+    "hits": 240,
+    "hit_rate": 0.5042016806722689,
+    "wilson95": [
+     0.4594315512054797,
+     0.5489045330356532
+    ],
+    "binom_p": 0.890650543122033,
+    "spearman": NaN,
+    "spearman_p": NaN,
+    "labels": {
+     "bullish": 476,
+     "neutral": 0,
+     "bearish": 0
+    },
+    "latency_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 0.0
+    },
+    "tokens_in": 0
+   }
+  },
+  "jev_tercile": {
+   "bottom": 0.5461538461538461,
+   "top": 0.47692307692307695,
+   "gap": -0.06923076923076915,
+   "n_each": 130
+  },
+  "jev_ece": 0.39798469387755103,
+  "hypotheses": {
+   "H1_no_arm_beats_chance": {
+    "holds": true,
+    "arms_that_beat": [],
+    "rule": "Wilson 95% lower bound > 0.5 and binomial p < 0.0167"
+   },
+   "H2_cheap_equals_paid": {
+    "gap_points": 0.9059824457487486,
+    "holds": true,
+    "falsified": false
+   },
+   "H3_confidence_matters": {
+    "gap_points": -6.923076923076915,
+    "holds": false,
+    "falsified": true
+   },
+   "H4_weak_correlation": {
+    "best_spearman": -0.08447843019279587,
+    "p": 0.06559742653344838,
+    "holds": true,
+    "falsified": false
+   }
+  }
+ }
+}

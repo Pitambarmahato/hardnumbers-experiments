@@ -1,0 +1,11 @@
+data/
+.env
+.venv/
+__pycache__/
+results/spend.json
+results/*.bak*
+cover.html
+cover.png
+dashboard.html
+dashboard_preview.png
+*.log

@@ -1,0 +1,23 @@
+{
+ "H1_no_arm_beats_chance": {
+  "holds": true,
+  "arms_that_beat": [],
+  "rule": "Wilson 95% lower bound > 0.5 and binomial p < 0.0167"
+ },
+ "H2_cheap_equals_paid": {
+  "gap_points": 5.726670615475737,
+  "holds": false,
+  "falsified": true
+ },
+ "H3_confidence_matters": {
+  "gap_points": 3.8461538461538436,
+  "holds": false,
+  "falsified": false
+ },
+ "H4_weak_correlation": {
+  "best_spearman": 0.22405088975084955,
+  "p": 1.04443627174964e-06,
+  "holds": false,
+  "falsified": true
+ }
+}

@@ -17,6 +17,7 @@ underlying numbers without having to trust the writeup.
 | [MLX vs llama.cpp on Apple Silicon: Same Model, Two Engines](https://hardnumbers.dev/articles/mlx-vs-llama-cpp-on-apple-silicon-same-model-two-engines) | [`mlx-vs-llama-cpp/`](./mlx-vs-llama-cpp/) | Wall-time and decode throughput for Qwen3 14B 4-bit under Ollama (llama.cpp) vs mlx-lm, on chat / RAG / code workloads |
 | [gpt-oss-20B vs Qwen3-14B vs Mistral-Small-24B: A Real Benchmark](https://hardnumbers.dev/articles/gpt-oss-20b-vs-qwen3-14b-vs-mistral-small-24b-a-real-benchmark) | [`open-weight-benchmark/`](./open-weight-benchmark/) | MMLU / GSM8K / HumanEval+ / IFEval accuracy + tokens/sec on 3 Apache 2.0 open-weight 14-24B models |
 | MCP Server Token Cost in Claude Code: 10 Servers Measured (article not yet published) | [`mcp-tax/`](./mcp-tax/) | Context tokens added by 10 open-source MCP servers in Claude Code 2.1.278, with tool search on and off, single and stacked |
+| Jev AI vs Local 7B Model: 476 Earnings Releases Tested (article not yet published) | [`earnings-release-ai-signal/`](./earnings-release-ai-signal/) | Next-session direction hit rate of Jev, a local 7B model and a keyword baseline on 476 SEC earnings releases, before and after the open |
 
 ## How to read this repo
 
