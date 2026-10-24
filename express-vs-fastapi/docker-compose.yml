@@ -1,0 +1,62 @@
+# One server up at a time (run.py handles it). All limits identical per contender.
+name: evf
+
+x-node: &node
+  build: ./node
+  cpus: 4
+  mem_limit: 2g
+  depends_on:
+    postgres: { condition: service_healthy }
+  environment: &node-env
+    PG_URL: postgres://bench:bench@postgres:5432/bench
+    PG_POOL: "10"
+  healthcheck:
+    test: ["CMD", "node", "-e", "fetch('http://localhost:3000/json').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+    interval: 2s
+    timeout: 3s
+    retries: 30
+
+x-py: &py
+  build: ./python
+  cpus: 4
+  mem_limit: 2g
+  depends_on:
+    postgres: { condition: service_healthy }
+  healthcheck:
+    test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:3000/json').status==200 else 1)"]
+    interval: 2s
+    timeout: 3s
+    retries: 30
+
+services:
+  postgres:
+    image: postgres:16.4
+    cpus: 2
+    mem_limit: 2g
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    command: ["postgres", "-c", "max_connections=200"]
+    volumes: ["./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bench -d bench"]
+      interval: 2s
+      retries: 30
+
+  express-1:
+    <<: *node
+    environment: { <<: *node-env, FRAMEWORK: express, WORKERS: "1" }
+  express-n:
+    <<: *node
+    environment: { <<: *node-env, FRAMEWORK: express, WORKERS: "4" }
+  fastify-1:
+    <<: *node
+    environment: { <<: *node-env, FRAMEWORK: fastify, WORKERS: "1" }
+  fastify-n:
+    <<: *node
+    environment: { <<: *node-env, FRAMEWORK: fastify, WORKERS: "4" }
+
+  fastapi-1:
+    <<: *py
+    environment: { PG_URL: postgresql://bench:bench@postgres:5432/bench, PG_POOL: "10", WORKERS: "1" }
+  fastapi-n:
+    <<: *py
+    environment: { PG_URL: postgresql://bench:bench@postgres:5432/bench, PG_POOL: "10", WORKERS: "4" }

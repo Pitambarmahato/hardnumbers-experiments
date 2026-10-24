@@ -1,0 +1,190 @@
+{
+ "meta": {
+  "oha": "ghcr.io/hatoo/oha@sha256:3ec3dbf549ea197793482d47a6324797411406bbf438c2fe8b91f244ec641a2f",
+  "duration_s": 5,
+  "warmup_s": 2,
+  "repeats": 1
+ },
+ "results": [
+  {
+   "provider": "express-1",
+   "task_id": "json",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 16480.9,
+   "p50_ms": 2.71,
+   "p95_ms": 4.14,
+   "p99_ms": 5.88,
+   "error_rate": 0.0,
+   "rss_mib": 47.5
+  },
+  {
+   "provider": "express-1",
+   "task_id": "validate",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 7192.7,
+   "p50_ms": 3.92,
+   "p95_ms": 17.23,
+   "p99_ms": 59.84,
+   "error_rate": 0.0,
+   "rss_mib": 50.2
+  },
+  {
+   "provider": "express-1",
+   "task_id": "db",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 8627.5,
+   "p50_ms": 4.74,
+   "p95_ms": 10.13,
+   "p99_ms": 28.59,
+   "error_rate": 0.0,
+   "rss_mib": 51.9
+  },
+  {
+   "provider": "express-1",
+   "task_id": "cpu",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 48.6,
+   "p50_ms": 281.04,
+   "p95_ms": 1971.09,
+   "p99_ms": 4494.38,
+   "error_rate": 0.0,
+   "rss_mib": 69.2
+  },
+  {
+   "provider": "express-1",
+   "task_id": "io",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 834.4,
+   "p50_ms": 55.39,
+   "p95_ms": 91.88,
+   "p99_ms": 163.17,
+   "error_rate": 0.0,
+   "rss_mib": 68.7
+  },
+  {
+   "provider": "fastapi-1",
+   "task_id": "json",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 20644.6,
+   "p50_ms": 2.0,
+   "p95_ms": 3.9,
+   "p99_ms": 9.76,
+   "error_rate": 0.0,
+   "rss_mib": 40.3
+  },
+  {
+   "provider": "fastapi-1",
+   "task_id": "validate",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 17042.8,
+   "p50_ms": 2.78,
+   "p95_ms": 3.25,
+   "p99_ms": 5.7,
+   "error_rate": 0.0,
+   "rss_mib": 40.4
+  },
+  {
+   "provider": "fastapi-1",
+   "task_id": "db",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 10657.6,
+   "p50_ms": 4.52,
+   "p95_ms": 5.41,
+   "p99_ms": 10.36,
+   "error_rate": 0.0,
+   "rss_mib": 41.2
+  },
+  {
+   "provider": "fastapi-1",
+   "task_id": "cpu",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 192.3,
+   "p50_ms": 258.31,
+   "p95_ms": 361.71,
+   "p99_ms": 723.52,
+   "error_rate": 0.0,
+   "rss_mib": 44.5
+  },
+  {
+   "provider": "fastapi-1",
+   "task_id": "io",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 817.8,
+   "p50_ms": 54.13,
+   "p95_ms": 70.61,
+   "p99_ms": 353.68,
+   "error_rate": 0.0,
+   "rss_mib": 44.3
+  },
+  {
+   "provider": "fastify-n",
+   "task_id": "json",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 142892.6,
+   "p50_ms": 0.22,
+   "p95_ms": 0.95,
+   "p99_ms": 2.27,
+   "error_rate": 0.0,
+   "rss_mib": 157.1
+  },
+  {
+   "provider": "fastify-n",
+   "task_id": "validate",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 109591.4,
+   "p50_ms": 0.33,
+   "p95_ms": 1.08,
+   "p99_ms": 2.4,
+   "error_rate": 0.0,
+   "rss_mib": 163.9
+  },
+  {
+   "provider": "fastify-n",
+   "task_id": "db",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 30747.3,
+   "p50_ms": 0.86,
+   "p95_ms": 2.68,
+   "p99_ms": 36.47,
+   "error_rate": 0.0,
+   "rss_mib": 171.7
+  },
+  {
+   "provider": "fastify-n",
+   "task_id": "cpu",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 108.8,
+   "p50_ms": 408.38,
+   "p95_ms": 1002.37,
+   "p99_ms": 2751.0,
+   "error_rate": 0.0,
+   "rss_mib": 250.9
+  },
+  {
+   "provider": "fastify-n",
+   "task_id": "io",
+   "concurrency": 50,
+   "run": 1,
+   "rps": 942.4,
+   "p50_ms": 52.68,
+   "p95_ms": 57.22,
+   "p99_ms": 69.51,
+   "error_rate": 0.0,
+   "rss_mib": 250.4
+  }
+ ]
+}
