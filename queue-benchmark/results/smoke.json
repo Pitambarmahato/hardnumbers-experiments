@@ -1,0 +1,84 @@
+{
+ "meta": {
+  "clients": {
+   "@nats-io/jetstream": "3.4.0",
+   "@nats-io/transport-node": "3.4.0",
+   "amqplib": "2.3.1",
+   "bullmq": "6.7.6",
+   "ioredis": "5.4.2",
+   "pg": "8.23.1"
+  },
+  "jobs": 5000,
+  "latency_seconds": 5,
+  "latency_rate": 1000,
+  "repeats": 1,
+  "crash": {
+   "kill_after_s": 3,
+   "rate": 2000,
+   "signal": "SIGKILL"
+  },
+  "host": {
+   "machine": "arm64",
+   "docker": "Docker version 24.0.6, build ed223bc820",
+   "vm": "8 CPUs, 8215117824 bytes"
+  },
+  "images": {
+   "postgres": "postgres:16.4 sha256:902c76d336c21f1cf7976e89935d137e712aa89dc245096beb839c9887faee4a"
+  }
+ },
+ "perf": [
+  {
+   "config": "postgres",
+   "scenario": "enqueue",
+   "run": 1,
+   "jobs": 5000,
+   "seconds": 0.25,
+   "jobs_per_s": 20102,
+   "driver_cpu_pct": 0,
+   "broker_cpu_pct": 0,
+   "broker_mem_mib": 0
+  },
+  {
+   "config": "postgres",
+   "scenario": "drain",
+   "run": 1,
+   "jobs": 5000,
+   "workers": 4,
+   "seconds": 0.72,
+   "jobs_per_s": 6915,
+   "driver_cpu_pct": 0,
+   "broker_cpu_pct": 0,
+   "broker_mem_mib": 0
+  },
+  {
+   "config": "postgres",
+   "scenario": "latency",
+   "run": 1,
+   "target_rate": 1000,
+   "workers": 4,
+   "scheduled": 5000,
+   "skipped": 0,
+   "processed": 5000,
+   "p50_ms": 11.12,
+   "p95_ms": 44.42,
+   "p99_ms": 122.32,
+   "max_ms": 151.31,
+   "driver_cpu_pct": 19,
+   "broker_cpu_pct": 47,
+   "broker_mem_mib": 84
+  }
+ ],
+ "crash": [
+  {
+   "config": "postgres",
+   "run": 1,
+   "confirmed": 5746,
+   "failed_after_kill": 7752,
+   "survived": 5746,
+   "lost": 0,
+   "lost_pct": 0.0,
+   "processed_not_confirmed": 5,
+   "duplicates": 0
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+# One broker + the bench driver up at a time (run.py handles it). Same limits for every broker.
+name: queue
+
+x-broker: &broker
+  cpus: 2
+  mem_limit: 2g
+
+services:
+  bench:  # driver: producers + workers live here. Started with `docker compose run`, never `up`.
+    build: ./app
+    cpus: 2
+    mem_limit: 1g
+    profiles: ["driver"]
+
+  postgres:
+    <<: *broker
+    image: postgres:16.4
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
+  postgres-nosync:  # like Redis everysec: Postgres does not flush on every commit
+    <<: *broker
+    image: postgres:16.4
+    command: ["postgres", "-c", "synchronous_commit=off"]
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
+  redis:  # stock image: RDB snapshots only, no AOF
+    <<: *broker
+    image: redis:8.0
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 2s, retries: 30 }
+  redis-aof:  # AOF flushed once a second (same setting as the nosql-db-benchmark)
+    <<: *broker
+    image: redis:8.0
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 2s, retries: 30 }
+  rabbitmq:  # default and persistent configs differ in the client (persistent flag), not the server
+    <<: *broker
+    image: rabbitmq:4.0
+    environment: { RABBITMQ_DEFAULT_USER: bench, RABBITMQ_DEFAULT_PASS: bench }
+    healthcheck: { test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"], interval: 3s, timeout: 10s, retries: 30 }
+  nats:
+    <<: *broker
+    image: nats:2.10-alpine  # alpine variant: the plain image has no shell for the healthcheck
+    command: ["-js", "-sd", "/data", "-m", "8222"]
+    healthcheck: { test: ["CMD-SHELL", "wget -qO- http://localhost:8222/healthz || exit 1"], interval: 2s, retries: 30 }
