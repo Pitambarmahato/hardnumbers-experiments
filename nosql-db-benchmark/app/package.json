@@ -1,0 +1,10 @@
+{
+  "name": "nosql-bench-app",
+  "private": true,
+  "dependencies": {
+    "fastify": "5.2.0",
+    "ioredis": "5.4.2",
+    "mongodb": "6.12.0",
+    "pg": "8.13.1"
+  }
+}

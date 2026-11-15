@@ -1,0 +1,64 @@
+# One database + its app up at a time (run.py handles it). Same limits for every contender.
+name: nosql
+
+x-app: &app
+  build: ./app
+  cpus: 2
+  mem_limit: 1g
+  healthcheck:
+    test: ["CMD", "node", "-e", "fetch('http://localhost:3000/read').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+    interval: 3s
+    timeout: 5s
+    retries: 60
+
+x-db: &db
+  cpus: 2
+  mem_limit: 2g
+
+services:
+  postgres:
+    <<: *db
+    image: postgres:16.4
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
+  postgres-nosync:  # durability-fair variant: like Redis/Valkey everysec, Postgres does not flush on every commit
+    <<: *db
+    image: postgres:16.4
+    command: ["postgres", "-c", "synchronous_commit=off"]
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
+  mongo:
+    <<: *db
+    image: mongo:8.0
+    healthcheck: { test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"], interval: 3s, retries: 30 }
+  redis:
+    <<: *db
+    image: redis:8.0
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 2s, retries: 30 }
+  valkey:
+    <<: *db
+    image: valkey/valkey:8.0
+    command: ["valkey-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    healthcheck: { test: ["CMD", "valkey-cli", "ping"], interval: 2s, retries: 30 }
+
+  app-postgres:
+    <<: *app
+    depends_on: { postgres: { condition: service_healthy } }
+    environment: { DB: postgres, DB_URL: "postgres://bench:bench@postgres:5432/bench" }
+  app-postgres-nosync:
+    <<: *app
+    depends_on: { postgres-nosync: { condition: service_healthy } }
+    environment: { DB: postgres, DB_URL: "postgres://bench:bench@postgres-nosync:5432/bench" }
+  app-mongo:
+    <<: *app
+    depends_on: { mongo: { condition: service_healthy } }
+    environment: { DB: mongo, DB_URL: "mongodb://mongo:27017" }
+  app-redis:
+    <<: *app
+    depends_on: { redis: { condition: service_healthy } }
+    environment: { DB: redis, DB_URL: "redis://redis:6379" }
+  app-valkey:
+    <<: *app
+    depends_on: { valkey: { condition: service_healthy } }
+    environment: { DB: valkey, DB_URL: "redis://valkey:6379" }
