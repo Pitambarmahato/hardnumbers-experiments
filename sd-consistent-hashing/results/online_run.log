@@ -1,0 +1,97 @@
+== s1 modn r0 18:56:26
+wrong values: 0 | wall 30.08 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-modn-r0.json
+== s1 ring1 r0 18:56:58
+wrong values: 0 | wall 30.05 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring1-r0.json
+== s1 ring10 r0 18:57:31
+wrong values: 0 | wall 30.08 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring10-r0.json
+== s1 ring150 r0 18:58:04
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring150-r0.json
+== s2 modn r0 18:58:37
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-modn-r0.json
+== s2 ring1 r0 18:59:49
+wrong values: 0 | wall 70.14 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring1-r0.json
+== s2 ring10 r0 19:01:02
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring10-r0.json
+== s2 ring150 r0 19:02:15
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring150-r0.json
+== s3 modn r0 19:03:27
+wrong values: 0 | wall 70.16 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-modn-r0.json
+== s3 ring1 r0 19:04:40
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring1-r0.json
+== s3 ring10 r0 19:05:54
+wrong values: 0 | wall 70.11 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring10-r0.json
+== s3 ring150 r0 19:07:07
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring150-r0.json
+== s4 modn r0 19:08:20
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-modn-r0.json
+== s4 ring1 r0 19:08:52
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring1-r0.json
+== s4 ring10 r0 19:09:27
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring10-r0.json
+== s4 ring150 r0 19:09:59
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring150-r0.json
+== s1 modn r1 19:10:32
+wrong values: 0 | wall 30.11 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-modn-r1.json
+== s1 ring1 r1 19:11:04
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring1-r1.json
+== s1 ring10 r1 19:11:37
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring10-r1.json
+== s1 ring150 r1 19:12:10
+wrong values: 0 | wall 30.08 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring150-r1.json
+== s2 modn r1 19:12:42
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-modn-r1.json
+== s2 ring1 r1 19:13:55
+wrong values: 0 | wall 70.14 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring1-r1.json
+== s2 ring10 r1 19:15:08
+wrong values: 0 | wall 70.15 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring10-r1.json
+== s2 ring150 r1 19:16:21
+wrong values: 0 | wall 70.14 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring150-r1.json
+== s3 modn r1 19:17:33
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-modn-r1.json
+== s3 ring1 r1 19:18:46
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring1-r1.json
+== s3 ring10 r1 19:19:59
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring10-r1.json
+== s3 ring150 r1 19:21:12
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring150-r1.json
+== s4 modn r1 19:22:25
+wrong values: 0 | wall 30.1 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-modn-r1.json
+== s4 ring1 r1 19:22:57
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring1-r1.json
+== s4 ring10 r1 19:23:30
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring10-r1.json
+== s4 ring150 r1 19:24:02
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring150-r1.json
+== s1 modn r2 19:24:35
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-modn-r2.json
+== s1 ring1 r2 19:25:07
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring1-r2.json
+== s1 ring10 r2 19:25:40
+wrong values: 0 | wall 30.05 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring10-r2.json
+== s1 ring150 r2 19:26:12
+wrong values: 0 | wall 30.05 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s1-ring150-r2.json
+== s2 modn r2 19:26:45
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-modn-r2.json
+== s2 ring1 r2 19:27:57
+wrong values: 0 | wall 70.28 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring1-r2.json
+== s2 ring10 r2 19:29:10
+wrong values: 0 | wall 70.11 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring10-r2.json
+== s2 ring150 r2 19:30:23
+wrong values: 0 | wall 70.14 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s2-ring150-r2.json
+== s3 modn r2 19:31:35
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-modn-r2.json
+== s3 ring1 r2 19:32:48
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring1-r2.json
+== s3 ring10 r2 19:34:01
+wrong values: 0 | wall 70.13 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring10-r2.json
+== s3 ring150 r2 19:35:14
+wrong values: 0 | wall 70.12 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s3-ring150-r2.json
+== s4 modn r2 19:36:26
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-modn-r2.json
+== s4 ring1 r2 19:36:59
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring1-r2.json
+== s4 ring10 r2 19:37:31
+wrong values: 0 | wall 30.06 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring10-r2.json
+== s4 ring150 r2 19:38:04
+wrong values: 0 | wall 30.07 s | /Users/pitambarmahato/Desktop/personal/hardnumbers/experiments/sd-consistent-hashing/results/online/s4-ring150-r2.json
+DONE

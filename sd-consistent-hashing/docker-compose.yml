@@ -1,0 +1,24 @@
+# 4 Redis cache nodes + 1 Postgres source of truth. Nodes r0-r2 serve at the start; r3 joins in S2; r2 is killed in S3.
+name: sdch
+
+x-redis: &redis
+  image: redis:8.0
+  # no persistence: a cache. no eviction: 100k x 1 KB fits well under maxmemory.
+  command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "768mb", "--maxmemory-policy", "noeviction"]
+  cpus: 1
+  mem_limit: 1g
+  healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 2s, retries: 30 }
+
+services:
+  r0: { <<: *redis, ports: ["16380:6379"] }
+  r1: { <<: *redis, ports: ["16381:6379"] }
+  r2: { <<: *redis, ports: ["16382:6379"] }
+  r3: { <<: *redis, ports: ["16383:6379"] }
+  pg:
+    image: postgres:16.4
+    command: ["postgres", "-c", "shared_buffers=256MB", "-c", "max_connections=100"]
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    ports: ["15432:5432"]
+    cpus: 2
+    mem_limit: 2g
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
