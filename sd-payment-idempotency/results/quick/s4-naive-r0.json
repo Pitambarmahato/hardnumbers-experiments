@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "variant": "naive",
+  "scenario": "s4",
+  "rep": 0,
+  "orders": 200,
+  "concurrency": 100,
+  "provider_delay_ms": 50,
+  "client_timeout_s": 2.0,
+  "tries": 10,
+  "backoff_s": 0.4,
+  "wall_s": 1.75,
+  "quick": true,
+  "events": [],
+  "python": "3.14.6"
+ },
+ "orders_charged_twice_or_more": 199,
+ "extra_charges": 199,
+ "orders_never_charged": 0,
+ "client_gave_up": 0,
+ "charged_but_client_gave_up": 0,
+ "orders_per_s": 114.4,
+ "p50_ms": 797.1,
+ "p99_ms": 1441.0,
+ "mean_attempts": 2,
+ "http_requests": 400,
+ "ledger_total": 399
+}

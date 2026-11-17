@@ -1,0 +1,35 @@
+# Postgres + mock payment provider + the charge service (naive or designed). Driver runs on the host.
+# VARIANT=naive|designed and PASS_KEY=0|1 are set by run.py before it recreates `svc`.
+name: sdidem
+
+x-app: &app
+  build: .
+  environment: &env
+    DSN: postgresql://bench:bench@pg:5432/bench
+
+services:
+  pg:
+    image: postgres:16.4
+    command: ["postgres", "-c", "max_connections=200"]
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    cpus: 2
+    mem_limit: 2g
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }
+  provider:  # mock payment provider: records every charge in its own ledger table; dedupes on Idempotency-Key if one is sent
+    <<: *app
+    command: ["python", "-u", "shared/provider.py"]
+    ports: ["18081:8081"]
+    cpus: 1
+    mem_limit: 512m
+    depends_on: { pg: { condition: service_healthy } }
+    healthcheck: { test: ["CMD", "python", "-c", "import urllib.request as u;u.urlopen('http://localhost:8081/health')"], interval: 2s, retries: 30 }
+  svc:  # the service under test. Killed with `docker kill` in S3.
+    <<: *app
+    command: ["sh", "-c", "exec python -u ${VARIANT:-naive}/service.py"]
+    environment: { <<: *env, PASS_KEY: "${PASS_KEY:-0}", PROVIDER_URL: "http://provider:8081" }
+    ports: ["18080:8080"]
+    restart: "no"
+    cpus: 1
+    mem_limit: 512m
+    depends_on: { provider: { condition: service_healthy } }
+    healthcheck: { test: ["CMD", "python", "-c", "import urllib.request as u;u.urlopen('http://localhost:8080/health')"], interval: 2s, retries: 30 }

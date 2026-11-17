@@ -1,0 +1,38 @@
+{
+ "meta": {
+  "variant": "idem-e2e",
+  "scenario": "s3",
+  "rep": 0,
+  "orders": 1000,
+  "concurrency": 100,
+  "provider_delay_ms": 1000,
+  "client_timeout_s": 2.0,
+  "tries": 10,
+  "backoff_s": 0.4,
+  "wall_s": 14.88,
+  "quick": false,
+  "events": [
+   [
+    "kill",
+    2.17
+   ],
+   [
+    "restarted",
+    3.0
+   ]
+  ],
+  "python": "3.14.6"
+ },
+ "orders_charged_twice_or_more": 0,
+ "extra_charges": 0,
+ "orders_never_charged": 0,
+ "client_gave_up": 0,
+ "charged_but_client_gave_up": 0,
+ "orders_per_s": 67.2,
+ "p50_ms": 1013.1,
+ "p99_ms": 4755.9,
+ "mean_attempts": 1.64,
+ "http_requests": 1635,
+ "ledger_total": 1000,
+ "kill_during_load": true
+}

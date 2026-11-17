@@ -1,0 +1,100 @@
+== s1 naive r0 06:38:01
+s1 naive r0 n=10000 wall=14.27s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=700.6 p50_ms=56.0 p99_ms=464.4 mean_attempts=1 [] 
+== s1 idem-local r0 06:38:18
+s1 idem-local r0 n=10000 wall=11.67s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=856.6 p50_ms=54.3 p99_ms=122.9 mean_attempts=1 [] 
+== s1 idem-e2e r0 06:38:32
+s1 idem-e2e r0 n=10000 wall=11.99s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=834.3 p50_ms=54.8 p99_ms=93.0 mean_attempts=1 [] 
+== s2 naive r0 06:38:46
+s2 naive r0 n=2000 wall=58.82s | orders_charged_twice_or_more=1988 extra_charges=1988 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=34.0 p50_ms=2910.9 p99_ms=3180.6 mean_attempts=2.99 [] 
+== s2 idem-local r0 06:39:47
+s2 idem-local r0 n=2000 wall=38.98s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=51.3 p50_ms=1908.4 p99_ms=2176.2 mean_attempts=2.93 [] 
+== s2 idem-e2e r0 06:40:29
+s2 idem-e2e r0 n=2000 wall=39.24s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=51.0 p50_ms=1909.3 p99_ms=2374.0 mean_attempts=3.03 [] 
+== s3 naive r0 06:41:10
+s3 naive r0 n=1000 wall=12.56s | orders_charged_twice_or_more=100 extra_charges=100 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=79.6 p50_ms=1019.6 p99_ms=2721.2 mean_attempts=1.1 [('kill', 2.18), ('restarted', 2.95)] kill_during_load=True
+== s3 idem-local r0 06:41:25
+s3 idem-local r0 n=1000 wall=13.97s | orders_charged_twice_or_more=98 extra_charges=98 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=71.6 p50_ms=1005.3 p99_ms=4329.0 mean_attempts=1.5 [('kill', 2.18), ('restarted', 2.93)] kill_during_load=True
+== s3 idem-e2e r0 06:41:41
+s3 idem-e2e r0 n=1000 wall=14.88s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=67.2 p50_ms=1013.1 p99_ms=4755.9 mean_attempts=1.64 [('kill', 2.17), ('restarted', 3.0)] kill_during_load=True
+== s4 naive r0 06:41:59
+s4 naive r0 n=2000 wall=2.69s | orders_charged_twice_or_more=2000 extra_charges=2000 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=744.2 p50_ms=93.2 p99_ms=715.9 mean_attempts=2 [] 
+== s4 idem-local r0 06:42:04
+s4 idem-local r0 n=2000 wall=9.99s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=200.3 p50_ms=461.7 p99_ms=947.6 mean_attempts=3 [] 
+== s4 idem-e2e r0 06:42:16
+s4 idem-e2e r0 n=2000 wall=9.92s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=201.6 p50_ms=458.0 p99_ms=1012.8 mean_attempts=3 [] 
+== s5 naive r0 06:42:30
+s5 naive r0 n=500 wall=1.07s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=466.0 p50_ms=54.5 p99_ms=522.1 mean_attempts=1 [] 
+  s5: 0 rejected, 500 accepted
+== s5 idem-local r0 06:42:33
+s5 idem-local r0 n=500 wall=1.05s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=474.0 p50_ms=54.1 p99_ms=511.9 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+== s5 idem-e2e r0 06:42:36
+s5 idem-e2e r0 n=500 wall=1.07s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=467.5 p50_ms=55.0 p99_ms=516.1 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+== s1 naive r1 06:42:39
+s1 naive r1 n=10000 wall=12.53s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=798.3 p50_ms=55.9 p99_ms=168.9 mean_attempts=1 [] 
+== s1 idem-local r1 06:42:54
+s1 idem-local r1 n=10000 wall=11.9s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=840.2 p50_ms=54.7 p99_ms=96.7 mean_attempts=1 [] 
+== s1 idem-e2e r1 06:43:09
+s1 idem-e2e r1 n=10000 wall=11.67s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=857.1 p50_ms=54.3 p99_ms=158.7 mean_attempts=1 [] 
+== s2 naive r1 06:43:23
+s2 naive r1 n=2000 wall=58.71s | orders_charged_twice_or_more=1988 extra_charges=1988 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=34.1 p50_ms=2905.6 p99_ms=2991.6 mean_attempts=2.99 [] 
+== s2 idem-local r1 06:44:24
+s2 idem-local r1 n=2000 wall=39.24s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=51.0 p50_ms=1912.6 p99_ms=2413.1 mean_attempts=3.02 [] 
+== s2 idem-e2e r1 06:45:05
+s2 idem-e2e r1 n=2000 wall=39.26s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=50.9 p50_ms=1911.4 p99_ms=2384.8 mean_attempts=3.02 [] 
+== s3 naive r1 06:45:47
+s3 naive r1 n=1000 wall=12.35s | orders_charged_twice_or_more=100 extra_charges=100 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=81.0 p50_ms=1022.2 p99_ms=2416.3 mean_attempts=1.1 [('kill', 2.2), ('restarted', 2.98)] kill_during_load=True
+== s3 idem-local r1 06:46:02
+s3 idem-local r1 n=1000 wall=14.01s | orders_charged_twice_or_more=100 extra_charges=100 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=71.4 p50_ms=1006.5 p99_ms=4349.3 mean_attempts=1.55 [('kill', 2.18), ('restarted', 2.98)] kill_during_load=True
+== s3 idem-e2e r1 06:46:19
+s3 idem-e2e r1 n=1000 wall=14.51s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=68.9 p50_ms=1011.4 p99_ms=4417.0 mean_attempts=1.6 [('kill', 2.26), ('restarted', 2.87)] kill_during_load=True
+== s4 naive r1 06:46:36
+s4 naive r1 n=2000 wall=2.64s | orders_charged_twice_or_more=1999 extra_charges=1999 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=757.3 p50_ms=95.0 p99_ms=569.2 mean_attempts=2 [] 
+== s4 idem-local r1 06:46:41
+s4 idem-local r1 n=2000 wall=10.53s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=189.9 p50_ms=471.0 p99_ms=985.1 mean_attempts=3 [] 
+== s4 idem-e2e r1 06:46:53
+s4 idem-e2e r1 n=2000 wall=10.2s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=196.1 p50_ms=463.4 p99_ms=1035.5 mean_attempts=2.99 [] 
+== s5 naive r1 06:47:06
+s5 naive r1 n=500 wall=1.12s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=445.3 p50_ms=55.4 p99_ms=569.7 mean_attempts=1 [] 
+  s5: 0 rejected, 500 accepted
+== s5 idem-local r1 06:47:10
+s5 idem-local r1 n=500 wall=1.15s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=433.0 p50_ms=61.7 p99_ms=532.7 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+== s5 idem-e2e r1 06:47:13
+s5 idem-e2e r1 n=500 wall=1.13s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=440.9 p50_ms=59.0 p99_ms=534.6 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+== s1 naive r2 06:47:17
+s1 naive r2 n=10000 wall=13.44s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=743.9 p50_ms=57.3 p99_ms=307.2 mean_attempts=1 [] 
+== s1 idem-local r2 06:47:32
+s1 idem-local r2 n=10000 wall=14.36s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=696.1 p50_ms=57.5 p99_ms=401.8 mean_attempts=1 [] 
+== s1 idem-e2e r2 06:47:49
+s1 idem-e2e r2 n=10000 wall=11.98s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=834.5 p50_ms=54.6 p99_ms=143.7 mean_attempts=1 [] 
+== s2 naive r2 06:48:04
+s2 naive r2 n=2000 wall=58.55s | orders_charged_twice_or_more=1934 extra_charges=1934 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=34.2 p50_ms=2906.0 p99_ms=3082.3 mean_attempts=2.97 [] 
+== s2 idem-local r2 06:49:05
+s2 idem-local r2 n=2000 wall=39.06s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=51.2 p50_ms=1913.4 p99_ms=2389.2 mean_attempts=3.03 [] 
+== s2 idem-e2e r2 06:49:47
+s2 idem-e2e r2 n=2000 wall=39.04s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=51.2 p50_ms=1912.0 p99_ms=2467.1 mean_attempts=2.98 [] 
+== s3 naive r2 06:50:28
+s3 naive r2 n=1000 wall=12.12s | orders_charged_twice_or_more=100 extra_charges=100 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=82.5 p50_ms=1014.4 p99_ms=2508.1 mean_attempts=1.1 [('kill', 2.19), ('restarted', 2.9)] kill_during_load=True
+== s3 idem-local r2 06:50:43
+s3 idem-local r2 n=1000 wall=14.13s | orders_charged_twice_or_more=100 extra_charges=100 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=70.8 p50_ms=1020.9 p99_ms=4464.4 mean_attempts=1.55 [('kill', 2.17), ('restarted', 2.76)] kill_during_load=True
+== s3 idem-e2e r2 06:50:59
+s3 idem-e2e r2 n=1000 wall=14.51s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=68.9 p50_ms=1011.7 p99_ms=4640.6 mean_attempts=1.46 [('kill', 2.2), ('restarted', 2.79)] kill_during_load=True
+== s4 naive r2 06:51:16
+s4 naive r2 n=2000 wall=2.49s | orders_charged_twice_or_more=2000 extra_charges=2000 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=802.3 p50_ms=90.6 p99_ms=590.0 mean_attempts=2 [] 
+== s4 idem-local r2 06:51:21
+s4 idem-local r2 n=2000 wall=10.15s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=197.0 p50_ms=458.9 p99_ms=1096.5 mean_attempts=3.0 [] 
+== s4 idem-e2e r2 06:51:33
+s4 idem-e2e r2 n=2000 wall=9.91s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=201.8 p50_ms=455.7 p99_ms=1023.0 mean_attempts=3.0 [] 
+== s5 naive r2 06:51:46
+s5 naive r2 n=500 wall=1.07s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=465.5 p50_ms=54.5 p99_ms=530.2 mean_attempts=1 [] 
+  s5: 0 rejected, 500 accepted
+== s5 idem-local r2 06:51:50
+s5 idem-local r2 n=500 wall=1.06s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=471.5 p50_ms=55.0 p99_ms=514.9 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+== s5 idem-e2e r2 06:51:53
+s5 idem-e2e r2 n=500 wall=1.06s | orders_charged_twice_or_more=0 extra_charges=0 orders_never_charged=0 client_gave_up=0 charged_but_client_gave_up=0 orders_per_s=473.2 p50_ms=54.4 p99_ms=526.0 mean_attempts=1 [] 
+  s5: 500 rejected, 0 accepted
+DONE

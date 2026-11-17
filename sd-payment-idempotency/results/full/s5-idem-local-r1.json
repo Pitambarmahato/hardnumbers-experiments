@@ -1,0 +1,30 @@
+{
+ "meta": {
+  "variant": "idem-local",
+  "scenario": "s5",
+  "rep": 1,
+  "orders": 500,
+  "concurrency": 50,
+  "provider_delay_ms": 50,
+  "client_timeout_s": 2.0,
+  "tries": 10,
+  "backoff_s": 0.4,
+  "wall_s": 1.15,
+  "quick": false,
+  "events": [],
+  "python": "3.14.6"
+ },
+ "orders_charged_twice_or_more": 0,
+ "extra_charges": 0,
+ "orders_never_charged": 0,
+ "client_gave_up": 0,
+ "charged_but_client_gave_up": 0,
+ "orders_per_s": 433.0,
+ "p50_ms": 61.7,
+ "p99_ms": 532.7,
+ "mean_attempts": 1,
+ "http_requests": 500,
+ "ledger_total": 500,
+ "s5_second_rejected": 500,
+ "s5_second_accepted_200": 0
+}

@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "variant": "idem-local",
+  "scenario": "s2",
+  "rep": 0,
+  "orders": 2000,
+  "concurrency": 100,
+  "provider_delay_ms": 1500,
+  "client_timeout_s": 1.0,
+  "tries": 10,
+  "backoff_s": 0.4,
+  "wall_s": 38.98,
+  "quick": false,
+  "events": [],
+  "python": "3.14.6"
+ },
+ "orders_charged_twice_or_more": 0,
+ "extra_charges": 0,
+ "orders_never_charged": 0,
+ "client_gave_up": 0,
+ "charged_but_client_gave_up": 0,
+ "orders_per_s": 51.3,
+ "p50_ms": 1908.4,
+ "p99_ms": 2176.2,
+ "mean_attempts": 2.93,
+ "http_requests": 5856,
+ "ledger_total": 2000
+}
