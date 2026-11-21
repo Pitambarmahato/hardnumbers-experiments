@@ -1,0 +1,23 @@
+{
+ "variant": "sliding-log",
+ "scenario": "s3",
+ "rep": 0,
+ "quick": false,
+ "limit": 100,
+ "window_s": 3600,
+ "attempts": 200000,
+ "allowed": 200000,
+ "denied": 0,
+ "errors": 0,
+ "error_kinds": {},
+ "duration_s": 8.39,
+ "throughput_per_s": 23831.3,
+ "p50_ms": 3.98,
+ "p99_ms": 7.77,
+ "keys": 2000,
+ "mem_per_key_bytes": 858,
+ "redis": "8.0.6",
+ "redis_py": "8.1.0",
+ "python": "3.14.6",
+ "platform": "macOS-15.0-arm64-arm-64bit-Mach-O"
+}

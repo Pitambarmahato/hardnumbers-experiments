@@ -1,0 +1,34 @@
+ Container sdrl-redis-1 Running 
+ Container sdrl-redis-1 Waiting 
+ Container sdrl-redis-1 Healthy 
+== s3 naive-fixed r0 09:27:15
+{"variant": "naive-fixed", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 14.23, "throughput_per_s": 14050.0, "p50_ms": 7.03, "p99_ms": 10.52, "keys": 2000, "redis_keys": 20
+== s3 fixed r0 09:27:29
+{"variant": "fixed", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.38, "throughput_per_s": 23876.1, "p50_ms": 4.05, "p99_ms": 5.97, "keys": 2000, "redis_keys": 2000, "mem
+== s3 sliding-log r0 09:27:38
+{"variant": "sliding-log", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.36, "throughput_per_s": 23911.1, "p50_ms": 4.08, "p99_ms": 5.75, "keys": 2000, "redis_keys": 2000
+== s3 sliding-counter r0 09:27:47
+{"variant": "sliding-counter", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.45, "throughput_per_s": 23660.7, "p50_ms": 4.1, "p99_ms": 6.25, "keys": 2000, "redis_keys": 2
+== s3 token-bucket r0 09:27:55
+{"variant": "token-bucket", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.4, "throughput_per_s": 23812.7, "p50_ms": 4.06, "p99_ms": 6.12, "keys": 2000, "redis_keys": 2000
+== s3 naive-fixed r1 09:28:04
+{"variant": "naive-fixed", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 15.34, "throughput_per_s": 13040.3, "p50_ms": 7.25, "p99_ms": 15.39, "keys": 2000, "redis_keys": 20
+== s3 fixed r1 09:28:20
+{"variant": "fixed", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.59, "throughput_per_s": 23287.6, "p50_ms": 4.06, "p99_ms": 7.89, "keys": 2000, "redis_keys": 2000, "mem
+== s3 sliding-log r1 09:28:29
+{"variant": "sliding-log", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.55, "throughput_per_s": 23385.3, "p50_ms": 4.08, "p99_ms": 6.54, "keys": 2000, "redis_keys": 2000
+== s3 sliding-counter r1 09:28:37
+{"variant": "sliding-counter", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.24, "throughput_per_s": 24258.7, "p50_ms": 4.0, "p99_ms": 5.72, "keys": 2000, "redis_keys": 2
+== s3 token-bucket r1 09:28:46
+{"variant": "token-bucket", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.27, "throughput_per_s": 24178.7, "p50_ms": 4.03, "p99_ms": 6.01, "keys": 2000, "redis_keys": 200
+== s3 naive-fixed r2 09:28:55
+{"variant": "naive-fixed", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 17.41, "throughput_per_s": 11488.0, "p50_ms": 7.58, "p99_ms": 19.21, "keys": 2000, "redis_keys": 20
+== s3 fixed r2 09:29:12
+{"variant": "fixed", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.43, "throughput_per_s": 23726.7, "p50_ms": 4.09, "p99_ms": 6.02, "keys": 2000, "redis_keys": 2000, "mem
+== s3 sliding-log r2 09:29:21
+{"variant": "sliding-log", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.59, "throughput_per_s": 23280.8, "p50_ms": 4.12, "p99_ms": 7.23, "keys": 2000, "redis_keys": 2000
+== s3 sliding-counter r2 09:29:30
+{"variant": "sliding-counter", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.44, "throughput_per_s": 23699.7, "p50_ms": 4.06, "p99_ms": 6.42, "keys": 2000, "redis_keys": 
+== s3 token-bucket r2 09:29:39
+{"variant": "token-bucket", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.33, "throughput_per_s": 23995.3, "p50_ms": 4.08, "p99_ms": 5.85, "keys": 2000, "redis_keys": 200
+DONE

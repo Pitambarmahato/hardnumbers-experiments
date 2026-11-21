@@ -1,0 +1,94 @@
+ Container sdrl-redis-1 Running 
+ Container sdrl-redis-1 Waiting 
+ Container sdrl-redis-1 Healthy 
+== s1 naive-fixed r0 09:05:23
+{"variant": "naive-fixed", "scenario": "s1", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 2000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 30.89, "throughput_per_s": 64.8, "p50_ms": 14.36, "p99_ms": 42.6, "max_sliding": 200, "max_aligned": 100, 
+== s1 fixed r0 09:05:55
+{"variant": "fixed", "scenario": "s1", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 2000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 30.77, "throughput_per_s": 65.0, "p50_ms": 6.85, "p99_ms": 12.66, "max_sliding": 200, "max_aligned": 100, "max_s
+== s1 sliding-log r0 09:06:26
+{"variant": "sliding-log", "scenario": "s1", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1000, "denied": 1000, "errors": 0, "error_kinds": {}, "duration_s": 30.75, "throughput_per_s": 65.0, "p50_ms": 6.8, "p99_ms": 29.84, "max_sliding": 100, "max_aligned": 100
+== s1 sliding-counter r0 09:06:57
+{"variant": "sliding-counter", "scenario": "s1", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1020, "denied": 980, "errors": 0, "error_kinds": {}, "duration_s": 30.61, "throughput_per_s": 65.3, "p50_ms": 6.55, "p99_ms": 14.07, "max_sliding": 102, "max_aligned":
+== s1 token-bucket r0 09:07:28
+{"variant": "token-bucket", "scenario": "s1", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1072, "denied": 928, "errors": 0, "error_kinds": {}, "duration_s": 30.68, "throughput_per_s": 65.2, "p50_ms": 6.53, "p99_ms": 11.65, "max_sliding": 108, "max_aligned": 10
+== s2 naive-fixed r0 09:07:59
+{"variant": "naive-fixed", "scenario": "s2", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 272362, "allowed": 1235, "denied": 271127, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 27236.4, "p50_ms": 3.47, "p99_ms": 7.26, "max_sliding": 223, "max_aligned
+== s2 fixed r0 09:08:09
+{"variant": "fixed", "scenario": "s2", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 241185, "allowed": 1100, "denied": 240085, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 24117.8, "p50_ms": 3.98, "p99_ms": 6.78, "max_sliding": 200, "max_aligned": 100
+== s2 sliding-log r0 09:08:19
+{"variant": "sliding-log", "scenario": "s2", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 233089, "allowed": 1000, "denied": 232089, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23307.4, "p50_ms": 4.02, "p99_ms": 7.9, "max_sliding": 100, "max_aligned"
+== s2 sliding-counter r0 09:08:30
+{"variant": "sliding-counter", "scenario": "s2", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 231496, "allowed": 1047, "denied": 230449, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23147.5, "p50_ms": 4.03, "p99_ms": 7.75, "max_sliding": 147, "max_ali
+== s2 token-bucket r0 09:08:40
+{"variant": "token-bucket", "scenario": "s2", "rep": 0, "quick": false, "limit": 100, "window_s": 1, "attempts": 229846, "allowed": 1099, "denied": 228747, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 22981.9, "p50_ms": 4.06, "p99_ms": 9.01, "max_sliding": 199, "max_aligne
+== s3 naive-fixed r0 09:08:50
+{"variant": "naive-fixed", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 16.58, "throughput_per_s": 12062.7, "p50_ms": 7.5, "p99_ms": 16.96, "keys": 2000, "mem_per_key_byte
+== s3 fixed r0 09:09:07
+{"variant": "fixed", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 10.45, "throughput_per_s": 19134.3, "p50_ms": 4.05, "p99_ms": 13.64, "keys": 2000, "mem_per_key_bytes": -
+== s3 sliding-log r0 09:09:18
+{"variant": "sliding-log", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.39, "throughput_per_s": 23831.3, "p50_ms": 3.98, "p99_ms": 7.77, "keys": 2000, "mem_per_key_bytes
+== s3 sliding-counter r0 09:09:27
+{"variant": "sliding-counter", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 10.15, "throughput_per_s": 19704.3, "p50_ms": 4.46, "p99_ms": 11.89, "keys": 2000, "mem_per_key
+== s3 token-bucket r0 09:09:37
+{"variant": "token-bucket", "scenario": "s3", "rep": 0, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 10.37, "throughput_per_s": 19282.6, "p50_ms": 4.47, "p99_ms": 13.59, "keys": 2000, "mem_per_key_by
+== s1 naive-fixed r1 09:09:48
+{"variant": "naive-fixed", "scenario": "s1", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 2000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 30.26, "throughput_per_s": 66.1, "p50_ms": 13.26, "p99_ms": 19.03, "max_sliding": 200, "max_aligned": 100,
+== s1 fixed r1 09:10:19
+{"variant": "fixed", "scenario": "s1", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 2000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 30.74, "throughput_per_s": 65.1, "p50_ms": 6.76, "p99_ms": 12.61, "max_sliding": 200, "max_aligned": 100, "max_s
+== s1 sliding-log r1 09:10:50
+{"variant": "sliding-log", "scenario": "s1", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1000, "denied": 1000, "errors": 0, "error_kinds": {}, "duration_s": 30.73, "throughput_per_s": 65.1, "p50_ms": 6.79, "p99_ms": 18.94, "max_sliding": 100, "max_aligned": 10
+== s1 sliding-counter r1 09:11:21
+{"variant": "sliding-counter", "scenario": "s1", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1021, "denied": 979, "errors": 0, "error_kinds": {}, "duration_s": 30.66, "throughput_per_s": 65.2, "p50_ms": 6.8, "p99_ms": 19.19, "max_sliding": 103, "max_aligned": 
+== s1 token-bucket r1 09:11:52
+{"variant": "token-bucket", "scenario": "s1", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1070, "denied": 930, "errors": 0, "error_kinds": {}, "duration_s": 30.68, "throughput_per_s": 65.2, "p50_ms": 6.86, "p99_ms": 13.13, "max_sliding": 107, "max_aligned": 10
+== s2 naive-fixed r1 09:12:23
+{"variant": "naive-fixed", "scenario": "s2", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 273607, "allowed": 1131, "denied": 272476, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 27357.2, "p50_ms": 3.48, "p99_ms": 7.04, "max_sliding": 204, "max_aligned
+== s2 fixed r1 09:12:33
+{"variant": "fixed", "scenario": "s2", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 234574, "allowed": 1100, "denied": 233474, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23455.2, "p50_ms": 4.03, "p99_ms": 7.01, "max_sliding": 200, "max_aligned": 100
+== s2 sliding-log r1 09:12:43
+{"variant": "sliding-log", "scenario": "s2", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 237153, "allowed": 1000, "denied": 236153, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23712.8, "p50_ms": 4.01, "p99_ms": 6.73, "max_sliding": 100, "max_aligned
+== s2 sliding-counter r1 09:12:53
+{"variant": "sliding-counter", "scenario": "s2", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 232503, "allowed": 1014, "denied": 231489, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23247.9, "p50_ms": 4.08, "p99_ms": 6.95, "max_sliding": 114, "max_ali
+== s2 token-bucket r1 09:13:04
+{"variant": "token-bucket", "scenario": "s2", "rep": 1, "quick": false, "limit": 100, "window_s": 1, "attempts": 232848, "allowed": 1099, "denied": 231749, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23282.2, "p50_ms": 4.05, "p99_ms": 7.58, "max_sliding": 199, "max_aligne
+== s3 naive-fixed r1 09:13:14
+{"variant": "naive-fixed", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 15.41, "throughput_per_s": 12979.0, "p50_ms": 7.21, "p99_ms": 14.53, "keys": 2000, "mem_per_key_byt
+== s3 fixed r1 09:13:30
+{"variant": "fixed", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.29, "throughput_per_s": 24134.4, "p50_ms": 3.95, "p99_ms": 6.73, "keys": 2000, "mem_per_key_bytes": -68
+== s3 sliding-log r1 09:13:38
+{"variant": "sliding-log", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.3, "throughput_per_s": 24109.1, "p50_ms": 4.01, "p99_ms": 6.35, "keys": 2000, "mem_per_key_bytes"
+== s3 sliding-counter r1 09:13:47
+{"variant": "sliding-counter", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.37, "throughput_per_s": 23894.3, "p50_ms": 4.0, "p99_ms": 6.62, "keys": 2000, "mem_per_key_by
+== s3 token-bucket r1 09:13:56
+{"variant": "token-bucket", "scenario": "s3", "rep": 1, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 9.36, "throughput_per_s": 21374.6, "p50_ms": 4.33, "p99_ms": 8.79, "keys": 2000, "mem_per_key_byte
+== s1 naive-fixed r2 09:14:05
+{"variant": "naive-fixed", "scenario": "s1", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 2000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 30.15, "throughput_per_s": 66.3, "p50_ms": 14.69, "p99_ms": 28.03, "max_sliding": 200, "max_aligned": 100,
+== s1 fixed r2 09:14:36
+{"variant": "fixed", "scenario": "s1", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1937, "denied": 63, "errors": 0, "error_kinds": {}, "duration_s": 30.7, "throughput_per_s": 65.2, "p50_ms": 6.82, "p99_ms": 68.75, "max_sliding": 200, "max_aligned": 100, "max_s
+== s1 sliding-log r2 09:15:07
+{"variant": "sliding-log", "scenario": "s1", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1000, "denied": 1000, "errors": 0, "error_kinds": {}, "duration_s": 30.72, "throughput_per_s": 65.1, "p50_ms": 6.37, "p99_ms": 11.16, "max_sliding": 100, "max_aligned": 10
+== s1 sliding-counter r2 09:15:38
+{"variant": "sliding-counter", "scenario": "s1", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1020, "denied": 980, "errors": 0, "error_kinds": {}, "duration_s": 30.73, "throughput_per_s": 65.1, "p50_ms": 6.9, "p99_ms": 48.62, "max_sliding": 103, "max_aligned": 
+== s1 token-bucket r2 09:16:09
+{"variant": "token-bucket", "scenario": "s1", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 2000, "allowed": 1071, "denied": 929, "errors": 0, "error_kinds": {}, "duration_s": 30.72, "throughput_per_s": 65.1, "p50_ms": 6.61, "p99_ms": 15.51, "max_sliding": 108, "max_aligned": 10
+== s2 naive-fixed r2 09:16:40
+{"variant": "naive-fixed", "scenario": "s2", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 278376, "allowed": 1191, "denied": 277185, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 27834.7, "p50_ms": 3.44, "p99_ms": 6.0, "max_sliding": 259, "max_aligned"
+== s2 fixed r2 09:16:50
+{"variant": "fixed", "scenario": "s2", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 245111, "allowed": 1100, "denied": 244011, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 24508.4, "p50_ms": 3.93, "p99_ms": 6.71, "max_sliding": 200, "max_aligned": 100
+== s2 sliding-log r2 09:17:00
+{"variant": "sliding-log", "scenario": "s2", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 244191, "allowed": 1001, "denied": 243190, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 24416.6, "p50_ms": 3.96, "p99_ms": 6.55, "max_sliding": 100, "max_aligned
+== s2 sliding-counter r2 09:17:10
+{"variant": "sliding-counter", "scenario": "s2", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 239351, "allowed": 1006, "denied": 238345, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23931.0, "p50_ms": 3.97, "p99_ms": 7.06, "max_sliding": 106, "max_ali
+== s2 token-bucket r2 09:17:21
+{"variant": "token-bucket", "scenario": "s2", "rep": 2, "quick": false, "limit": 100, "window_s": 1, "attempts": 235673, "allowed": 1099, "denied": 234574, "errors": 0, "error_kinds": {}, "duration_s": 10.0, "throughput_per_s": 23565.1, "p50_ms": 4.05, "p99_ms": 7.15, "max_sliding": 199, "max_aligne
+== s3 naive-fixed r2 09:17:31
+{"variant": "naive-fixed", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 14.9, "throughput_per_s": 13421.9, "p50_ms": 7.11, "p99_ms": 12.61, "keys": 2000, "mem_per_key_byte
+== s3 fixed r2 09:17:46
+{"variant": "fixed", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.93, "throughput_per_s": 22386.3, "p50_ms": 4.08, "p99_ms": 10.65, "keys": 2000, "mem_per_key_bytes": -6
+== s3 sliding-log r2 09:17:55
+{"variant": "sliding-log", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.54, "throughput_per_s": 23409.2, "p50_ms": 4.03, "p99_ms": 7.71, "keys": 2000, "mem_per_key_bytes
+== s3 sliding-counter r2 09:18:04
+{"variant": "sliding-counter", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.64, "throughput_per_s": 23137.7, "p50_ms": 4.07, "p99_ms": 7.59, "keys": 2000, "mem_per_key_b
+== s3 token-bucket r2 09:18:13
+{"variant": "token-bucket", "scenario": "s3", "rep": 2, "quick": false, "limit": 100, "window_s": 3600, "attempts": 200000, "allowed": 200000, "denied": 0, "errors": 0, "error_kinds": {}, "duration_s": 8.51, "throughput_per_s": 23493.7, "p50_ms": 4.02, "p99_ms": 7.64, "keys": 2000, "mem_per_key_byte
+DONE

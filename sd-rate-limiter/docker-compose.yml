@@ -1,0 +1,9 @@
+name: sdrl
+services:
+  redis:
+    image: redis:8.0
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports: ["16379:6379"]
+    cpus: 2
+    mem_limit: 1g
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 2s, retries: 30 }

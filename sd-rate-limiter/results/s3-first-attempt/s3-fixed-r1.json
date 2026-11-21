@@ -1,0 +1,23 @@
+{
+ "variant": "fixed",
+ "scenario": "s3",
+ "rep": 1,
+ "quick": false,
+ "limit": 100,
+ "window_s": 3600,
+ "attempts": 200000,
+ "allowed": 200000,
+ "denied": 0,
+ "errors": 0,
+ "error_kinds": {},
+ "duration_s": 8.29,
+ "throughput_per_s": 24134.4,
+ "p50_ms": 3.95,
+ "p99_ms": 6.73,
+ "keys": 2000,
+ "mem_per_key_bytes": -688,
+ "redis": "8.0.6",
+ "redis_py": "8.1.0",
+ "python": "3.14.6",
+ "platform": "macOS-15.0-arm64-arm-64bit-Mach-O"
+}
