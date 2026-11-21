@@ -1,0 +1,94 @@
+ Container sdhotel-pg-1 Running 
+ Container sdhotel-pg-1 Waiting 
+ Container sdhotel-pg-1 Healthy 
+== s1 naive r0 09:19:20
+{"variant": "naive", "scenario": "s1", "rep": 0, "attempts": 10000, "accepted": 3252, "sold_out": 6748, "errors": 0, "double_bookings": 21, "nights_oversold": 43, "throughput_per_s": 6381.2, "p50_ms": 6.74, "p99_ms": 23.24, "retries_total": 0, "pg_deadlocks": 0}
+== s1 pessimistic r0 09:19:24
+{"variant": "pessimistic", "scenario": "s1", "rep": 0, "attempts": 10000, "accepted": 3243, "sold_out": 6757, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4363.3, "p50_ms": 9.21, "p99_ms": 43.37, "retries_total": 0, "pg_deadlocks": 0}
+== s1 optimistic r0 09:19:28
+{"variant": "optimistic", "scenario": "s1", "rep": 0, "attempts": 10000, "accepted": 3241, "sold_out": 6759, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3835.6, "p50_ms": 8.74, "p99_ms": 57.89, "retries_total": 324, "pg_deadlocks": 0}
+== s1 exclusion r0 09:19:32
+{"variant": "exclusion", "scenario": "s1", "rep": 0, "attempts": 10000, "accepted": 3242, "sold_out": 6758, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7386.0, "p50_ms": 4.0, "p99_ms": 57.1, "retries_total": 0, "pg_deadlocks": 0}
+== s1 exclusion-retry r0 09:19:36
+{"variant": "exclusion-retry", "scenario": "s1", "rep": 0, "attempts": 10000, "accepted": 3242, "sold_out": 6758, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7200.1, "p50_ms": 4.13, "p99_ms": 56.75, "retries_total": 0, "pg_deadlocks": 0}
+== s2 naive r0 09:19:39
+{"variant": "naive", "scenario": "s2", "rep": 0, "attempts": 2000, "accepted": 102, "sold_out": 1898, "errors": 0, "double_bookings": 83, "nights_oversold": 47, "throughput_per_s": 8124.9, "p50_ms": 9.79, "p99_ms": 48.84, "retries_total": 0, "pg_deadlocks": 0}
+== s2 pessimistic r0 09:19:41
+{"variant": "pessimistic", "scenario": "s2", "rep": 0, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3515.0, "p50_ms": 24.72, "p99_ms": 84.94, "retries_total": 0, "pg_deadlocks": 0}
+== s2 optimistic r0 09:19:44
+{"variant": "optimistic", "scenario": "s2", "rep": 0, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3344.9, "p50_ms": 20.03, "p99_ms": 134.65, "retries_total": 124, "pg_deadlocks": 0}
+== s2 exclusion r0 09:19:46
+{"variant": "exclusion", "scenario": "s2", "rep": 0, "attempts": 2000, "accepted": 32, "sold_out": 1737, "errors": 231, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 21.9, "p50_ms": 1.94, "p99_ms": 52137.99, "retries_total": 0, "pg_deadlocks": 231}
+== s2 exclusion-retry r0 09:21:19
+{"variant": "exclusion-retry", "scenario": "s2", "rep": 0, "attempts": 2000, "accepted": 32, "sold_out": 1936, "errors": 32, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 33.1, "p50_ms": 4.97, "p99_ms": 46221.63, "retries_total": 53, "pg_deadlocks": 213}
+== s3 naive r0 09:22:22
+{"variant": "naive", "scenario": "s3", "rep": 0, "attempts": 2000, "accepted": 40, "sold_out": 1960, "errors": 0, "double_bookings": 14, "nights_oversold": 18, "throughput_per_s": 5755.2, "p50_ms": 65.18, "p99_ms": 202.17, "retries_total": 0, "pg_deadlocks": 0}
+== s3 pessimistic r0 09:22:24
+{"variant": "pessimistic", "scenario": "s3", "rep": 0, "attempts": 2000, "accepted": 33, "sold_out": 1967, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3513.5, "p50_ms": 110.52, "p99_ms": 223.75, "retries_total": 0, "pg_deadlocks": 0}
+== s3 optimistic r0 09:22:26
+{"variant": "optimistic", "scenario": "s3", "rep": 0, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4072.4, "p50_ms": 83.18, "p99_ms": 290.06, "retries_total": 22, "pg_deadlocks": 0}
+== s3 exclusion r0 09:22:29
+{"variant": "exclusion", "scenario": "s3", "rep": 0, "attempts": 2000, "accepted": 29, "sold_out": 1526, "errors": 445, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 123.8, "p50_ms": 51.11, "p99_ms": 9071.88, "retries_total": 0, "pg_deadlocks": 20}
+== s3 exclusion-retry r0 09:22:47
+{"variant": "exclusion-retry", "scenario": "s3", "rep": 0, "attempts": 2000, "accepted": 33, "sold_out": 1967, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 163.3, "p50_ms": 40.61, "p99_ms": 200.74, "retries_total": 19, "pg_deadlocks": 19}
+== s1 naive r1 09:23:01
+{"variant": "naive", "scenario": "s1", "rep": 1, "attempts": 10000, "accepted": 3250, "sold_out": 6750, "errors": 0, "double_bookings": 27, "nights_oversold": 48, "throughput_per_s": 5742.9, "p50_ms": 6.54, "p99_ms": 41.8, "retries_total": 0, "pg_deadlocks": 0}
+== s1 pessimistic r1 09:23:04
+{"variant": "pessimistic", "scenario": "s1", "rep": 1, "attempts": 10000, "accepted": 3233, "sold_out": 6767, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4423.4, "p50_ms": 9.03, "p99_ms": 41.18, "retries_total": 0, "pg_deadlocks": 0}
+== s1 optimistic r1 09:23:08
+{"variant": "optimistic", "scenario": "s1", "rep": 1, "attempts": 10000, "accepted": 3231, "sold_out": 6769, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4396.1, "p50_ms": 8.39, "p99_ms": 51.21, "retries_total": 343, "pg_deadlocks": 0}
+== s1 exclusion r1 09:23:12
+{"variant": "exclusion", "scenario": "s1", "rep": 1, "attempts": 10000, "accepted": 3232, "sold_out": 6768, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7737.1, "p50_ms": 4.08, "p99_ms": 45.7, "retries_total": 0, "pg_deadlocks": 0}
+== s1 exclusion-retry r1 09:23:16
+{"variant": "exclusion-retry", "scenario": "s1", "rep": 1, "attempts": 10000, "accepted": 3232, "sold_out": 6768, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7394.8, "p50_ms": 4.0, "p99_ms": 57.75, "retries_total": 0, "pg_deadlocks": 0}
+== s2 naive r1 09:23:19
+{"variant": "naive", "scenario": "s2", "rep": 1, "attempts": 2000, "accepted": 104, "sold_out": 1896, "errors": 0, "double_bookings": 81, "nights_oversold": 44, "throughput_per_s": 7263.6, "p50_ms": 11.0, "p99_ms": 51.39, "retries_total": 0, "pg_deadlocks": 0}
+== s2 pessimistic r1 09:23:21
+{"variant": "pessimistic", "scenario": "s2", "rep": 1, "attempts": 2000, "accepted": 37, "sold_out": 1963, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3442.8, "p50_ms": 21.3, "p99_ms": 78.72, "retries_total": 0, "pg_deadlocks": 0}
+== s2 optimistic r1 09:23:24
+{"variant": "optimistic", "scenario": "s2", "rep": 1, "attempts": 2000, "accepted": 38, "sold_out": 1962, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 5173.1, "p50_ms": 14.0, "p99_ms": 103.91, "retries_total": 136, "pg_deadlocks": 0}
+== s2 exclusion r1 09:23:26
+{"variant": "exclusion", "scenario": "s2", "rep": 1, "attempts": 2000, "accepted": 42, "sold_out": 1733, "errors": 225, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 19.3, "p50_ms": 1.64, "p99_ms": 59215.84, "retries_total": 0, "pg_deadlocks": 225}
+== s2 exclusion-retry r1 09:25:11
+{"variant": "exclusion-retry", "scenario": "s2", "rep": 1, "attempts": 2000, "accepted": 37, "sold_out": 1792, "errors": 171, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7.5, "p50_ms": 1.73, "p99_ms": 158479.7, "retries_total": 98, "pg_deadlocks": 953}
+== s3 naive r1 09:29:41
+{"variant": "naive", "scenario": "s3", "rep": 1, "attempts": 2000, "accepted": 41, "sold_out": 1959, "errors": 0, "double_bookings": 13, "nights_oversold": 15, "throughput_per_s": 6383.9, "p50_ms": 60.33, "p99_ms": 178.11, "retries_total": 0, "pg_deadlocks": 0}
+== s3 pessimistic r1 09:29:43
+{"variant": "pessimistic", "scenario": "s3", "rep": 1, "attempts": 2000, "accepted": 33, "sold_out": 1967, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4060.5, "p50_ms": 94.33, "p99_ms": 208.2, "retries_total": 0, "pg_deadlocks": 0}
+== s3 optimistic r1 09:29:46
+{"variant": "optimistic", "scenario": "s3", "rep": 1, "attempts": 2000, "accepted": 31, "sold_out": 1969, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 5488.4, "p50_ms": 67.24, "p99_ms": 196.26, "retries_total": 19, "pg_deadlocks": 0}
+== s3 exclusion r1 09:29:48
+{"variant": "exclusion", "scenario": "s3", "rep": 1, "attempts": 2000, "accepted": 37, "sold_out": 1963, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 9265.5, "p50_ms": 40.1, "p99_ms": 121.88, "retries_total": 0, "pg_deadlocks": 0}
+== s3 exclusion-retry r1 09:29:50
+{"variant": "exclusion-retry", "scenario": "s3", "rep": 1, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 9463.9, "p50_ms": 38.1, "p99_ms": 149.42, "retries_total": 0, "pg_deadlocks": 0}
+== s1 naive r2 09:29:52
+{"variant": "naive", "scenario": "s1", "rep": 2, "attempts": 10000, "accepted": 3264, "sold_out": 6736, "errors": 0, "double_bookings": 23, "nights_oversold": 42, "throughput_per_s": 5845.8, "p50_ms": 6.83, "p99_ms": 49.81, "retries_total": 0, "pg_deadlocks": 0}
+== s1 pessimistic r2 09:29:55
+{"variant": "pessimistic", "scenario": "s1", "rep": 2, "attempts": 10000, "accepted": 3249, "sold_out": 6751, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4292.0, "p50_ms": 9.13, "p99_ms": 43.59, "retries_total": 0, "pg_deadlocks": 0}
+== s1 optimistic r2 09:29:59
+{"variant": "optimistic", "scenario": "s1", "rep": 2, "attempts": 10000, "accepted": 3248, "sold_out": 6752, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3705.1, "p50_ms": 8.82, "p99_ms": 59.25, "retries_total": 323, "pg_deadlocks": 0}
+== s1 exclusion r2 09:30:04
+{"variant": "exclusion", "scenario": "s1", "rep": 2, "attempts": 10000, "accepted": 3247, "sold_out": 6753, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7798.9, "p50_ms": 3.97, "p99_ms": 56.42, "retries_total": 0, "pg_deadlocks": 0}
+== s1 exclusion-retry r2 09:30:07
+{"variant": "exclusion-retry", "scenario": "s1", "rep": 2, "attempts": 10000, "accepted": 3248, "sold_out": 6752, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 7553.6, "p50_ms": 4.32, "p99_ms": 52.17, "retries_total": 0, "pg_deadlocks": 0}
+== s2 naive r2 09:30:10
+{"variant": "naive", "scenario": "s2", "rep": 2, "attempts": 2000, "accepted": 89, "sold_out": 1911, "errors": 0, "double_bookings": 73, "nights_oversold": 42, "throughput_per_s": 5717.6, "p50_ms": 12.65, "p99_ms": 75.74, "retries_total": 0, "pg_deadlocks": 0}
+== s2 pessimistic r2 09:30:13
+{"variant": "pessimistic", "scenario": "s2", "rep": 2, "attempts": 2000, "accepted": 30, "sold_out": 1970, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3477.6, "p50_ms": 19.23, "p99_ms": 98.09, "retries_total": 0, "pg_deadlocks": 0}
+== s2 optimistic r2 09:30:15
+{"variant": "optimistic", "scenario": "s2", "rep": 2, "attempts": 2000, "accepted": 29, "sold_out": 1971, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 4041.6, "p50_ms": 14.37, "p99_ms": 115.01, "retries_total": 122, "pg_deadlocks": 0}
+== s2 exclusion r2 09:30:17
+{"variant": "exclusion", "scenario": "s2", "rep": 2, "attempts": 2000, "accepted": 30, "sold_out": 1792, "errors": 178, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 28.4, "p50_ms": 2.55, "p99_ms": 51201.95, "retries_total": 0, "pg_deadlocks": 178}
+== s2 exclusion-retry r2 09:31:30
+{"variant": "exclusion-retry", "scenario": "s2", "rep": 2, "attempts": 2000, "accepted": 30, "sold_out": 1970, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 8202.3, "p50_ms": 7.28, "p99_ms": 52.29, "retries_total": 0, "pg_deadlocks": 0}
+== s3 naive r2 09:31:32
+{"variant": "naive", "scenario": "s3", "rep": 2, "attempts": 2000, "accepted": 42, "sold_out": 1958, "errors": 0, "double_bookings": 12, "nights_oversold": 16, "throughput_per_s": 6911.4, "p50_ms": 54.7, "p99_ms": 160.19, "retries_total": 0, "pg_deadlocks": 0}
+== s3 pessimistic r2 09:31:34
+{"variant": "pessimistic", "scenario": "s3", "rep": 2, "attempts": 2000, "accepted": 31, "sold_out": 1969, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 3339.8, "p50_ms": 106.66, "p99_ms": 259.39, "retries_total": 0, "pg_deadlocks": 0}
+== s3 optimistic r2 09:31:36
+{"variant": "optimistic", "scenario": "s3", "rep": 2, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 5435.5, "p50_ms": 68.54, "p99_ms": 202.26, "retries_total": 23, "pg_deadlocks": 0}
+== s3 exclusion r2 09:31:38
+{"variant": "exclusion", "scenario": "s3", "rep": 2, "attempts": 2000, "accepted": 32, "sold_out": 1968, "errors": 0, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 8917.8, "p50_ms": 41.11, "p99_ms": 132.3, "retries_total": 0, "pg_deadlocks": 0}
+== s3 exclusion-retry r2 09:31:40
+{"variant": "exclusion-retry", "scenario": "s3", "rep": 2, "attempts": 2000, "accepted": 31, "sold_out": 697, "errors": 1272, "double_bookings": 0, "nights_oversold": 0, "throughput_per_s": 28.9, "p50_ms": 5000.14, "p99_ms": 13060.82, "retries_total": 14, "pg_deadlocks": 89}
+DONE

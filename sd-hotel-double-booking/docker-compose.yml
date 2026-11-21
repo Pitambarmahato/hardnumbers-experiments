@@ -1,0 +1,12 @@
+# One Postgres. The load driver (run.py) runs on the host and issues transactions with asyncpg.
+name: sdhotel
+
+services:
+  pg:
+    image: postgres:16.4
+    command: ["postgres", "-c", "max_connections=200"]
+    environment: { POSTGRES_USER: bench, POSTGRES_PASSWORD: bench, POSTGRES_DB: bench }
+    ports: ["15433:5432"]
+    cpus: 2
+    mem_limit: 2g
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U bench -d bench"], interval: 2s, retries: 30 }

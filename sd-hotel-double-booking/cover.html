@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf-8><style>
+html,body{margin:0;width:1376px;height:768px;background:linear-gradient(160deg,#0d1226,#161b33);font-family:ui-monospace,Menlo,'SF Mono',monospace;color:#cfd8ee;overflow:hidden}
+.wrap{padding:44px 64px 0 64px}.brand{font-size:20px;letter-spacing:.32em;color:#6f7ba0}
+h1{margin:14px 0 0 0;font-size:37px;line-height:1.05;color:#eef2ff;font-weight:700;max-width:900px}
+.big{margin-top:16px;display:flex;align-items:baseline;gap:18px}.n{font-size:96px;font-weight:800;line-height:1;color:#fbbf24}
+.cap{font-size:22px;color:#9aa6c8;line-height:1.35}
+.foot{position:absolute;right:64px;top:50px;font-size:16px;color:#6f7ba0;text-align:right;line-height:1.5}
+.chart{position:absolute;left:64px;right:64px;bottom:40px;display:flex;gap:28px;border-bottom:1px solid #2a3355}
+.grp{flex:1;text-align:center}.bars{display:flex;align-items:flex-end;justify-content:center;height:200px}
+.b{width:110px;border-radius:4px 4px 0 0}.val{font-size:19px;color:#eef2ff;font-weight:700;margin-bottom:6px}
+.nm{margin-top:10px;font-size:17px;color:#cfd8ee}.nt{margin:2px 0 10px;font-size:16px;color:#9aa6c8}
+</style><div class=wrap><div class=brand>HARD NUMBERS</div><h1>SELECT FOR UPDATE vs Exclusion Constraint</h1>
+<div class=big><div class=n>225</div><div class=cap>deadlocks per run when overlapping inserts<br>hit an exclusion constraint on hot rooms</div></div></div>
+<div class=foot>45 runs · Postgres 16.4<br>truth = audit over the table<br>bars: attempts/s, 10 hot rooms</div>
+<div class=chart><div class="grp"><div class="val">7,264/s</div><div class="bars"><div class="b" style="height:200px;background:#ff5d5d"></div></div><div class="nm">plain check</div><div class="nt">81 double</div></div><div class="grp"><div class="val">3,478/s</div><div class="bars"><div class="b" style="height:96px;background:#34d399"></div></div><div class="nm">FOR UPDATE</div><div class="nt">0 double</div></div><div class="grp"><div class="val">4,042/s</div><div class="bars"><div class="b" style="height:111px;background:#60a5fa"></div></div><div class="nm">version column</div><div class="nt">0 double</div></div><div class="grp"><div class="val">22/s</div><div class="bars"><div class="b" style="height:3px;background:#fbbf24"></div></div><div class="nm">exclusion constraint</div><div class="nt">225 deadlocks</div></div><div class="grp"><div class="val">33/s</div><div class="bars"><div class="b" style="height:3px;background:#f59e0b"></div></div><div class="nm">exclusion + retry</div><div class="nt">213 deadlocks</div></div></div>

@@ -1,0 +1,32 @@
+{
+ "variant": "naive",
+ "scenario": "s2",
+ "rep": 1,
+ "quick": false,
+ "attempts": 2000,
+ "concurrency": 100,
+ "pool": 100,
+ "rooms": 10,
+ "window_nights": 5,
+ "stay_nights": [
+  1,
+  3
+ ],
+ "elapsed_s": 0.275,
+ "throughput_per_s": 7263.6,
+ "accepted": 104,
+ "sold_out": 1896,
+ "errors": 0,
+ "error_kinds": {},
+ "retries_total": 0,
+ "pg_deadlocks": 0,
+ "rows_in_table": 104,
+ "double_bookings": 81,
+ "nights_oversold": 44,
+ "p50_ms": 11.0,
+ "p99_ms": 51.39,
+ "postgres": "16.4 (Debian 16.4-1.pgdg120+2)",
+ "asyncpg": "0.32.0",
+ "python": "3.14.6",
+ "platform": "macOS-15.0-arm64-arm-64bit-Mach-O"
+}
